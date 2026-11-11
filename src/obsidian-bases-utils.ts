@@ -678,8 +678,7 @@ export function serializeToYAML(base: ObsidianBase): string {
       lineWidth: -1, // Don't wrap lines
       noRefs: true,  // Don't use YAML references
       sortKeys: false, // Preserve key order
-      quotingType: '"', // Use double quotes
-      forceQuotes: false, // Only quote when necessary
+      quoteStyle: 'double', // Double quotes, only where needed
     });
   } catch (error) {
     throw new Error(`Failed to serialize to YAML: ${error instanceof Error ? error.message : 'Unknown error'}`);

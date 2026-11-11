@@ -60,7 +60,10 @@ import * as yaml from 'js-yaml';
  */
 export function readBase(yamlString: string): ObsidianBase {
   try {
-    const parsed = yaml.load(yamlString) as Partial<ObsidianBase>;
+    // A file with no document (empty, or only comments) is an empty base; `load` throws on one.
+    const [document, ...more] = yaml.loadAll(yamlString);
+    if (more.length) throw new Error('expected a single document');
+    const parsed = (document ?? {}) as Partial<ObsidianBase>;
     
     // Ensure views array exists
     if (!parsed.views) {

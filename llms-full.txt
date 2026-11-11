@@ -50,10 +50,10 @@ cp index.ts obsidian-bases-schema.ts obsidian-bases-parser.ts obsidian-bases-uti
 
 ### Dependencies
 
-For the reactive query system, Vue 3 is required:
+For the reactive query system, Vue 3.5 is required (a peer dependency), and YAML needs js-yaml 5:
 
 ```bash
-npm install vue
+npm install vue js-yaml
 ```
 
 ---

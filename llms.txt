@@ -68,7 +68,7 @@ obsidian-bases/
 ├── obsidian-bases-parser.ts    # Lexer, parser, evaluator
 ├── obsidian-bases-utils.ts     # Builders, presets, serialization
 ├── obsidian-bases-reactive.ts  # Reactive query system (Vue)
-├── obsidian-bases-example.ts   # Usage examples
+├── obsidian-bases-example.ts   # Example bases, filters and formulas (plain data)
 ├── llms.txt                    # This file (overview)
 └── llms-full.txt               # Complete documentation
 ```

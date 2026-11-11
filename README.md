@@ -35,9 +35,8 @@ bun add @type32/obsidian-bases-parser
 
 ### Dependencies
 
-This package requires:
-- `vue` ^3.5.27 - For reactive system
-- `js-yaml` ^4.1.1 - For efficient YAML parsing and serialization
+- `vue` ^3.5 is a **peer dependency**, for the reactive system: install it alongside (`bun add vue`). It's a peer so your app and this package share one Vue, which reactivity needs.
+- `js-yaml` ^5 is installed with the package, for YAML parsing and serialization.
 
 ## Quick Start
 
@@ -384,10 +383,12 @@ obsidian-bases-parser/
 │   ├── obsidian-bases-parser.ts    # Lexer, parser, evaluator
 │   ├── obsidian-bases-utils.ts     # Builders, presets, serialization
 │   ├── obsidian-bases-reactive.ts  # Reactive system (Vue + ReactiveBase)
-│   └── obsidian-bases-example.ts   # Usage examples
+│   └── obsidian-bases-example.ts   # Example bases, filters and formulas (plain data)
 ├── examples/
+│   ├── walkthrough.ts              # Lexer, parser, evaluator, validation, YAML and reactive queries, with logs (`bun examples/walkthrough.ts`)
 │   ├── reactive-base-example.ts    # Comprehensive reactive base examples
 │   └── simple-reactive-demo.ts     # Simple demonstration
+├── tsdown.config.mts               # Build: ESM and CJS with declarations (`bun run build`)
 ├── llms.txt                        # LLM overview
 ├── llms-full.txt                   # Complete LLM documentation
 └── README.md                       # This file
