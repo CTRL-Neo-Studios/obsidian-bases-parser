@@ -1,0 +1,76 @@
+filters:
+  not:
+    - file.folder == "Templates"
+formulas:
+  Untitled: ""
+  Time of Existence: today() - file.ctime
+  Last Edited Time: today() - file.mtime
+  Untitled 2: ""
+properties:
+  formula.Last Edited Time:
+    displayName: Last Time of Edit
+views:
+  - type: table
+    name: All Entries
+    filters:
+      and:
+        - tags.filter(value.containsAny('kthalatir'))
+    order:
+      - file.name
+      - file.mtime
+      - file.ctime
+      - tags
+      - file.path
+      - formula.Untitled
+      - formula.Time of Existence
+      - formula.Last Edited Time
+      - file.folder
+      - file.backlinks
+    sort:
+      - property: file.name
+        direction: ASC
+    columnSize:
+      file.name: 361
+      file.mtime: 127
+      file.ctime: 150
+      note.tags: 762
+  - type: cards
+    name: Kthalatir Races
+    filters:
+      and:
+        - tags.filter(value.containsAny("kthalatir/races"))
+    order:
+      - file.name
+      - file.mtime
+    cardSize: 210
+    imageFit: ""
+    imageAspectRatio: 0.55
+    image: cover
+  - type: table
+    name: Adventurers' Guild
+    filters:
+      and:
+        - tags.filter(value.containsAny("kthalatir/adventurers-guild"))
+    order:
+      - file.name
+  - type: cards
+    name: Kthalatir Characters
+    filters:
+      and:
+        - tags.filter(value.containsAny("kthalatir/characters"))
+    order:
+      - file.name
+      - file.mtime
+      - file.ctime
+    cardSize: 250
+    image: cover
+    imageFit: ""
+    imageAspectRatio: 1.4
+  - type: kanban
+    name: View
+    groupBy:
+      property: file.tags
+      direction: ASC
+  - type: map
+    name: View 2
+    mapTiles: []

@@ -1,9 +1,5 @@
 .DS_Store
 
-# Example sample data files
-examples/sampledata.base
-examples/basessampledata.json
-
 # Logs
 logs
 *.log

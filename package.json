@@ -1,7 +1,7 @@
 {
     "name": "@type32/obsidian-bases-parser",
     "version": "0.4.0",
-    "description": "A complete TypeScript implementation for Obsidian Bases (.base files) including schema definitions, lexer, parser, evaluator, and reactive query system with Vue integration.",
+    "description": "Obsidian Bases (.base files) in plain TypeScript: the expression language, functions, queries, summaries and Obsidian-compatible reading and writing of .base files.",
     "main": "./dist/index.js",
     "module": "./dist/index.mjs",
     "types": "./dist/index.d.ts",
@@ -28,7 +28,9 @@
     "scripts": {
         "build": "tsdown",
         "dev": "tsdown --watch",
-        "test": "echo \"Error: no test specified\" && exit 1",
+        "lint": "eslint .",
+        "test": "vitest run",
+        "test:types": "tsc --noEmit",
         "release:minor": "bun run build && bun pm version minor && bun publish",
         "release:patch": "bun run build && bun pm version patch && bun publish"
     },
@@ -42,8 +44,6 @@
         "formula",
         "yaml",
         "typescript",
-        "vue",
-        "reactive",
         "parser",
         "lexer",
         "ast"
@@ -51,15 +51,16 @@
     "author": "Type-32",
     "license": "MIT",
     "devDependencies": {
+        "@eslint/js": "^10.0.1",
         "@types/node": "^26.6.6",
+        "eslint": "^10.14.0",
         "tsdown": "^0.23.7",
         "typescript": "^6.0.3",
-        "vue": "^3.5.45"
+        "typescript-eslint": "^8.72.2",
+        "vitest": "^5.1.0"
     },
     "dependencies": {
+        "dayjs": "^1.11.23",
         "js-yaml": "^5.5.0"
-    },
-    "peerDependencies": {
-        "vue": "^3.5.0"
     }
 }
