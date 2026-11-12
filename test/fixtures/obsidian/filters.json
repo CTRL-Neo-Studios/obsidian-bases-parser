@@ -1,0 +1,1760 @@
+{
+	"obsidian": "1.15.1",
+	"note": "---\ns: todo\nn: 5\nb: true\nd: 2026-01-05\ndt: 2026-01-05T10:00:00\nl: [x, y]\ntags: [one]\nrel: \"[[N]]\"\n---\nbody\n",
+	"operators": {
+		"text": [
+			"is",
+			"is not",
+			"starts with",
+			"ends with",
+			"is empty",
+			"contains",
+			"contains any of",
+			"contains all of",
+			"does not start with",
+			"does not end with",
+			"is not empty",
+			"does not contain",
+			"does not contain any of",
+			"does not contain all of"
+		],
+		"number": [
+			"=",
+			"≠",
+			"<",
+			"≤",
+			">",
+			"≥",
+			"is empty",
+			"is not empty"
+		],
+		"checkbox": [
+			"is",
+			"is not"
+		],
+		"date": [
+			"on",
+			"not on",
+			"before",
+			"on or before",
+			"after",
+			"on or after",
+			"is empty",
+			"is not empty"
+		],
+		"list": [
+			"is exactly",
+			"is not exactly",
+			"is empty",
+			"contains",
+			"contains any of",
+			"contains all of",
+			"is not empty",
+			"does not contain",
+			"does not contain any of",
+			"does not contain all of"
+		],
+		"tags": [
+			"is exactly",
+			"is not exactly",
+			"is empty",
+			"contains",
+			"contains any of",
+			"contains all of",
+			"is not empty",
+			"does not contain",
+			"does not contain any of",
+			"does not contain all of"
+		],
+		"file": [
+			"links to",
+			"in folder",
+			"has tag",
+			"has property",
+			"does not link to",
+			"is not in folder",
+			"does not have tag",
+			"does not have property"
+		],
+		"file name": [
+			"is",
+			"is not",
+			"starts with",
+			"ends with",
+			"is empty",
+			"contains",
+			"contains any of",
+			"contains all of",
+			"does not start with",
+			"does not end with",
+			"is not empty",
+			"does not contain",
+			"does not contain any of",
+			"does not contain all of"
+		],
+		"folder": [
+			"is",
+			"is not",
+			"starts with",
+			"ends with",
+			"is empty",
+			"contains",
+			"contains any of",
+			"contains all of",
+			"does not start with",
+			"does not end with",
+			"is not empty",
+			"does not contain",
+			"does not contain any of",
+			"does not contain all of"
+		],
+		"file extension": [
+			"is",
+			"is not",
+			"starts with",
+			"ends with",
+			"is empty",
+			"contains",
+			"contains any of",
+			"contains all of",
+			"does not start with",
+			"does not end with",
+			"is not empty",
+			"does not contain",
+			"does not contain any of",
+			"does not contain all of"
+		],
+		"file path": [
+			"is",
+			"is not",
+			"starts with",
+			"ends with",
+			"is empty",
+			"contains",
+			"contains any of",
+			"contains all of",
+			"does not start with",
+			"does not end with",
+			"is not empty",
+			"does not contain",
+			"does not contain any of",
+			"does not contain all of"
+		],
+		"file size": [
+			"=",
+			"≠",
+			"<",
+			"≤",
+			">",
+			"≥",
+			"is empty",
+			"is not empty"
+		],
+		"created time": [
+			"on",
+			"not on",
+			"before",
+			"on or before",
+			"after",
+			"on or after",
+			"is empty",
+			"is not empty"
+		],
+		"file tags": [
+			"is exactly",
+			"is not exactly",
+			"is empty",
+			"contains",
+			"contains any of",
+			"contains all of",
+			"is not empty",
+			"does not contain",
+			"does not contain any of",
+			"does not contain all of"
+		],
+		"file links": [
+			"is exactly",
+			"is not exactly",
+			"is empty",
+			"contains",
+			"contains any of",
+			"contains all of",
+			"is not empty",
+			"does not contain",
+			"does not contain any of",
+			"does not contain all of"
+		],
+		"link": [
+			"is",
+			"is not",
+			"starts with",
+			"ends with",
+			"is empty",
+			"contains",
+			"contains any of",
+			"contains all of",
+			"does not start with",
+			"does not end with",
+			"is not empty",
+			"does not contain",
+			"does not contain any of",
+			"does not contain all of"
+		],
+		"formula number": [
+			"=",
+			"≠",
+			"<",
+			"≤",
+			">",
+			"≥",
+			"is empty",
+			"is not empty"
+		]
+	},
+	"reads": [
+		{
+			"expression": "s == \"todo\"",
+			"property": "s",
+			"operator": "is",
+			"value": "todo"
+		},
+		{
+			"expression": "s != \"todo\"",
+			"property": "s",
+			"operator": "is not",
+			"value": "todo"
+		},
+		{
+			"expression": "s.startsWith(\"to\")",
+			"property": "s",
+			"operator": "starts with",
+			"value": "to"
+		},
+		{
+			"expression": "s.endsWith(\"do\")",
+			"property": "s",
+			"operator": "ends with",
+			"value": "do"
+		},
+		{
+			"expression": "s.isEmpty()",
+			"property": "s",
+			"operator": "is empty",
+			"value": null
+		},
+		{
+			"expression": "!s.isEmpty()",
+			"property": "s",
+			"operator": "is not empty",
+			"value": null
+		},
+		{
+			"expression": "s.contains(\"o\")",
+			"property": "s",
+			"operator": "contains",
+			"value": "o"
+		},
+		{
+			"expression": "!s.contains(\"o\")",
+			"property": "s",
+			"operator": "does not contain",
+			"value": "o"
+		},
+		{
+			"expression": "s.containsAny(\"a\", \"b\")",
+			"property": "s",
+			"operator": "contains any of",
+			"value": [
+				"a",
+				"b"
+			]
+		},
+		{
+			"expression": "s.containsAll(\"a\", \"b\")",
+			"property": "s",
+			"operator": "contains all of",
+			"value": [
+				"a",
+				"b"
+			]
+		},
+		{
+			"expression": "!s.startsWith(\"x\")",
+			"property": "s",
+			"operator": "does not start with",
+			"value": "x"
+		},
+		{
+			"expression": "!s.endsWith(\"x\")",
+			"property": "s",
+			"operator": "does not end with",
+			"value": "x"
+		},
+		{
+			"expression": "!s.containsAny(\"a\")",
+			"property": "s",
+			"operator": "does not contain any of",
+			"value": [
+				"a"
+			]
+		},
+		{
+			"expression": "!s.containsAll(\"a\")",
+			"property": "s",
+			"operator": "does not contain all of",
+			"value": [
+				"a"
+			]
+		},
+		{
+			"expression": "\"todo\" == s",
+			"advanced": true
+		},
+		{
+			"expression": "s == 5",
+			"property": "s",
+			"operator": "is",
+			"value": "5"
+		},
+		{
+			"expression": "s == todo",
+			"advanced": true
+		},
+		{
+			"expression": "s == \"a\" || s == \"b\"",
+			"advanced": true
+		},
+		{
+			"expression": "s.lower() == \"todo\"",
+			"advanced": true
+		},
+		{
+			"expression": "note.s == \"todo\"",
+			"property": "s",
+			"operator": "is",
+			"value": "todo"
+		},
+		{
+			"expression": "note[\"s\"] == \"todo\"",
+			"property": "s",
+			"operator": "is",
+			"value": "todo"
+		},
+		{
+			"expression": "n == 5",
+			"property": "n",
+			"operator": "=",
+			"value": "5"
+		},
+		{
+			"expression": "n != 5",
+			"property": "n",
+			"operator": "≠",
+			"value": "5"
+		},
+		{
+			"expression": "n > 3",
+			"property": "n",
+			"operator": ">",
+			"value": "3"
+		},
+		{
+			"expression": "n >= 3",
+			"property": "n",
+			"operator": "≥",
+			"value": "3"
+		},
+		{
+			"expression": "n < 3",
+			"property": "n",
+			"operator": "<",
+			"value": "3"
+		},
+		{
+			"expression": "n <= 3",
+			"property": "n",
+			"operator": "≤",
+			"value": "3"
+		},
+		{
+			"expression": "n.isEmpty()",
+			"property": "n",
+			"operator": "is empty",
+			"value": null
+		},
+		{
+			"expression": "!n.isEmpty()",
+			"property": "n",
+			"operator": "is not empty",
+			"value": null
+		},
+		{
+			"expression": "n > -1.5",
+			"property": "n",
+			"operator": ">",
+			"value": "-1.5"
+		},
+		{
+			"expression": "n > \"3\"",
+			"property": "n",
+			"operator": ">",
+			"value": "3"
+		},
+		{
+			"expression": "b == true",
+			"property": "b",
+			"operator": "is",
+			"value": "true"
+		},
+		{
+			"expression": "b == false",
+			"property": "b",
+			"operator": "is",
+			"value": "false"
+		},
+		{
+			"expression": "b != true",
+			"property": "b",
+			"operator": "is not",
+			"value": "true"
+		},
+		{
+			"expression": "b",
+			"advanced": true
+		},
+		{
+			"expression": "!b",
+			"advanced": true
+		},
+		{
+			"expression": "b.isEmpty()",
+			"advanced": true
+		},
+		{
+			"expression": "d == \"2026-01-05\"",
+			"property": "d",
+			"operator": "on",
+			"value": "2026-01-05"
+		},
+		{
+			"expression": "d == date(\"2026-01-05\")",
+			"advanced": true
+		},
+		{
+			"expression": "d > \"2026-01-01\"",
+			"property": "d",
+			"operator": "after",
+			"value": "2026-01-01"
+		},
+		{
+			"expression": "d < date(\"2026-01-01\")",
+			"advanced": true
+		},
+		{
+			"expression": "d >= \"2026-01-01\"",
+			"property": "d",
+			"operator": "on or after",
+			"value": "2026-01-01"
+		},
+		{
+			"expression": "d <= \"2026-01-01\"",
+			"property": "d",
+			"operator": "on or before",
+			"value": "2026-01-01"
+		},
+		{
+			"expression": "d != \"2026-01-05\"",
+			"property": "d",
+			"operator": "not on",
+			"value": "2026-01-05"
+		},
+		{
+			"expression": "d.isEmpty()",
+			"property": "d",
+			"operator": "is empty",
+			"value": null
+		},
+		{
+			"expression": "d > today()",
+			"advanced": true
+		},
+		{
+			"expression": "d < now() - \"1 week\"",
+			"advanced": true
+		},
+		{
+			"expression": "d.date() == today()",
+			"advanced": true
+		},
+		{
+			"expression": "dt > \"2026-01-05T10:00:00\"",
+			"advanced": true
+		},
+		{
+			"expression": "dt == \"2026-01-05 10:00\"",
+			"property": "dt",
+			"operator": "is",
+			"value": "2026-01-05 10:00"
+		},
+		{
+			"expression": "l.contains(\"x\")",
+			"property": "l",
+			"operator": "contains",
+			"value": "x"
+		},
+		{
+			"expression": "!l.contains(\"x\")",
+			"property": "l",
+			"operator": "does not contain",
+			"value": "x"
+		},
+		{
+			"expression": "l.containsAny(\"x\", \"z\")",
+			"property": "l",
+			"operator": "contains any of",
+			"value": [
+				"x",
+				"z"
+			]
+		},
+		{
+			"expression": "l.containsAll(\"x\", \"y\")",
+			"property": "l",
+			"operator": "contains all of",
+			"value": [
+				"x",
+				"y"
+			]
+		},
+		{
+			"expression": "l.isEmpty()",
+			"property": "l",
+			"operator": "is empty",
+			"value": null
+		},
+		{
+			"expression": "!l.isEmpty()",
+			"property": "l",
+			"operator": "is not empty",
+			"value": null
+		},
+		{
+			"expression": "l == [\"x\", \"y\"]",
+			"property": "l",
+			"operator": "is exactly",
+			"value": [
+				"x",
+				"y"
+			]
+		},
+		{
+			"expression": "tags.contains(\"one\")",
+			"property": "tags",
+			"operator": "contains",
+			"value": "one"
+		},
+		{
+			"expression": "file.hasTag(\"one\")",
+			"property": "file",
+			"operator": "has tag",
+			"value": [
+				"one"
+			]
+		},
+		{
+			"expression": "!file.hasTag(\"one\")",
+			"property": "file",
+			"operator": "does not have tag",
+			"value": [
+				"one"
+			]
+		},
+		{
+			"expression": "file.hasTag(\"one\", \"two\")",
+			"property": "file",
+			"operator": "has tag",
+			"value": [
+				"one",
+				"two"
+			]
+		},
+		{
+			"expression": "file.tags.contains(\"#one\")",
+			"property": "file tags",
+			"operator": "contains",
+			"value": "#one"
+		},
+		{
+			"expression": "file.inFolder(\"zz-b5\")",
+			"property": "file",
+			"operator": "in folder",
+			"value": "zz-b5"
+		},
+		{
+			"expression": "!file.inFolder(\"zz-b5\")",
+			"property": "file",
+			"operator": "is not in folder",
+			"value": "zz-b5"
+		},
+		{
+			"expression": "file.folder == \"zz-b5\"",
+			"property": "folder",
+			"operator": "is",
+			"value": "zz-b5"
+		},
+		{
+			"expression": "file.name == \"N\"",
+			"property": "file name",
+			"operator": "is",
+			"value": "N"
+		},
+		{
+			"expression": "file.name.contains(\"N\")",
+			"property": "file name",
+			"operator": "contains",
+			"value": "N"
+		},
+		{
+			"expression": "file.ext == \"md\"",
+			"property": "file extension",
+			"operator": "is",
+			"value": "md"
+		},
+		{
+			"expression": "file.path == \"zz-b5/N.md\"",
+			"property": "file path",
+			"operator": "is",
+			"value": "zz-b5/N.md"
+		},
+		{
+			"expression": "file.size > 10",
+			"property": "file size",
+			"operator": ">",
+			"value": "10"
+		},
+		{
+			"expression": "file.ctime > \"2026-01-01\"",
+			"property": "created time",
+			"operator": "after",
+			"value": "2026-01-01"
+		},
+		{
+			"expression": "file.mtime < now()",
+			"advanced": true
+		},
+		{
+			"expression": "file.hasLink(\"N\")",
+			"property": "file",
+			"operator": "links to",
+			"value": "N"
+		},
+		{
+			"expression": "file.links.contains(link(\"N\"))",
+			"property": "file links",
+			"operator": "contains",
+			"value": "N"
+		},
+		{
+			"expression": "file.hasProperty(\"s\")",
+			"property": "file",
+			"operator": "has property",
+			"value": "s"
+		},
+		{
+			"expression": "!file.hasProperty(\"s\")",
+			"property": "file",
+			"operator": "does not have property",
+			"value": "s"
+		},
+		{
+			"expression": "rel == \"[[N]]\"",
+			"property": "rel",
+			"operator": "is",
+			"value": "N"
+		},
+		{
+			"expression": "rel.contains(\"N\")",
+			"property": "rel",
+			"operator": "contains",
+			"value": "N"
+		},
+		{
+			"expression": "formula.f > 1",
+			"property": "f",
+			"operator": ">",
+			"value": "1"
+		},
+		{
+			"expression": "formula.f == \"x\"",
+			"property": "f",
+			"operator": "=",
+			"value": ""
+		},
+		{
+			"expression": "this.file.name == \"x\"",
+			"advanced": true
+		},
+		{
+			"expression": "true",
+			"advanced": true
+		},
+		{
+			"expression": "((",
+			"advanced": true
+		},
+		{
+			"expression": "",
+			"advanced": true
+		}
+	],
+	"writes": [
+		{
+			"kind": "text",
+			"start": "s == \"todo\"",
+			"operator": "is",
+			"expression": "s == \"todo\""
+		},
+		{
+			"kind": "text",
+			"start": "s == \"todo\"",
+			"operator": "is not",
+			"expression": "s != \"todo\""
+		},
+		{
+			"kind": "text",
+			"start": "s == \"todo\"",
+			"operator": "starts with",
+			"expression": "s.startsWith(\"todo\")"
+		},
+		{
+			"kind": "text",
+			"start": "s == \"todo\"",
+			"operator": "ends with",
+			"expression": "s.endsWith(\"todo\")"
+		},
+		{
+			"kind": "text",
+			"start": "s == \"todo\"",
+			"operator": "is empty",
+			"expression": "s.isEmpty()"
+		},
+		{
+			"kind": "text",
+			"start": "s == \"todo\"",
+			"operator": "contains",
+			"expression": "s.contains(\"todo\")"
+		},
+		{
+			"kind": "text",
+			"start": "s == \"todo\"",
+			"operator": "contains any of",
+			"expression": "s.containsAny(\"todo\")"
+		},
+		{
+			"kind": "text",
+			"start": "s == \"todo\"",
+			"operator": "contains all of",
+			"expression": "s.containsAll(\"todo\")"
+		},
+		{
+			"kind": "text",
+			"start": "s == \"todo\"",
+			"operator": "does not start with",
+			"expression": "!s.startsWith(\"todo\")"
+		},
+		{
+			"kind": "text",
+			"start": "s == \"todo\"",
+			"operator": "does not end with",
+			"expression": "!s.endsWith(\"todo\")"
+		},
+		{
+			"kind": "text",
+			"start": "s == \"todo\"",
+			"operator": "is not empty",
+			"expression": "!s.isEmpty()"
+		},
+		{
+			"kind": "text",
+			"start": "s == \"todo\"",
+			"operator": "does not contain",
+			"expression": "!s.contains(\"todo\")"
+		},
+		{
+			"kind": "text",
+			"start": "s == \"todo\"",
+			"operator": "does not contain any of",
+			"expression": "!s.containsAny(\"todo\")"
+		},
+		{
+			"kind": "text",
+			"start": "s == \"todo\"",
+			"operator": "does not contain all of",
+			"expression": "!s.containsAll(\"todo\")"
+		},
+		{
+			"kind": "number",
+			"start": "n > 3",
+			"operator": "=",
+			"expression": "n == 3"
+		},
+		{
+			"kind": "number",
+			"start": "n > 3",
+			"operator": "≠",
+			"expression": "n != 3"
+		},
+		{
+			"kind": "number",
+			"start": "n > 3",
+			"operator": "<",
+			"expression": "n < 3"
+		},
+		{
+			"kind": "number",
+			"start": "n > 3",
+			"operator": "≤",
+			"expression": "n <= 3"
+		},
+		{
+			"kind": "number",
+			"start": "n > 3",
+			"operator": ">",
+			"expression": "n > 3"
+		},
+		{
+			"kind": "number",
+			"start": "n > 3",
+			"operator": "≥",
+			"expression": "n >= 3"
+		},
+		{
+			"kind": "number",
+			"start": "n > 3",
+			"operator": "is empty",
+			"expression": "n.isEmpty()"
+		},
+		{
+			"kind": "number",
+			"start": "n > 3",
+			"operator": "is not empty",
+			"expression": "!n.isEmpty()"
+		},
+		{
+			"kind": "checkbox",
+			"start": "b == true",
+			"operator": "is",
+			"expression": "b == true"
+		},
+		{
+			"kind": "checkbox",
+			"start": "b == true",
+			"operator": "is not",
+			"expression": "b != true"
+		},
+		{
+			"kind": "date",
+			"start": "d > \"2026-01-01\"",
+			"operator": "on",
+			"expression": "d == \"2026-01-01\""
+		},
+		{
+			"kind": "date",
+			"start": "d > \"2026-01-01\"",
+			"operator": "not on",
+			"expression": "d != \"2026-01-01\""
+		},
+		{
+			"kind": "date",
+			"start": "d > \"2026-01-01\"",
+			"operator": "before",
+			"expression": "d < \"2026-01-01\""
+		},
+		{
+			"kind": "date",
+			"start": "d > \"2026-01-01\"",
+			"operator": "on or before",
+			"expression": "d <= \"2026-01-01\""
+		},
+		{
+			"kind": "date",
+			"start": "d > \"2026-01-01\"",
+			"operator": "after",
+			"expression": "d > \"2026-01-01\""
+		},
+		{
+			"kind": "date",
+			"start": "d > \"2026-01-01\"",
+			"operator": "on or after",
+			"expression": "d >= \"2026-01-01\""
+		},
+		{
+			"kind": "date",
+			"start": "d > \"2026-01-01\"",
+			"operator": "is empty",
+			"expression": "d.isEmpty()"
+		},
+		{
+			"kind": "date",
+			"start": "d > \"2026-01-01\"",
+			"operator": "is not empty",
+			"expression": "!d.isEmpty()"
+		},
+		{
+			"kind": "list",
+			"start": "l.contains(\"x\")",
+			"operator": "is exactly",
+			"expression": "l == \"x\""
+		},
+		{
+			"kind": "list",
+			"start": "l.contains(\"x\")",
+			"operator": "is not exactly",
+			"expression": "l != \"x\""
+		},
+		{
+			"kind": "list",
+			"start": "l.contains(\"x\")",
+			"operator": "is empty",
+			"expression": "l.isEmpty()"
+		},
+		{
+			"kind": "list",
+			"start": "l.contains(\"x\")",
+			"operator": "contains",
+			"expression": "l.contains(\"x\")"
+		},
+		{
+			"kind": "list",
+			"start": "l.contains(\"x\")",
+			"operator": "contains any of",
+			"expression": "l.containsAny(\"x\")"
+		},
+		{
+			"kind": "list",
+			"start": "l.contains(\"x\")",
+			"operator": "contains all of",
+			"expression": "l.containsAll(\"x\")"
+		},
+		{
+			"kind": "list",
+			"start": "l.contains(\"x\")",
+			"operator": "is not empty",
+			"expression": "!l.isEmpty()"
+		},
+		{
+			"kind": "list",
+			"start": "l.contains(\"x\")",
+			"operator": "does not contain",
+			"expression": "!l.contains(\"x\")"
+		},
+		{
+			"kind": "list",
+			"start": "l.contains(\"x\")",
+			"operator": "does not contain any of",
+			"expression": "!l.containsAny(\"x\")"
+		},
+		{
+			"kind": "list",
+			"start": "l.contains(\"x\")",
+			"operator": "does not contain all of",
+			"expression": "!l.containsAll(\"x\")"
+		},
+		{
+			"kind": "tags",
+			"start": "tags.contains(\"one\")",
+			"operator": "is exactly",
+			"expression": "tags == \"one\""
+		},
+		{
+			"kind": "tags",
+			"start": "tags.contains(\"one\")",
+			"operator": "is not exactly",
+			"expression": "tags != \"one\""
+		},
+		{
+			"kind": "tags",
+			"start": "tags.contains(\"one\")",
+			"operator": "is empty",
+			"expression": "tags.isEmpty()"
+		},
+		{
+			"kind": "tags",
+			"start": "tags.contains(\"one\")",
+			"operator": "contains",
+			"expression": "tags.contains(\"one\")"
+		},
+		{
+			"kind": "tags",
+			"start": "tags.contains(\"one\")",
+			"operator": "contains any of",
+			"expression": "tags.containsAny(\"one\")"
+		},
+		{
+			"kind": "tags",
+			"start": "tags.contains(\"one\")",
+			"operator": "contains all of",
+			"expression": "tags.containsAll(\"one\")"
+		},
+		{
+			"kind": "tags",
+			"start": "tags.contains(\"one\")",
+			"operator": "is not empty",
+			"expression": "!tags.isEmpty()"
+		},
+		{
+			"kind": "tags",
+			"start": "tags.contains(\"one\")",
+			"operator": "does not contain",
+			"expression": "!tags.contains(\"one\")"
+		},
+		{
+			"kind": "tags",
+			"start": "tags.contains(\"one\")",
+			"operator": "does not contain any of",
+			"expression": "!tags.containsAny(\"one\")"
+		},
+		{
+			"kind": "tags",
+			"start": "tags.contains(\"one\")",
+			"operator": "does not contain all of",
+			"expression": "!tags.containsAll(\"one\")"
+		},
+		{
+			"kind": "file",
+			"start": "file.hasTag(\"one\")",
+			"operator": "links to",
+			"expression": "file.hasLink(\"one\")"
+		},
+		{
+			"kind": "file",
+			"start": "file.hasTag(\"one\")",
+			"operator": "in folder",
+			"expression": "file.inFolder(\"one\")"
+		},
+		{
+			"kind": "file",
+			"start": "file.hasTag(\"one\")",
+			"operator": "has tag",
+			"expression": "file.hasTag(\"one\")"
+		},
+		{
+			"kind": "file",
+			"start": "file.hasTag(\"one\")",
+			"operator": "has property",
+			"expression": "file.hasProperty(\"one\")"
+		},
+		{
+			"kind": "file",
+			"start": "file.hasTag(\"one\")",
+			"operator": "does not link to",
+			"expression": "!file.hasLink(\"one\")"
+		},
+		{
+			"kind": "file",
+			"start": "file.hasTag(\"one\")",
+			"operator": "is not in folder",
+			"expression": "!file.inFolder(\"one\")"
+		},
+		{
+			"kind": "file",
+			"start": "file.hasTag(\"one\")",
+			"operator": "does not have tag",
+			"expression": "!file.hasTag(\"one\")"
+		},
+		{
+			"kind": "file",
+			"start": "file.hasTag(\"one\")",
+			"operator": "does not have property",
+			"expression": "!file.hasProperty(\"one\")"
+		},
+		{
+			"kind": "file name",
+			"start": "file.name == \"N\"",
+			"operator": "is",
+			"expression": "file.name == \"N\""
+		},
+		{
+			"kind": "file name",
+			"start": "file.name == \"N\"",
+			"operator": "is not",
+			"expression": "file.name != \"N\""
+		},
+		{
+			"kind": "file name",
+			"start": "file.name == \"N\"",
+			"operator": "starts with",
+			"expression": "file.name.startsWith(\"N\")"
+		},
+		{
+			"kind": "file name",
+			"start": "file.name == \"N\"",
+			"operator": "ends with",
+			"expression": "file.name.endsWith(\"N\")"
+		},
+		{
+			"kind": "file name",
+			"start": "file.name == \"N\"",
+			"operator": "is empty",
+			"expression": "file.name.isEmpty()"
+		},
+		{
+			"kind": "file name",
+			"start": "file.name == \"N\"",
+			"operator": "contains",
+			"expression": "file.name.contains(\"N\")"
+		},
+		{
+			"kind": "file name",
+			"start": "file.name == \"N\"",
+			"operator": "contains any of",
+			"expression": "file.name.containsAny(\"N\")"
+		},
+		{
+			"kind": "file name",
+			"start": "file.name == \"N\"",
+			"operator": "contains all of",
+			"expression": "file.name.containsAll(\"N\")"
+		},
+		{
+			"kind": "file name",
+			"start": "file.name == \"N\"",
+			"operator": "does not start with",
+			"expression": "!file.name.startsWith(\"N\")"
+		},
+		{
+			"kind": "file name",
+			"start": "file.name == \"N\"",
+			"operator": "does not end with",
+			"expression": "!file.name.endsWith(\"N\")"
+		},
+		{
+			"kind": "file name",
+			"start": "file.name == \"N\"",
+			"operator": "is not empty",
+			"expression": "!file.name.isEmpty()"
+		},
+		{
+			"kind": "file name",
+			"start": "file.name == \"N\"",
+			"operator": "does not contain",
+			"expression": "!file.name.contains(\"N\")"
+		},
+		{
+			"kind": "file name",
+			"start": "file.name == \"N\"",
+			"operator": "does not contain any of",
+			"expression": "!file.name.containsAny(\"N\")"
+		},
+		{
+			"kind": "file name",
+			"start": "file.name == \"N\"",
+			"operator": "does not contain all of",
+			"expression": "!file.name.containsAll(\"N\")"
+		},
+		{
+			"kind": "folder",
+			"start": "file.folder == \"zz-b5\"",
+			"operator": "is",
+			"expression": "file.folder == \"zz-b5\""
+		},
+		{
+			"kind": "folder",
+			"start": "file.folder == \"zz-b5\"",
+			"operator": "is not",
+			"expression": "file.folder != \"zz-b5\""
+		},
+		{
+			"kind": "folder",
+			"start": "file.folder == \"zz-b5\"",
+			"operator": "starts with",
+			"expression": "file.folder.startsWith(\"zz-b5\")"
+		},
+		{
+			"kind": "folder",
+			"start": "file.folder == \"zz-b5\"",
+			"operator": "ends with",
+			"expression": "file.folder.endsWith(\"zz-b5\")"
+		},
+		{
+			"kind": "folder",
+			"start": "file.folder == \"zz-b5\"",
+			"operator": "is empty",
+			"expression": "file.folder.isEmpty()"
+		},
+		{
+			"kind": "folder",
+			"start": "file.folder == \"zz-b5\"",
+			"operator": "contains",
+			"expression": "file.folder.contains(\"zz-b5\")"
+		},
+		{
+			"kind": "folder",
+			"start": "file.folder == \"zz-b5\"",
+			"operator": "contains any of",
+			"expression": "file.folder.containsAny(\"zz-b5\")"
+		},
+		{
+			"kind": "folder",
+			"start": "file.folder == \"zz-b5\"",
+			"operator": "contains all of",
+			"expression": "file.folder.containsAll(\"zz-b5\")"
+		},
+		{
+			"kind": "folder",
+			"start": "file.folder == \"zz-b5\"",
+			"operator": "does not start with",
+			"expression": "!file.folder.startsWith(\"zz-b5\")"
+		},
+		{
+			"kind": "folder",
+			"start": "file.folder == \"zz-b5\"",
+			"operator": "does not end with",
+			"expression": "!file.folder.endsWith(\"zz-b5\")"
+		},
+		{
+			"kind": "folder",
+			"start": "file.folder == \"zz-b5\"",
+			"operator": "is not empty",
+			"expression": "!file.folder.isEmpty()"
+		},
+		{
+			"kind": "folder",
+			"start": "file.folder == \"zz-b5\"",
+			"operator": "does not contain",
+			"expression": "!file.folder.contains(\"zz-b5\")"
+		},
+		{
+			"kind": "folder",
+			"start": "file.folder == \"zz-b5\"",
+			"operator": "does not contain any of",
+			"expression": "!file.folder.containsAny(\"zz-b5\")"
+		},
+		{
+			"kind": "folder",
+			"start": "file.folder == \"zz-b5\"",
+			"operator": "does not contain all of",
+			"expression": "!file.folder.containsAll(\"zz-b5\")"
+		},
+		{
+			"kind": "file extension",
+			"start": "file.ext == \"md\"",
+			"operator": "is",
+			"expression": "file.ext == \"md\""
+		},
+		{
+			"kind": "file extension",
+			"start": "file.ext == \"md\"",
+			"operator": "is not",
+			"expression": "file.ext != \"md\""
+		},
+		{
+			"kind": "file extension",
+			"start": "file.ext == \"md\"",
+			"operator": "starts with",
+			"expression": "file.ext.startsWith(\"md\")"
+		},
+		{
+			"kind": "file extension",
+			"start": "file.ext == \"md\"",
+			"operator": "ends with",
+			"expression": "file.ext.endsWith(\"md\")"
+		},
+		{
+			"kind": "file extension",
+			"start": "file.ext == \"md\"",
+			"operator": "is empty",
+			"expression": "file.ext.isEmpty()"
+		},
+		{
+			"kind": "file extension",
+			"start": "file.ext == \"md\"",
+			"operator": "contains",
+			"expression": "file.ext.contains(\"md\")"
+		},
+		{
+			"kind": "file extension",
+			"start": "file.ext == \"md\"",
+			"operator": "contains any of",
+			"expression": "file.ext.containsAny(\"md\")"
+		},
+		{
+			"kind": "file extension",
+			"start": "file.ext == \"md\"",
+			"operator": "contains all of",
+			"expression": "file.ext.containsAll(\"md\")"
+		},
+		{
+			"kind": "file extension",
+			"start": "file.ext == \"md\"",
+			"operator": "does not start with",
+			"expression": "!file.ext.startsWith(\"md\")"
+		},
+		{
+			"kind": "file extension",
+			"start": "file.ext == \"md\"",
+			"operator": "does not end with",
+			"expression": "!file.ext.endsWith(\"md\")"
+		},
+		{
+			"kind": "file extension",
+			"start": "file.ext == \"md\"",
+			"operator": "is not empty",
+			"expression": "!file.ext.isEmpty()"
+		},
+		{
+			"kind": "file extension",
+			"start": "file.ext == \"md\"",
+			"operator": "does not contain",
+			"expression": "!file.ext.contains(\"md\")"
+		},
+		{
+			"kind": "file extension",
+			"start": "file.ext == \"md\"",
+			"operator": "does not contain any of",
+			"expression": "!file.ext.containsAny(\"md\")"
+		},
+		{
+			"kind": "file extension",
+			"start": "file.ext == \"md\"",
+			"operator": "does not contain all of",
+			"expression": "!file.ext.containsAll(\"md\")"
+		},
+		{
+			"kind": "file path",
+			"start": "file.path == \"zz-b5/N.md\"",
+			"operator": "is",
+			"expression": "file.path == \"zz-b5/N.md\""
+		},
+		{
+			"kind": "file path",
+			"start": "file.path == \"zz-b5/N.md\"",
+			"operator": "is not",
+			"expression": "file.path != \"zz-b5/N.md\""
+		},
+		{
+			"kind": "file path",
+			"start": "file.path == \"zz-b5/N.md\"",
+			"operator": "starts with",
+			"expression": "file.path.startsWith(\"zz-b5/N.md\")"
+		},
+		{
+			"kind": "file path",
+			"start": "file.path == \"zz-b5/N.md\"",
+			"operator": "ends with",
+			"expression": "file.path.endsWith(\"zz-b5/N.md\")"
+		},
+		{
+			"kind": "file path",
+			"start": "file.path == \"zz-b5/N.md\"",
+			"operator": "is empty",
+			"expression": "file.path.isEmpty()"
+		},
+		{
+			"kind": "file path",
+			"start": "file.path == \"zz-b5/N.md\"",
+			"operator": "contains",
+			"expression": "file.path.contains(\"zz-b5/N.md\")"
+		},
+		{
+			"kind": "file path",
+			"start": "file.path == \"zz-b5/N.md\"",
+			"operator": "contains any of",
+			"expression": "file.path.containsAny(\"zz-b5/N.md\")"
+		},
+		{
+			"kind": "file path",
+			"start": "file.path == \"zz-b5/N.md\"",
+			"operator": "contains all of",
+			"expression": "file.path.containsAll(\"zz-b5/N.md\")"
+		},
+		{
+			"kind": "file path",
+			"start": "file.path == \"zz-b5/N.md\"",
+			"operator": "does not start with",
+			"expression": "!file.path.startsWith(\"zz-b5/N.md\")"
+		},
+		{
+			"kind": "file path",
+			"start": "file.path == \"zz-b5/N.md\"",
+			"operator": "does not end with",
+			"expression": "!file.path.endsWith(\"zz-b5/N.md\")"
+		},
+		{
+			"kind": "file path",
+			"start": "file.path == \"zz-b5/N.md\"",
+			"operator": "is not empty",
+			"expression": "!file.path.isEmpty()"
+		},
+		{
+			"kind": "file path",
+			"start": "file.path == \"zz-b5/N.md\"",
+			"operator": "does not contain",
+			"expression": "!file.path.contains(\"zz-b5/N.md\")"
+		},
+		{
+			"kind": "file path",
+			"start": "file.path == \"zz-b5/N.md\"",
+			"operator": "does not contain any of",
+			"expression": "!file.path.containsAny(\"zz-b5/N.md\")"
+		},
+		{
+			"kind": "file path",
+			"start": "file.path == \"zz-b5/N.md\"",
+			"operator": "does not contain all of",
+			"expression": "!file.path.containsAll(\"zz-b5/N.md\")"
+		},
+		{
+			"kind": "file size",
+			"start": "file.size > 10",
+			"operator": "=",
+			"expression": "file.size == 10"
+		},
+		{
+			"kind": "file size",
+			"start": "file.size > 10",
+			"operator": "≠",
+			"expression": "file.size != 10"
+		},
+		{
+			"kind": "file size",
+			"start": "file.size > 10",
+			"operator": "<",
+			"expression": "file.size < 10"
+		},
+		{
+			"kind": "file size",
+			"start": "file.size > 10",
+			"operator": "≤",
+			"expression": "file.size <= 10"
+		},
+		{
+			"kind": "file size",
+			"start": "file.size > 10",
+			"operator": ">",
+			"expression": "file.size > 10"
+		},
+		{
+			"kind": "file size",
+			"start": "file.size > 10",
+			"operator": "≥",
+			"expression": "file.size >= 10"
+		},
+		{
+			"kind": "file size",
+			"start": "file.size > 10",
+			"operator": "is empty",
+			"expression": "file.size.isEmpty()"
+		},
+		{
+			"kind": "file size",
+			"start": "file.size > 10",
+			"operator": "is not empty",
+			"expression": "!file.size.isEmpty()"
+		},
+		{
+			"kind": "created time",
+			"start": "file.ctime > \"2026-01-01\"",
+			"operator": "on",
+			"expression": "file.ctime == \"2026-01-01\""
+		},
+		{
+			"kind": "created time",
+			"start": "file.ctime > \"2026-01-01\"",
+			"operator": "not on",
+			"expression": "file.ctime != \"2026-01-01\""
+		},
+		{
+			"kind": "created time",
+			"start": "file.ctime > \"2026-01-01\"",
+			"operator": "before",
+			"expression": "file.ctime < \"2026-01-01\""
+		},
+		{
+			"kind": "created time",
+			"start": "file.ctime > \"2026-01-01\"",
+			"operator": "on or before",
+			"expression": "file.ctime <= \"2026-01-01\""
+		},
+		{
+			"kind": "created time",
+			"start": "file.ctime > \"2026-01-01\"",
+			"operator": "after",
+			"expression": "file.ctime > \"2026-01-01\""
+		},
+		{
+			"kind": "created time",
+			"start": "file.ctime > \"2026-01-01\"",
+			"operator": "on or after",
+			"expression": "file.ctime >= \"2026-01-01\""
+		},
+		{
+			"kind": "created time",
+			"start": "file.ctime > \"2026-01-01\"",
+			"operator": "is empty",
+			"expression": "file.ctime.isEmpty()"
+		},
+		{
+			"kind": "created time",
+			"start": "file.ctime > \"2026-01-01\"",
+			"operator": "is not empty",
+			"expression": "!file.ctime.isEmpty()"
+		},
+		{
+			"kind": "file tags",
+			"start": "file.tags.contains(\"#one\")",
+			"operator": "is exactly",
+			"expression": "file.tags == \"#one\""
+		},
+		{
+			"kind": "file tags",
+			"start": "file.tags.contains(\"#one\")",
+			"operator": "is not exactly",
+			"expression": "file.tags != \"#one\""
+		},
+		{
+			"kind": "file tags",
+			"start": "file.tags.contains(\"#one\")",
+			"operator": "is empty",
+			"expression": "file.tags.isEmpty()"
+		},
+		{
+			"kind": "file tags",
+			"start": "file.tags.contains(\"#one\")",
+			"operator": "contains",
+			"expression": "file.tags.contains(\"#one\")"
+		},
+		{
+			"kind": "file tags",
+			"start": "file.tags.contains(\"#one\")",
+			"operator": "contains any of",
+			"expression": "file.tags.containsAny(\"#one\")"
+		},
+		{
+			"kind": "file tags",
+			"start": "file.tags.contains(\"#one\")",
+			"operator": "contains all of",
+			"expression": "file.tags.containsAll(\"#one\")"
+		},
+		{
+			"kind": "file tags",
+			"start": "file.tags.contains(\"#one\")",
+			"operator": "is not empty",
+			"expression": "!file.tags.isEmpty()"
+		},
+		{
+			"kind": "file tags",
+			"start": "file.tags.contains(\"#one\")",
+			"operator": "does not contain",
+			"expression": "!file.tags.contains(\"#one\")"
+		},
+		{
+			"kind": "file tags",
+			"start": "file.tags.contains(\"#one\")",
+			"operator": "does not contain any of",
+			"expression": "!file.tags.containsAny(\"#one\")"
+		},
+		{
+			"kind": "file tags",
+			"start": "file.tags.contains(\"#one\")",
+			"operator": "does not contain all of",
+			"expression": "!file.tags.containsAll(\"#one\")"
+		},
+		{
+			"kind": "file links",
+			"start": "file.links.contains(link(\"N\"))",
+			"operator": "is exactly",
+			"expression": "file.links == link(\"N\")"
+		},
+		{
+			"kind": "file links",
+			"start": "file.links.contains(link(\"N\"))",
+			"operator": "is not exactly",
+			"expression": "file.links != link(\"N\")"
+		},
+		{
+			"kind": "file links",
+			"start": "file.links.contains(link(\"N\"))",
+			"operator": "is empty",
+			"expression": "file.links.isEmpty()"
+		},
+		{
+			"kind": "file links",
+			"start": "file.links.contains(link(\"N\"))",
+			"operator": "contains",
+			"expression": "file.links.contains(link(\"N\"))"
+		},
+		{
+			"kind": "file links",
+			"start": "file.links.contains(link(\"N\"))",
+			"operator": "contains any of",
+			"expression": "file.links.containsAny(link(\"N\"))"
+		},
+		{
+			"kind": "file links",
+			"start": "file.links.contains(link(\"N\"))",
+			"operator": "contains all of",
+			"expression": "file.links.containsAll(link(\"N\"))"
+		},
+		{
+			"kind": "file links",
+			"start": "file.links.contains(link(\"N\"))",
+			"operator": "is not empty",
+			"expression": "!file.links.isEmpty()"
+		},
+		{
+			"kind": "file links",
+			"start": "file.links.contains(link(\"N\"))",
+			"operator": "does not contain",
+			"expression": "!file.links.contains(link(\"N\"))"
+		},
+		{
+			"kind": "file links",
+			"start": "file.links.contains(link(\"N\"))",
+			"operator": "does not contain any of",
+			"expression": "!file.links.containsAny(link(\"N\"))"
+		},
+		{
+			"kind": "file links",
+			"start": "file.links.contains(link(\"N\"))",
+			"operator": "does not contain all of",
+			"expression": "!file.links.containsAll(link(\"N\"))"
+		},
+		{
+			"kind": "link",
+			"start": "rel == \"[[N]]\"",
+			"operator": "is",
+			"expression": "rel == link(\"N\")"
+		},
+		{
+			"kind": "link",
+			"start": "rel == \"[[N]]\"",
+			"operator": "is not",
+			"expression": "rel != link(\"N\")"
+		},
+		{
+			"kind": "link",
+			"start": "rel == \"[[N]]\"",
+			"operator": "starts with",
+			"expression": "rel.startsWith(link(\"N\"))"
+		},
+		{
+			"kind": "link",
+			"start": "rel == \"[[N]]\"",
+			"operator": "ends with",
+			"expression": "rel.endsWith(link(\"N\"))"
+		},
+		{
+			"kind": "link",
+			"start": "rel == \"[[N]]\"",
+			"operator": "is empty",
+			"expression": "rel.isEmpty()"
+		},
+		{
+			"kind": "link",
+			"start": "rel == \"[[N]]\"",
+			"operator": "contains",
+			"expression": "rel.contains(link(\"N\"))"
+		},
+		{
+			"kind": "link",
+			"start": "rel == \"[[N]]\"",
+			"operator": "contains any of",
+			"expression": "rel.containsAny(link(\"N\"))"
+		},
+		{
+			"kind": "link",
+			"start": "rel == \"[[N]]\"",
+			"operator": "contains all of",
+			"expression": "rel.containsAll(link(\"N\"))"
+		},
+		{
+			"kind": "link",
+			"start": "rel == \"[[N]]\"",
+			"operator": "does not start with",
+			"expression": "!rel.startsWith(link(\"N\"))"
+		},
+		{
+			"kind": "link",
+			"start": "rel == \"[[N]]\"",
+			"operator": "does not end with",
+			"expression": "!rel.endsWith(link(\"N\"))"
+		},
+		{
+			"kind": "link",
+			"start": "rel == \"[[N]]\"",
+			"operator": "is not empty",
+			"expression": "!rel.isEmpty()"
+		},
+		{
+			"kind": "link",
+			"start": "rel == \"[[N]]\"",
+			"operator": "does not contain",
+			"expression": "!rel.contains(link(\"N\"))"
+		},
+		{
+			"kind": "link",
+			"start": "rel == \"[[N]]\"",
+			"operator": "does not contain any of",
+			"expression": "!rel.containsAny(link(\"N\"))"
+		},
+		{
+			"kind": "link",
+			"start": "rel == \"[[N]]\"",
+			"operator": "does not contain all of",
+			"expression": "!rel.containsAll(link(\"N\"))"
+		},
+		{
+			"kind": "formula number",
+			"start": "formula.f > 1",
+			"operator": "=",
+			"expression": "formula.f == 1"
+		},
+		{
+			"kind": "formula number",
+			"start": "formula.f > 1",
+			"operator": "≠",
+			"expression": "formula.f != 1"
+		},
+		{
+			"kind": "formula number",
+			"start": "formula.f > 1",
+			"operator": "<",
+			"expression": "formula.f < 1"
+		},
+		{
+			"kind": "formula number",
+			"start": "formula.f > 1",
+			"operator": "≤",
+			"expression": "formula.f <= 1"
+		},
+		{
+			"kind": "formula number",
+			"start": "formula.f > 1",
+			"operator": ">",
+			"expression": "formula.f > 1"
+		},
+		{
+			"kind": "formula number",
+			"start": "formula.f > 1",
+			"operator": "≥",
+			"expression": "formula.f >= 1"
+		},
+		{
+			"kind": "formula number",
+			"start": "formula.f > 1",
+			"operator": "is empty",
+			"expression": "formula.f.isEmpty()"
+		},
+		{
+			"kind": "formula number",
+			"start": "formula.f > 1",
+			"operator": "is not empty",
+			"expression": "!formula.f.isEmpty()"
+		}
+	],
+	"untouched": {
+		"before": "filters:\n  and:\n    - file.inFolder(\"zz-b5\")\nformulas:\n  f: n * 2\nviews:\n  - type: table\n    name: T\n    filters:\n      and:\n        - \"s == \\\"todo\\\"\"\n        - n > \"3\"\n        - note[\"s\"] != \"x\"\n        - rel == \"[[N]]\"\n        - \"s.lower() == \\\"x\\\"\"\n",
+		"after": "filters:\n  and:\n    - file.inFolder(\"zz-b5\")\nformulas:\n  f: n * 2\nviews:\n  - type: table\n    name: T\n    filters:\n      and:\n        - n > \"3\"\n        - note[\"s\"] != \"x\"\n        - rel == \"[[N]]\"\n        - s.lower() == \"x\"\n"
+	}
+}
