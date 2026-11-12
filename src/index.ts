@@ -1,2 +1,3 @@
-// Obsidian Bases engine: expressions, values, queries and .base files. Rebuilt in phases B1–B5 (see the Bases Plan).
-export {}
+// Obsidian Bases engine: expressions, values, queries and .base files.
+export type * from './expr/ast'
+export {parseExpression, ExpressionSyntaxError} from './expr/parse'

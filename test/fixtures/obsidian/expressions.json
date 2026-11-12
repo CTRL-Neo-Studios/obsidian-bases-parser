@@ -1,0 +1,2493 @@
+[
+	{
+		"expr": "1 + 2 * 3",
+		"ast": {
+			"type": "arithmetic",
+			"operator": "+",
+			"left": {
+				"type": "primitive",
+				"value": 1
+			},
+			"right": {
+				"type": "arithmetic",
+				"operator": "*",
+				"left": {
+					"type": "primitive",
+					"value": 2
+				},
+				"right": {
+					"type": "primitive",
+					"value": 3
+				}
+			}
+		}
+	},
+	{
+		"expr": "10 - 2 - 3",
+		"ast": {
+			"type": "arithmetic",
+			"operator": "-",
+			"left": {
+				"type": "arithmetic",
+				"operator": "-",
+				"left": {
+					"type": "primitive",
+					"value": 10
+				},
+				"right": {
+					"type": "primitive",
+					"value": 2
+				}
+			},
+			"right": {
+				"type": "primitive",
+				"value": 3
+			}
+		}
+	},
+	{
+		"expr": "2 * 3 % 4",
+		"ast": {
+			"type": "arithmetic",
+			"operator": "%",
+			"left": {
+				"type": "arithmetic",
+				"operator": "*",
+				"left": {
+					"type": "primitive",
+					"value": 2
+				},
+				"right": {
+					"type": "primitive",
+					"value": 3
+				}
+			},
+			"right": {
+				"type": "primitive",
+				"value": 4
+			}
+		}
+	},
+	{
+		"expr": "a % b * c",
+		"ast": {
+			"type": "arithmetic",
+			"operator": "*",
+			"left": {
+				"type": "arithmetic",
+				"operator": "%",
+				"left": {
+					"type": "ident",
+					"id": "a"
+				},
+				"right": {
+					"type": "ident",
+					"id": "b"
+				}
+			},
+			"right": {
+				"type": "ident",
+				"id": "c"
+			}
+		}
+	},
+	{
+		"expr": "1 * 2 + 3 * 4",
+		"ast": {
+			"type": "arithmetic",
+			"operator": "+",
+			"left": {
+				"type": "arithmetic",
+				"operator": "*",
+				"left": {
+					"type": "primitive",
+					"value": 1
+				},
+				"right": {
+					"type": "primitive",
+					"value": 2
+				}
+			},
+			"right": {
+				"type": "arithmetic",
+				"operator": "*",
+				"left": {
+					"type": "primitive",
+					"value": 3
+				},
+				"right": {
+					"type": "primitive",
+					"value": 4
+				}
+			}
+		}
+	},
+	{
+		"expr": "a / b / c",
+		"ast": {
+			"type": "arithmetic",
+			"operator": "/",
+			"left": {
+				"type": "arithmetic",
+				"operator": "/",
+				"left": {
+					"type": "ident",
+					"id": "a"
+				},
+				"right": {
+					"type": "ident",
+					"id": "b"
+				}
+			},
+			"right": {
+				"type": "ident",
+				"id": "c"
+			}
+		}
+	},
+	{
+		"expr": "n / 2",
+		"ast": {
+			"type": "arithmetic",
+			"operator": "/",
+			"left": {
+				"type": "ident",
+				"id": "n"
+			},
+			"right": {
+				"type": "primitive",
+				"value": 2
+			}
+		}
+	},
+	{
+		"expr": "\"a\" + 1",
+		"ast": {
+			"type": "arithmetic",
+			"operator": "+",
+			"left": {
+				"type": "primitive",
+				"value": "a"
+			},
+			"right": {
+				"type": "primitive",
+				"value": 1
+			}
+		}
+	},
+	{
+		"expr": "!true && false",
+		"ast": {
+			"type": "comparison",
+			"operator": "&&",
+			"left": {
+				"type": "not",
+				"expr": {
+					"type": "primitive",
+					"value": true
+				}
+			},
+			"right": {
+				"type": "primitive",
+				"value": false
+			}
+		}
+	},
+	{
+		"expr": "true || false && false",
+		"ast": {
+			"type": "comparison",
+			"operator": "||",
+			"left": {
+				"type": "primitive",
+				"value": true
+			},
+			"right": {
+				"type": "comparison",
+				"operator": "&&",
+				"left": {
+					"type": "primitive",
+					"value": false
+				},
+				"right": {
+					"type": "primitive",
+					"value": false
+				}
+			}
+		}
+	},
+	{
+		"expr": "a && b || c && d",
+		"ast": {
+			"type": "comparison",
+			"operator": "||",
+			"left": {
+				"type": "comparison",
+				"operator": "&&",
+				"left": {
+					"type": "ident",
+					"id": "a"
+				},
+				"right": {
+					"type": "ident",
+					"id": "b"
+				}
+			},
+			"right": {
+				"type": "comparison",
+				"operator": "&&",
+				"left": {
+					"type": "ident",
+					"id": "c"
+				},
+				"right": {
+					"type": "ident",
+					"id": "d"
+				}
+			}
+		}
+	},
+	{
+		"expr": "a || b || c",
+		"ast": {
+			"type": "comparison",
+			"operator": "||",
+			"left": {
+				"type": "comparison",
+				"operator": "||",
+				"left": {
+					"type": "ident",
+					"id": "a"
+				},
+				"right": {
+					"type": "ident",
+					"id": "b"
+				}
+			},
+			"right": {
+				"type": "ident",
+				"id": "c"
+			}
+		}
+	},
+	{
+		"expr": "1 == 1 == true",
+		"ast": {
+			"type": "comparison",
+			"operator": "==",
+			"left": {
+				"type": "comparison",
+				"operator": "==",
+				"left": {
+					"type": "primitive",
+					"value": 1
+				},
+				"right": {
+					"type": "primitive",
+					"value": 1
+				}
+			},
+			"right": {
+				"type": "primitive",
+				"value": true
+			}
+		}
+	},
+	{
+		"expr": "1 < 2 == true",
+		"ast": {
+			"type": "comparison",
+			"operator": "==",
+			"left": {
+				"type": "comparison",
+				"operator": "<",
+				"left": {
+					"type": "primitive",
+					"value": 1
+				},
+				"right": {
+					"type": "primitive",
+					"value": 2
+				}
+			},
+			"right": {
+				"type": "primitive",
+				"value": true
+			}
+		}
+	},
+	{
+		"expr": "1 == 2 < 3",
+		"ast": {
+			"type": "comparison",
+			"operator": "==",
+			"left": {
+				"type": "primitive",
+				"value": 1
+			},
+			"right": {
+				"type": "comparison",
+				"operator": "<",
+				"left": {
+					"type": "primitive",
+					"value": 2
+				},
+				"right": {
+					"type": "primitive",
+					"value": 3
+				}
+			}
+		}
+	},
+	{
+		"expr": "1 <= 2 >= 3",
+		"ast": {
+			"type": "comparison",
+			"operator": ">=",
+			"left": {
+				"type": "comparison",
+				"operator": "<=",
+				"left": {
+					"type": "primitive",
+					"value": 1
+				},
+				"right": {
+					"type": "primitive",
+					"value": 2
+				}
+			},
+			"right": {
+				"type": "primitive",
+				"value": 3
+			}
+		}
+	},
+	{
+		"expr": "1 != 2",
+		"ast": {
+			"type": "comparison",
+			"operator": "!=",
+			"left": {
+				"type": "primitive",
+				"value": 1
+			},
+			"right": {
+				"type": "primitive",
+				"value": 2
+			}
+		}
+	},
+	{
+		"expr": "1 + 2 == 3",
+		"ast": {
+			"type": "comparison",
+			"operator": "==",
+			"left": {
+				"type": "arithmetic",
+				"operator": "+",
+				"left": {
+					"type": "primitive",
+					"value": 1
+				},
+				"right": {
+					"type": "primitive",
+					"value": 2
+				}
+			},
+			"right": {
+				"type": "primitive",
+				"value": 3
+			}
+		}
+	},
+	{
+		"expr": "1 + 2 > 3 && 4",
+		"ast": {
+			"type": "comparison",
+			"operator": "&&",
+			"left": {
+				"type": "comparison",
+				"operator": ">",
+				"left": {
+					"type": "arithmetic",
+					"operator": "+",
+					"left": {
+						"type": "primitive",
+						"value": 1
+					},
+					"right": {
+						"type": "primitive",
+						"value": 2
+					}
+				},
+				"right": {
+					"type": "primitive",
+					"value": 3
+				}
+			},
+			"right": {
+				"type": "primitive",
+				"value": 4
+			}
+		}
+	},
+	{
+		"expr": "(1+2)*3",
+		"ast": {
+			"type": "arithmetic",
+			"operator": "*",
+			"left": {
+				"type": "paren_expr",
+				"value": {
+					"type": "arithmetic",
+					"operator": "+",
+					"left": {
+						"type": "primitive",
+						"value": 1
+					},
+					"right": {
+						"type": "primitive",
+						"value": 2
+					}
+				}
+			},
+			"right": {
+				"type": "primitive",
+				"value": 3
+			}
+		}
+	},
+	{
+		"expr": "(((1)))",
+		"ast": {
+			"type": "paren_expr",
+			"value": {
+				"type": "paren_expr",
+				"value": {
+					"type": "paren_expr",
+					"value": {
+						"type": "primitive",
+						"value": 1
+					}
+				}
+			}
+		}
+	},
+	{
+		"expr": "a<b",
+		"ast": {
+			"type": "comparison",
+			"operator": "<",
+			"left": {
+				"type": "ident",
+				"id": "a"
+			},
+			"right": {
+				"type": "ident",
+				"id": "b"
+			}
+		}
+	},
+	{
+		"expr": "-1",
+		"ast": {
+			"type": "primitive",
+			"value": -1
+		}
+	},
+	{
+		"expr": "- 1",
+		"ast": {
+			"type": "primitive",
+			"value": -1
+		}
+	},
+	{
+		"expr": "-1.5",
+		"ast": {
+			"type": "primitive",
+			"value": -1.5
+		}
+	},
+	{
+		"expr": "-.5",
+		"ast": {
+			"type": "primitive",
+			"value": -0.5
+		}
+	},
+	{
+		"expr": "--1",
+		"ast": {
+			"type": "negate",
+			"expr": {
+				"type": "primitive",
+				"value": -1
+			}
+		}
+	},
+	{
+		"expr": "!!true",
+		"ast": {
+			"type": "not",
+			"expr": {
+				"type": "not",
+				"expr": {
+					"type": "primitive",
+					"value": true
+				}
+			}
+		}
+	},
+	{
+		"expr": "- n",
+		"ast": {
+			"type": "negate",
+			"expr": {
+				"type": "ident",
+				"id": "n"
+			}
+		}
+	},
+	{
+		"expr": "-(1)",
+		"ast": {
+			"type": "negate",
+			"expr": {
+				"type": "paren_expr",
+				"value": {
+					"type": "primitive",
+					"value": 1
+				}
+			}
+		}
+	},
+	{
+		"expr": "-n * 2",
+		"ast": {
+			"type": "arithmetic",
+			"operator": "*",
+			"left": {
+				"type": "negate",
+				"expr": {
+					"type": "ident",
+					"id": "n"
+				}
+			},
+			"right": {
+				"type": "primitive",
+				"value": 2
+			}
+		}
+	},
+	{
+		"expr": "! a || b",
+		"ast": {
+			"type": "comparison",
+			"operator": "||",
+			"left": {
+				"type": "not",
+				"expr": {
+					"type": "ident",
+					"id": "a"
+				}
+			},
+			"right": {
+				"type": "ident",
+				"id": "b"
+			}
+		}
+	},
+	{
+		"expr": "-n.abs()",
+		"ast": {
+			"type": "negate",
+			"expr": {
+				"type": "function",
+				"name": "abs",
+				"subject": {
+					"type": "ident",
+					"id": "n"
+				},
+				"args": []
+			}
+		}
+	},
+	{
+		"expr": "-1 .abs()",
+		"ast": {
+			"type": "negate",
+			"expr": {
+				"type": "function",
+				"name": "abs",
+				"subject": {
+					"type": "primitive",
+					"value": 1
+				},
+				"args": []
+			}
+		}
+	},
+	{
+		"expr": "- 1 .abs()",
+		"ast": {
+			"type": "negate",
+			"expr": {
+				"type": "function",
+				"name": "abs",
+				"subject": {
+					"type": "primitive",
+					"value": 1
+				},
+				"args": []
+			}
+		}
+	},
+	{
+		"expr": "!n.isEmpty()",
+		"ast": {
+			"type": "not",
+			"expr": {
+				"type": "function",
+				"name": "isEmpty",
+				"subject": {
+					"type": "ident",
+					"id": "n"
+				},
+				"args": []
+			}
+		}
+	},
+	{
+		"expr": "!-1",
+		"ast": {
+			"type": "not",
+			"expr": {
+				"type": "primitive",
+				"value": -1
+			}
+		}
+	},
+	{
+		"expr": "-!a",
+		"ast": {
+			"type": "negate",
+			"expr": {
+				"type": "not",
+				"expr": {
+					"type": "ident",
+					"id": "a"
+				}
+			}
+		}
+	},
+	{
+		"expr": "n -1",
+		"ast": {
+			"type": "arithmetic",
+			"operator": "-",
+			"left": {
+				"type": "ident",
+				"id": "n"
+			},
+			"right": {
+				"type": "primitive",
+				"value": 1
+			}
+		}
+	},
+	{
+		"expr": "n-1",
+		"ast": {
+			"type": "arithmetic",
+			"operator": "-",
+			"left": {
+				"type": "ident",
+				"id": "n"
+			},
+			"right": {
+				"type": "primitive",
+				"value": 1
+			}
+		}
+	},
+	{
+		"expr": "1 - -1",
+		"ast": {
+			"type": "arithmetic",
+			"operator": "-",
+			"left": {
+				"type": "primitive",
+				"value": 1
+			},
+			"right": {
+				"type": "primitive",
+				"value": -1
+			}
+		}
+	},
+	{
+		"expr": "1 - - 1",
+		"ast": {
+			"type": "arithmetic",
+			"operator": "-",
+			"left": {
+				"type": "primitive",
+				"value": 1
+			},
+			"right": {
+				"type": "primitive",
+				"value": -1
+			}
+		}
+	},
+	{
+		"expr": "1--1",
+		"ast": {
+			"type": "arithmetic",
+			"operator": "-",
+			"left": {
+				"type": "primitive",
+				"value": 1
+			},
+			"right": {
+				"type": "primitive",
+				"value": -1
+			}
+		}
+	},
+	{
+		"expr": "1+-2",
+		"ast": {
+			"type": "arithmetic",
+			"operator": "+",
+			"left": {
+				"type": "primitive",
+				"value": 1
+			},
+			"right": {
+				"type": "primitive",
+				"value": -2
+			}
+		}
+	},
+	{
+		"expr": "1*-n",
+		"ast": {
+			"type": "arithmetic",
+			"operator": "*",
+			"left": {
+				"type": "primitive",
+				"value": 1
+			},
+			"right": {
+				"type": "negate",
+				"expr": {
+					"type": "ident",
+					"id": "n"
+				}
+			}
+		}
+	},
+	{
+		"expr": ".5",
+		"ast": {
+			"type": "primitive",
+			"value": 0.5
+		}
+	},
+	{
+		"expr": "0.5",
+		"ast": {
+			"type": "primitive",
+			"value": 0.5
+		}
+	},
+	{
+		"expr": "1.",
+		"ast": {
+			"type": "primitive",
+			"value": 1
+		}
+	},
+	{
+		"expr": "007",
+		"ast": {
+			"type": "primitive",
+			"value": 7
+		}
+	},
+	{
+		"expr": "\"\"",
+		"ast": {
+			"type": "primitive",
+			"value": ""
+		}
+	},
+	{
+		"expr": "''",
+		"ast": {
+			"type": "primitive",
+			"value": ""
+		}
+	},
+	{
+		"expr": "'a\\'b'",
+		"ast": {
+			"type": "primitive",
+			"value": "a'b"
+		}
+	},
+	{
+		"expr": "\"a\\\"b\\n\\tc\\\\d\"",
+		"ast": {
+			"type": "primitive",
+			"value": "a\"b\n\tc\\d"
+		}
+	},
+	{
+		"expr": "\"\\u0041\"",
+		"ast": {
+			"type": "primitive",
+			"value": "A"
+		}
+	},
+	{
+		"expr": "'\\u00e9'",
+		"ast": {
+			"type": "primitive",
+			"value": "é"
+		}
+	},
+	{
+		"expr": "'\\n'",
+		"ast": {
+			"type": "primitive",
+			"value": "\n"
+		}
+	},
+	{
+		"expr": "\"\\/\"",
+		"ast": {
+			"type": "primitive",
+			"value": "/"
+		}
+	},
+	{
+		"expr": "\"\\b\\f\\r\"",
+		"ast": {
+			"type": "primitive",
+			"value": "\b\f\r"
+		}
+	},
+	{
+		"expr": "\"it's\"",
+		"ast": {
+			"type": "primitive",
+			"value": "it's"
+		}
+	},
+	{
+		"expr": "'say \"hi\"'",
+		"ast": {
+			"type": "primitive",
+			"value": "say \"hi\""
+		}
+	},
+	{
+		"expr": "'\\\"'",
+		"ast": {
+			"type": "primitive",
+			"value": "\""
+		}
+	},
+	{
+		"expr": "null",
+		"ast": {
+			"type": "primitive",
+			"value": null
+		}
+	},
+	{
+		"expr": "true",
+		"ast": {
+			"type": "primitive",
+			"value": true
+		}
+	},
+	{
+		"expr": "false",
+		"ast": {
+			"type": "primitive",
+			"value": false
+		}
+	},
+	{
+		"expr": "[]",
+		"ast": {
+			"type": "array",
+			"elements": []
+		}
+	},
+	{
+		"expr": "[[1],[2]]",
+		"ast": {
+			"type": "array",
+			"elements": [
+				{
+					"type": "array",
+					"elements": [
+						{
+							"type": "primitive",
+							"value": 1
+						}
+					]
+				},
+				{
+					"type": "array",
+					"elements": [
+						{
+							"type": "primitive",
+							"value": 2
+						}
+					]
+				}
+			]
+		}
+	},
+	{
+		"expr": "[1,[2,[3]]][1][1][0]",
+		"ast": {
+			"type": "array_access",
+			"array": {
+				"type": "array_access",
+				"array": {
+					"type": "array_access",
+					"array": {
+						"type": "array",
+						"elements": [
+							{
+								"type": "primitive",
+								"value": 1
+							},
+							{
+								"type": "array",
+								"elements": [
+									{
+										"type": "primitive",
+										"value": 2
+									},
+									{
+										"type": "array",
+										"elements": [
+											{
+												"type": "primitive",
+												"value": 3
+											}
+										]
+									}
+								]
+							}
+						]
+					},
+					"index": {
+						"type": "primitive",
+						"value": 1
+					}
+				},
+				"index": {
+					"type": "primitive",
+					"value": 1
+				}
+			},
+			"index": {
+				"type": "primitive",
+				"value": 0
+			}
+		}
+	},
+	{
+		"expr": "\"a\"[0]",
+		"ast": {
+			"type": "array_access",
+			"array": {
+				"type": "primitive",
+				"value": "a"
+			},
+			"index": {
+				"type": "primitive",
+				"value": 0
+			}
+		}
+	},
+	{
+		"expr": "[1, 2].length",
+		"ast": {
+			"type": "object_access",
+			"object": {
+				"type": "array",
+				"elements": [
+					{
+						"type": "primitive",
+						"value": 1
+					},
+					{
+						"type": "primitive",
+						"value": 2
+					}
+				]
+			},
+			"index": "length"
+		}
+	},
+	{
+		"expr": "/a/",
+		"ast": {
+			"type": "regexp",
+			"pattern": "a",
+			"flags": ""
+		}
+	},
+	{
+		"expr": "/ab+c/i.matches(\"ABBC\")",
+		"ast": {
+			"type": "function",
+			"name": "matches",
+			"subject": {
+				"type": "regexp",
+				"pattern": "ab+c",
+				"flags": "i"
+			},
+			"args": [
+				{
+					"type": "primitive",
+					"value": "ABBC"
+				}
+			]
+		}
+	},
+	{
+		"expr": "/a/gimsuy",
+		"ast": {
+			"type": "regexp",
+			"pattern": "a",
+			"flags": "gimsuy"
+		}
+	},
+	{
+		"expr": "/\\d+/",
+		"ast": {
+			"type": "regexp",
+			"pattern": "\\d+",
+			"flags": ""
+		}
+	},
+	{
+		"expr": "/a\\/b/",
+		"ast": {
+			"type": "regexp",
+			"pattern": "a\\/b",
+			"flags": ""
+		}
+	},
+	{
+		"expr": "/[/]/",
+		"ast": {
+			"type": "regexp",
+			"pattern": "[/]",
+			"flags": ""
+		}
+	},
+	{
+		"expr": "1 + /x/",
+		"ast": {
+			"type": "arithmetic",
+			"operator": "+",
+			"left": {
+				"type": "primitive",
+				"value": 1
+			},
+			"right": {
+				"type": "regexp",
+				"pattern": "x",
+				"flags": ""
+			}
+		}
+	},
+	{
+		"expr": "list.filter(/x/.matches(value))",
+		"ast": {
+			"type": "function",
+			"name": "filter",
+			"subject": {
+				"type": "ident",
+				"id": "list"
+			},
+			"args": [
+				{
+					"type": "function",
+					"name": "matches",
+					"subject": {
+						"type": "regexp",
+						"pattern": "x",
+						"flags": ""
+					},
+					"args": [
+						{
+							"type": "ident",
+							"id": "value"
+						}
+					]
+				}
+			]
+		}
+	},
+	{
+		"expr": "n",
+		"ast": {
+			"type": "ident",
+			"id": "n"
+		}
+	},
+	{
+		"expr": "note.n",
+		"ast": {
+			"type": "object_access",
+			"object": {
+				"type": "ident",
+				"id": "note"
+			},
+			"index": "n"
+		}
+	},
+	{
+		"expr": "note[\"my prop\"]",
+		"ast": {
+			"type": "array_access",
+			"array": {
+				"type": "ident",
+				"id": "note"
+			},
+			"index": {
+				"type": "primitive",
+				"value": "my prop"
+			}
+		}
+	},
+	{
+		"expr": "file.name",
+		"ast": {
+			"type": "object_access",
+			"object": {
+				"type": "ident",
+				"id": "file"
+			},
+			"index": "name"
+		}
+	},
+	{
+		"expr": "a.b.c",
+		"ast": {
+			"type": "object_access",
+			"object": {
+				"type": "object_access",
+				"object": {
+					"type": "ident",
+					"id": "a"
+				},
+				"index": "b"
+			},
+			"index": "c"
+		}
+	},
+	{
+		"expr": "a . b",
+		"ast": {
+			"type": "object_access",
+			"object": {
+				"type": "ident",
+				"id": "a"
+			},
+			"index": "b"
+		}
+	},
+	{
+		"expr": "a.b .c",
+		"ast": {
+			"type": "object_access",
+			"object": {
+				"type": "object_access",
+				"object": {
+					"type": "ident",
+					"id": "a"
+				},
+				"index": "b"
+			},
+			"index": "c"
+		}
+	},
+	{
+		"expr": "list[0]",
+		"ast": {
+			"type": "array_access",
+			"array": {
+				"type": "ident",
+				"id": "list"
+			},
+			"index": {
+				"type": "primitive",
+				"value": 0
+			}
+		}
+	},
+	{
+		"expr": "list[-1]",
+		"ast": {
+			"type": "array_access",
+			"array": {
+				"type": "ident",
+				"id": "list"
+			},
+			"index": {
+				"type": "primitive",
+				"value": -1
+			}
+		}
+	},
+	{
+		"expr": "a[1][2]",
+		"ast": {
+			"type": "array_access",
+			"array": {
+				"type": "array_access",
+				"array": {
+					"type": "ident",
+					"id": "a"
+				},
+				"index": {
+					"type": "primitive",
+					"value": 1
+				}
+			},
+			"index": {
+				"type": "primitive",
+				"value": 2
+			}
+		}
+	},
+	{
+		"expr": "a[b[0]]",
+		"ast": {
+			"type": "array_access",
+			"array": {
+				"type": "ident",
+				"id": "a"
+			},
+			"index": {
+				"type": "array_access",
+				"array": {
+					"type": "ident",
+					"id": "b"
+				},
+				"index": {
+					"type": "primitive",
+					"value": 0
+				}
+			}
+		}
+	},
+	{
+		"expr": "a[ 0 ]",
+		"ast": {
+			"type": "array_access",
+			"array": {
+				"type": "ident",
+				"id": "a"
+			},
+			"index": {
+				"type": "primitive",
+				"value": 0
+			}
+		}
+	},
+	{
+		"expr": "名前",
+		"ast": {
+			"type": "ident",
+			"id": "名前"
+		}
+	},
+	{
+		"expr": "café",
+		"ast": {
+			"type": "ident",
+			"id": "café"
+		}
+	},
+	{
+		"expr": "emoji😀",
+		"ast": {
+			"type": "ident",
+			"id": "emoji😀"
+		}
+	},
+	{
+		"expr": "a€b",
+		"ast": {
+			"type": "ident",
+			"id": "a€b"
+		}
+	},
+	{
+		"expr": "a…b",
+		"ast": {
+			"type": "ident",
+			"id": "a…b"
+		}
+	},
+	{
+		"expr": "a—b",
+		"ast": {
+			"type": "ident",
+			"id": "a—b"
+		}
+	},
+	{
+		"expr": "my-prop",
+		"ast": {
+			"type": "arithmetic",
+			"operator": "-",
+			"left": {
+				"type": "ident",
+				"id": "my"
+			},
+			"right": {
+				"type": "ident",
+				"id": "prop"
+			}
+		}
+	},
+	{
+		"expr": "my_prop",
+		"ast": {
+			"type": "ident",
+			"id": "my_prop"
+		}
+	},
+	{
+		"expr": "_x",
+		"ast": {
+			"type": "ident",
+			"id": "_x"
+		}
+	},
+	{
+		"expr": "$x",
+		"ast": {
+			"type": "ident",
+			"id": "$x"
+		}
+	},
+	{
+		"expr": "$",
+		"ast": {
+			"type": "ident",
+			"id": "$"
+		}
+	},
+	{
+		"expr": "_",
+		"ast": {
+			"type": "ident",
+			"id": "_"
+		}
+	},
+	{
+		"expr": "x1",
+		"ast": {
+			"type": "ident",
+			"id": "x1"
+		}
+	},
+	{
+		"expr": "a.名前",
+		"ast": {
+			"type": "object_access",
+			"object": {
+				"type": "ident",
+				"id": "a"
+			},
+			"index": "名前"
+		}
+	},
+	{
+		"expr": "a.$b",
+		"ast": {
+			"type": "object_access",
+			"object": {
+				"type": "ident",
+				"id": "a"
+			},
+			"index": "$b"
+		}
+	},
+	{
+		"expr": "a._",
+		"ast": {
+			"type": "object_access",
+			"object": {
+				"type": "ident",
+				"id": "a"
+			},
+			"index": "_"
+		}
+	},
+	{
+		"expr": "a.b-c",
+		"ast": {
+			"type": "arithmetic",
+			"operator": "-",
+			"left": {
+				"type": "object_access",
+				"object": {
+					"type": "ident",
+					"id": "a"
+				},
+				"index": "b"
+			},
+			"right": {
+				"type": "ident",
+				"id": "c"
+			}
+		}
+	},
+	{
+		"expr": "undefined",
+		"ast": {
+			"type": "ident",
+			"id": "undefined"
+		}
+	},
+	{
+		"expr": "True",
+		"ast": {
+			"type": "ident",
+			"id": "True"
+		}
+	},
+	{
+		"expr": "and",
+		"ast": {
+			"type": "ident",
+			"id": "and"
+		}
+	},
+	{
+		"expr": "if",
+		"ast": {
+			"type": "ident",
+			"id": "if"
+		}
+	},
+	{
+		"expr": "true1",
+		"ast": {
+			"type": "ident",
+			"id": "true1"
+		}
+	},
+	{
+		"expr": "nullx",
+		"ast": {
+			"type": "ident",
+			"id": "nullx"
+		}
+	},
+	{
+		"expr": "truefalse",
+		"ast": {
+			"type": "ident",
+			"id": "truefalse"
+		}
+	},
+	{
+		"expr": "file.ctime.year",
+		"ast": {
+			"type": "object_access",
+			"object": {
+				"type": "object_access",
+				"object": {
+					"type": "ident",
+					"id": "file"
+				},
+				"index": "ctime"
+			},
+			"index": "year"
+		}
+	},
+	{
+		"expr": "this.file.name",
+		"ast": {
+			"type": "object_access",
+			"object": {
+				"type": "object_access",
+				"object": {
+					"type": "ident",
+					"id": "this"
+				},
+				"index": "file"
+			},
+			"index": "name"
+		}
+	},
+	{
+		"expr": "formula.f0",
+		"ast": {
+			"type": "object_access",
+			"object": {
+				"type": "ident",
+				"id": "formula"
+			},
+			"index": "f0"
+		}
+	},
+	{
+		"expr": "value",
+		"ast": {
+			"type": "ident",
+			"id": "value"
+		}
+	},
+	{
+		"expr": "now()",
+		"ast": {
+			"type": "function",
+			"name": "now",
+			"subject": null,
+			"args": []
+		}
+	},
+	{
+		"expr": "if(n > 1, \"a\", \"b\")",
+		"ast": {
+			"type": "function",
+			"name": "if",
+			"subject": null,
+			"args": [
+				{
+					"type": "comparison",
+					"operator": ">",
+					"left": {
+						"type": "ident",
+						"id": "n"
+					},
+					"right": {
+						"type": "primitive",
+						"value": 1
+					}
+				},
+				{
+					"type": "primitive",
+					"value": "a"
+				},
+				{
+					"type": "primitive",
+					"value": "b"
+				}
+			]
+		}
+	},
+	{
+		"expr": "max(1, 2, 3)",
+		"ast": {
+			"type": "function",
+			"name": "max",
+			"subject": null,
+			"args": [
+				{
+					"type": "primitive",
+					"value": 1
+				},
+				{
+					"type": "primitive",
+					"value": 2
+				},
+				{
+					"type": "primitive",
+					"value": 3
+				}
+			]
+		}
+	},
+	{
+		"expr": "(n).abs()",
+		"ast": {
+			"type": "function",
+			"name": "abs",
+			"subject": {
+				"type": "paren_expr",
+				"value": {
+					"type": "ident",
+					"id": "n"
+				}
+			},
+			"args": []
+		}
+	},
+	{
+		"expr": "list[0].abs()",
+		"ast": {
+			"type": "function",
+			"name": "abs",
+			"subject": {
+				"type": "array_access",
+				"array": {
+					"type": "ident",
+					"id": "list"
+				},
+				"index": {
+					"type": "primitive",
+					"value": 0
+				}
+			},
+			"args": []
+		}
+	},
+	{
+		"expr": "a.b.c()",
+		"ast": {
+			"type": "function",
+			"name": "c",
+			"subject": {
+				"type": "object_access",
+				"object": {
+					"type": "ident",
+					"id": "a"
+				},
+				"index": "b"
+			},
+			"args": []
+		}
+	},
+	{
+		"expr": "a.b[0].c(1)",
+		"ast": {
+			"type": "function",
+			"name": "c",
+			"subject": {
+				"type": "array_access",
+				"array": {
+					"type": "object_access",
+					"object": {
+						"type": "ident",
+						"id": "a"
+					},
+					"index": "b"
+				},
+				"index": {
+					"type": "primitive",
+					"value": 0
+				}
+			},
+			"args": [
+				{
+					"type": "primitive",
+					"value": 1
+				}
+			]
+		}
+	},
+	{
+		"expr": "a.if(1)",
+		"ast": {
+			"type": "function",
+			"name": "if",
+			"subject": {
+				"type": "ident",
+				"id": "a"
+			},
+			"args": [
+				{
+					"type": "primitive",
+					"value": 1
+				}
+			]
+		}
+	},
+	{
+		"expr": "f ()",
+		"ast": {
+			"type": "function",
+			"name": "f",
+			"subject": null,
+			"args": []
+		}
+	},
+	{
+		"expr": "f(\n1\n)",
+		"ast": {
+			"type": "function",
+			"name": "f",
+			"subject": null,
+			"args": [
+				{
+					"type": "primitive",
+					"value": 1
+				}
+			]
+		}
+	},
+	{
+		"expr": "x.y(1,2,3)",
+		"ast": {
+			"type": "function",
+			"name": "y",
+			"subject": {
+				"type": "ident",
+				"id": "x"
+			},
+			"args": [
+				{
+					"type": "primitive",
+					"value": 1
+				},
+				{
+					"type": "primitive",
+					"value": 2
+				},
+				{
+					"type": "primitive",
+					"value": 3
+				}
+			]
+		}
+	},
+	{
+		"expr": "f(g(h()))",
+		"ast": {
+			"type": "function",
+			"name": "f",
+			"subject": null,
+			"args": [
+				{
+					"type": "function",
+					"name": "g",
+					"subject": null,
+					"args": [
+						{
+							"type": "function",
+							"name": "h",
+							"subject": null,
+							"args": []
+						}
+					]
+				}
+			]
+		}
+	},
+	{
+		"expr": "true.toString()",
+		"ast": {
+			"type": "function",
+			"name": "toString",
+			"subject": {
+				"type": "primitive",
+				"value": true
+			},
+			"args": []
+		}
+	},
+	{
+		"expr": "1 .toString()",
+		"ast": {
+			"type": "function",
+			"name": "toString",
+			"subject": {
+				"type": "primitive",
+				"value": 1
+			},
+			"args": []
+		}
+	},
+	{
+		"expr": "\"abc\".upper()",
+		"ast": {
+			"type": "function",
+			"name": "upper",
+			"subject": {
+				"type": "primitive",
+				"value": "abc"
+			},
+			"args": []
+		}
+	},
+	{
+		"expr": "list.filter(value > 1)",
+		"ast": {
+			"type": "function",
+			"name": "filter",
+			"subject": {
+				"type": "ident",
+				"id": "list"
+			},
+			"args": [
+				{
+					"type": "comparison",
+					"operator": ">",
+					"left": {
+						"type": "ident",
+						"id": "value"
+					},
+					"right": {
+						"type": "primitive",
+						"value": 1
+					}
+				}
+			]
+		}
+	},
+	{
+		"expr": "list.map(value * 2).reduce(acc + value, 0)",
+		"ast": {
+			"type": "function",
+			"name": "reduce",
+			"subject": {
+				"type": "function",
+				"name": "map",
+				"subject": {
+					"type": "ident",
+					"id": "list"
+				},
+				"args": [
+					{
+						"type": "arithmetic",
+						"operator": "*",
+						"left": {
+							"type": "ident",
+							"id": "value"
+						},
+						"right": {
+							"type": "primitive",
+							"value": 2
+						}
+					}
+				]
+			},
+			"args": [
+				{
+					"type": "arithmetic",
+					"operator": "+",
+					"left": {
+						"type": "ident",
+						"id": "acc"
+					},
+					"right": {
+						"type": "ident",
+						"id": "value"
+					}
+				},
+				{
+					"type": "primitive",
+					"value": 0
+				}
+			]
+		}
+	},
+	{
+		"expr": " 1 ",
+		"ast": {
+			"type": "primitive",
+			"value": 1
+		}
+	},
+	{
+		"expr": "1\n+2",
+		"ast": {
+			"type": "arithmetic",
+			"operator": "+",
+			"left": {
+				"type": "primitive",
+				"value": 1
+			},
+			"right": {
+				"type": "primitive",
+				"value": 2
+			}
+		}
+	},
+	{
+		"expr": "1 +\t2",
+		"ast": {
+			"type": "arithmetic",
+			"operator": "+",
+			"left": {
+				"type": "primitive",
+				"value": 1
+			},
+			"right": {
+				"type": "primitive",
+				"value": 2
+			}
+		}
+	},
+	{
+		"expr": "\t1",
+		"ast": {
+			"type": "primitive",
+			"value": 1
+		}
+	},
+	{
+		"expr": "tags.filter(value.containsAny('kthalatir'))",
+		"ast": {
+			"type": "function",
+			"name": "filter",
+			"subject": {
+				"type": "ident",
+				"id": "tags"
+			},
+			"args": [
+				{
+					"type": "function",
+					"name": "containsAny",
+					"subject": {
+						"type": "ident",
+						"id": "value"
+					},
+					"args": [
+						{
+							"type": "primitive",
+							"value": "kthalatir"
+						}
+					]
+				}
+			]
+		}
+	},
+	{
+		"expr": "today() - file.ctime",
+		"ast": {
+			"type": "arithmetic",
+			"operator": "-",
+			"left": {
+				"type": "function",
+				"name": "today",
+				"subject": null,
+				"args": []
+			},
+			"right": {
+				"type": "object_access",
+				"object": {
+					"type": "ident",
+					"id": "file"
+				},
+				"index": "ctime"
+			}
+		}
+	},
+	{
+		"expr": "today() - file.mtime",
+		"ast": {
+			"type": "arithmetic",
+			"operator": "-",
+			"left": {
+				"type": "function",
+				"name": "today",
+				"subject": null,
+				"args": []
+			},
+			"right": {
+				"type": "object_access",
+				"object": {
+					"type": "ident",
+					"id": "file"
+				},
+				"index": "mtime"
+			}
+		}
+	},
+	{
+		"expr": "file.folder == \"Templates\"",
+		"ast": {
+			"type": "comparison",
+			"operator": "==",
+			"left": {
+				"type": "object_access",
+				"object": {
+					"type": "ident",
+					"id": "file"
+				},
+				"index": "folder"
+			},
+			"right": {
+				"type": "primitive",
+				"value": "Templates"
+			}
+		}
+	},
+	{
+		"expr": "note[\"my prop\"].lower()",
+		"ast": {
+			"type": "function",
+			"name": "lower",
+			"subject": {
+				"type": "array_access",
+				"array": {
+					"type": "ident",
+					"id": "note"
+				},
+				"index": {
+					"type": "primitive",
+					"value": "my prop"
+				}
+			},
+			"args": []
+		}
+	},
+	{
+		"expr": "formula[\"Time of Existence\"]",
+		"ast": {
+			"type": "array_access",
+			"array": {
+				"type": "ident",
+				"id": "formula"
+			},
+			"index": {
+				"type": "primitive",
+				"value": "Time of Existence"
+			}
+		}
+	},
+	{
+		"expr": "file.inFolder(\"zz-probe\")",
+		"ast": {
+			"type": "function",
+			"name": "inFolder",
+			"subject": {
+				"type": "ident",
+				"id": "file"
+			},
+			"args": [
+				{
+					"type": "primitive",
+					"value": "zz-probe"
+				}
+			]
+		}
+	},
+	{
+		"expr": "file.ext == \"md\"",
+		"ast": {
+			"type": "comparison",
+			"operator": "==",
+			"left": {
+				"type": "object_access",
+				"object": {
+					"type": "ident",
+					"id": "file"
+				},
+				"index": "ext"
+			},
+			"right": {
+				"type": "primitive",
+				"value": "md"
+			}
+		}
+	},
+	{
+		"expr": "priority * 2",
+		"ast": {
+			"type": "arithmetic",
+			"operator": "*",
+			"left": {
+				"type": "ident",
+				"id": "priority"
+			},
+			"right": {
+				"type": "primitive",
+				"value": 2
+			}
+		}
+	},
+	{
+		"expr": "image(\"https://obsidian.md/images/obsidian-logo-gradient.svg\")",
+		"ast": {
+			"type": "function",
+			"name": "image",
+			"subject": null,
+			"args": [
+				{
+					"type": "primitive",
+					"value": "https://obsidian.md/images/obsidian-logo-gradient.svg"
+				}
+			]
+		}
+	},
+	{
+		"expr": "icon(\"star\")",
+		"ast": {
+			"type": "function",
+			"name": "icon",
+			"subject": null,
+			"args": [
+				{
+					"type": "primitive",
+					"value": "star"
+				}
+			]
+		}
+	},
+	{
+		"expr": "html(\"<b>bold</b>\")",
+		"ast": {
+			"type": "function",
+			"name": "html",
+			"subject": null,
+			"args": [
+				{
+					"type": "primitive",
+					"value": "<b>bold</b>"
+				}
+			]
+		}
+	},
+	{
+		"expr": "priority.nope()",
+		"ast": {
+			"type": "function",
+			"name": "nope",
+			"subject": {
+				"type": "ident",
+				"id": "priority"
+			},
+			"args": []
+		}
+	},
+	{
+		"expr": "values.length * 2",
+		"ast": {
+			"type": "arithmetic",
+			"operator": "*",
+			"left": {
+				"type": "object_access",
+				"object": {
+					"type": "ident",
+					"id": "values"
+				},
+				"index": "length"
+			},
+			"right": {
+				"type": "primitive",
+				"value": 2
+			}
+		}
+	},
+	{
+		"expr": "((",
+		"error": "Unable to parse formula. (position 0)"
+	},
+	{
+		"expr": "1 +",
+		"error": "Unable to parse formula. (position 0)"
+	},
+	{
+		"expr": ")",
+		"error": "Unable to parse formula. (position 0)"
+	},
+	{
+		"expr": "a b",
+		"error": "Unable to parse formula. (position 1)"
+	},
+	{
+		"expr": "1 2",
+		"error": "Unable to parse formula. (position 1)"
+	},
+	{
+		"expr": "abc def",
+		"error": "Unable to parse formula. (position 0)"
+	},
+	{
+		"expr": "x y z w",
+		"error": "Unable to parse formula. (position 1)"
+	},
+	{
+		"expr": "a + b c",
+		"error": "Unable to parse formula. (position 0)"
+	},
+	{
+		"expr": "\"x\" \"y\"",
+		"error": "Unable to parse formula. (position 0)"
+	},
+	{
+		"expr": "(1 + 2",
+		"error": "Unable to parse formula. (position 0)"
+	},
+	{
+		"expr": "(1 + 2) 3",
+		"error": "Unable to parse formula. (position 7)"
+	},
+	{
+		"expr": "f(1, )",
+		"error": "Unable to parse formula. (position 0)"
+	},
+	{
+		"expr": "a.b +",
+		"error": "Unable to parse formula. (position 0)"
+	},
+	{
+		"expr": "1 + (2 *)",
+		"error": "Unable to parse formula. (position 0)"
+	},
+	{
+		"expr": "[1, 2",
+		"error": "Unable to parse formula. (position 0)"
+	},
+	{
+		"expr": "[1, 2, ]",
+		"error": "Unable to parse formula. (position 0)"
+	},
+	{
+		"expr": "a ? b : c",
+		"error": "Unable to parse formula. (position 1)"
+	},
+	{
+		"expr": "a.b(",
+		"error": "Unable to parse formula. (position 0)"
+	},
+	{
+		"expr": "n > 1 &&",
+		"error": "Unable to parse formula. (position 0)"
+	},
+	{
+		"expr": "a.",
+		"error": "Unable to parse formula. (position 0)"
+	},
+	{
+		"expr": "a..b",
+		"error": "Unable to parse formula. (position 0)"
+	},
+	{
+		"expr": "1 @ 2",
+		"error": "Unable to parse formula. (position 1)"
+	},
+	{
+		"expr": "a #b",
+		"error": "Unable to parse formula. (position 1)"
+	},
+	{
+		"expr": "\"abc",
+		"error": "Unable to parse formula. (position 0)"
+	},
+	{
+		"expr": "1e3",
+		"error": "Unable to parse formula. (position 0)"
+	},
+	{
+		"expr": "1.5e3",
+		"error": "Unable to parse formula. (position 0)"
+	},
+	{
+		"expr": "0x10",
+		"error": "Unable to parse formula. (position 0)"
+	},
+	{
+		"expr": "1_000",
+		"error": "Unable to parse formula. (position 0)"
+	},
+	{
+		"expr": "1 === 1",
+		"error": "Unable to parse formula. (position 0)"
+	},
+	{
+		"expr": "1 = 1",
+		"error": "Unable to parse formula. (position 1)"
+	},
+	{
+		"expr": "1 <> 2",
+		"error": "Unable to parse formula. (position 0)"
+	},
+	{
+		"expr": "{\"a\": 1}.a",
+		"error": "Unable to parse formula. (position 1)"
+	},
+	{
+		"expr": "{a: 1}",
+		"error": "Unable to parse formula. (position 1)"
+	},
+	{
+		"expr": "{}",
+		"error": "Unable to parse formula. (position 0)"
+	},
+	{
+		"expr": "true and false",
+		"error": "Unable to parse formula. (position 0)"
+	},
+	{
+		"expr": "not true",
+		"error": "Unable to parse formula. (position 0)"
+	},
+	{
+		"expr": "`x`",
+		"error": "Unable to parse formula. (position 1)"
+	},
+	{
+		"expr": "1x",
+		"error": "Unable to parse formula. (position 1)"
+	},
+	{
+		"expr": "1.5.2",
+		"error": "Unable to parse formula. (position 0)"
+	},
+	{
+		"expr": "1.toString()",
+		"error": "Unable to parse formula. (position 0)"
+	},
+	{
+		"expr": "a.1",
+		"error": "Unable to parse formula. (position 0)"
+	},
+	{
+		"expr": "a.true",
+		"error": "Unable to parse formula. (position 0)"
+	},
+	{
+		"expr": "\"\\x41\"",
+		"error": "Bad escaped character in JSON at position 2 (line 1 column 3)"
+	},
+	{
+		"expr": "\"\\q\"",
+		"error": "Bad escaped character in JSON at position 2 (line 1 column 3)"
+	},
+	{
+		"expr": "'\\x'",
+		"error": "Unable to parse formula. (position 0)"
+	},
+	{
+		"expr": "\"a\nb\"",
+		"error": "Unable to parse formula. (position 3)"
+	},
+	{
+		"expr": "\"a\tb\"",
+		"error": "Bad control character in string literal in JSON at position 2 (line 1 column 3)"
+	},
+	{
+		"expr": "\"\\'\"",
+		"error": "Bad escaped character in JSON at position 2 (line 1 column 3)"
+	},
+	{
+		"expr": "//",
+		"error": "Unable to parse formula. (position 0)"
+	},
+	{
+		"expr": "/a",
+		"error": "Invalid flags supplied to RegExp constructor 'a'"
+	},
+	{
+		"expr": "a!b",
+		"error": "Unable to parse formula. (position 0)"
+	},
+	{
+		"expr": "a=b",
+		"error": "Unable to parse formula. (position 1)"
+	},
+	{
+		"expr": "a@b",
+		"error": "Unable to parse formula. (position 1)"
+	},
+	{
+		"expr": "a?b",
+		"error": "Unable to parse formula. (position 1)"
+	},
+	{
+		"expr": "a~b",
+		"error": "Unable to parse formula. (position 1)"
+	},
+	{
+		"expr": "a^b",
+		"error": "Unable to parse formula. (position 1)"
+	},
+	{
+		"expr": "a&b",
+		"error": "Unable to parse formula. (position 1)"
+	},
+	{
+		"expr": "a|b",
+		"error": "Unable to parse formula. (position 1)"
+	},
+	{
+		"expr": "a:b",
+		"error": "Unable to parse formula. (position 1)"
+	},
+	{
+		"expr": "a;b",
+		"error": "Unable to parse formula. (position 1)"
+	},
+	{
+		"expr": "a,b",
+		"error": "Unable to parse formula. (position 1)"
+	},
+	{
+		"expr": "a\\b",
+		"error": "Unable to parse formula. (position 1)"
+	},
+	{
+		"expr": "a b",
+		"error": "Unable to parse formula. (position 1)"
+	},
+	{
+		"expr": "a'b",
+		"error": "Unable to parse formula. (position 1)"
+	},
+	{
+		"expr": "a\"b",
+		"error": "Unable to parse formula. (position 1)"
+	},
+	{
+		"expr": "a{b",
+		"error": "Unable to parse formula. (position 1)"
+	},
+	{
+		"expr": "a}b",
+		"error": "Unable to parse formula. (position 1)"
+	},
+	{
+		"expr": "f()()",
+		"error": "Invalid function name"
+	},
+	{
+		"expr": "(n)()",
+		"error": "Invalid function name"
+	},
+	{
+		"expr": "list[0]()",
+		"error": "Invalid function name"
+	},
+	{
+		"expr": "\"x\"()",
+		"error": "Invalid function name"
+	},
+	{
+		"expr": "a[\"b\"]()",
+		"error": "Invalid function name"
+	},
+	{
+		"expr": "",
+		"ast": {
+			"type": "empty"
+		}
+	},
+	{
+		"expr": "   ",
+		"ast": {
+			"type": "empty"
+		}
+	},
+	{
+		"expr": "1 // c",
+		"error": "Invalid flags supplied to RegExp constructor ' c'"
+	},
+	{
+		"expr": "/a/x",
+		"error": "Unable to parse formula. (position 3)"
+	}
+]
