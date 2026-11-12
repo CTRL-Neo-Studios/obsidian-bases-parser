@@ -28,6 +28,10 @@ export type Value =
 	| {type: 'Error'; message: string}
 
 export type TypeName = Value['type']
+
+// Numeric-aware, case- and accent-blind: `2, 9, 10`; `a` and `A` tie (Obsidian's sorting of text).
+const collator = new Intl.Collator('en', {numeric: true, sensitivity: 'base'})
+export const collate = (a: string, b: string) => collator.compare(a, b)
 export type ValueOf<T extends TypeName> = Extract<Value, {type: T}>
 
 export const NULL: Value = {type: 'Null'}

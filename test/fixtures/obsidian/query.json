@@ -1,0 +1,6403 @@
+{
+	"obsidian": "1.15.1",
+	"base": "zz-b3/Q.base",
+	"files": {
+		"zz-b3/0.md": {
+			"ctime": 1794517610567,
+			"mtime": 1794517610567,
+			"size": 21,
+			"frontmatter": {
+				"s": "zero",
+				"n": 3
+			},
+			"tags": []
+		},
+		"zz-b3/H.md": {
+			"ctime": 1794517595330,
+			"mtime": 1794517595330,
+			"size": 21,
+			"frontmatter": null,
+			"tags": [
+				"#one"
+			]
+		},
+		"zz-b3/G.md": {
+			"ctime": 1794517595328,
+			"mtime": 1794517595328,
+			"size": 22,
+			"frontmatter": {
+				"s": "9",
+				"n": 100
+			},
+			"tags": []
+		},
+		"zz-b3/F.md": {
+			"ctime": 1794517595320,
+			"mtime": 1794517595320,
+			"size": 39,
+			"frontmatter": {
+				"s": "",
+				"n": 0,
+				"l": "x",
+				"mixed": "[[A]]"
+			},
+			"tags": []
+		},
+		"zz-b3/E.md": {
+			"ctime": 1794517595318,
+			"mtime": 1794517595318,
+			"size": 41,
+			"frontmatter": {
+				"n": null,
+				"b": false,
+				"l": [
+					"x"
+				],
+				"mixed": [
+					1,
+					2
+				]
+			},
+			"tags": []
+		},
+		"zz-b3/D.md": {
+			"ctime": 1794517595316,
+			"mtime": 1794517595316,
+			"size": 78,
+			"frontmatter": {
+				"s": "10",
+				"n": 2.5,
+				"d": "2026-01-05",
+				"l": [],
+				"mixed": "2026-01-01",
+				"tags": [
+					"one",
+					"two"
+				]
+			},
+			"tags": []
+		},
+		"zz-b3/C.md": {
+			"ctime": 1794517595313,
+			"mtime": 1794517595313,
+			"size": 91,
+			"frontmatter": {
+				"s": "apple",
+				"n": -1,
+				"b": true,
+				"d": "2026-03-01",
+				"dt": "2026-03-01T08:00:00",
+				"l": [
+					"x",
+					"y"
+				],
+				"mixed": true
+			},
+			"tags": []
+		},
+		"zz-b3/B.md": {
+			"ctime": 1794517595304,
+			"mtime": 1794517595305,
+			"size": 76,
+			"frontmatter": {
+				"s": "Apple",
+				"n": 2,
+				"b": false,
+				"d": "2025-12-31",
+				"l": [
+					"y"
+				],
+				"mixed": "five",
+				"tags": [
+					"two"
+				]
+			},
+			"tags": []
+		},
+		"zz-b3/A.md": {
+			"ctime": 1794517595301,
+			"mtime": 1794517595302,
+			"size": 108,
+			"frontmatter": {
+				"s": "banana",
+				"n": 10,
+				"b": true,
+				"d": "2026-01-05",
+				"dt": "2026-01-05T10:00:00",
+				"l": [
+					"x",
+					"y"
+				],
+				"mixed": 5,
+				"tags": [
+					"one"
+				]
+			},
+			"tags": []
+		},
+		"zz-b3/sub/I.md": {
+			"ctime": 1794517595332,
+			"mtime": 1794517595332,
+			"size": 28,
+			"frontmatter": {
+				"s": "Zed",
+				"n": 7,
+				"b": true
+			},
+			"tags": []
+		}
+	},
+	"bases": {
+		"sortGroup": "filters:\n  and:\n    - file.inFolder(\"zz-b3\")\n    - file.ext == \"md\"\nformulas:\n  len: s.length\n  err: n.nope()\nviews:\n  - type: table\n    name: \"sort s ASC\"\n    sort:\n      - property: s\n        direction: ASC\n  - type: table\n    name: \"sort s DESC\"\n    sort:\n      - property: s\n        direction: DESC\n  - type: table\n    name: \"sort n ASC\"\n    sort:\n      - property: n\n        direction: ASC\n  - type: table\n    name: \"sort n DESC\"\n    sort:\n      - property: n\n        direction: DESC\n  - type: table\n    name: \"sort b ASC\"\n    sort:\n      - property: b\n        direction: ASC\n  - type: table\n    name: \"sort b DESC\"\n    sort:\n      - property: b\n        direction: DESC\n  - type: table\n    name: \"sort d ASC\"\n    sort:\n      - property: d\n        direction: ASC\n  - type: table\n    name: \"sort d DESC\"\n    sort:\n      - property: d\n        direction: DESC\n  - type: table\n    name: \"sort dt ASC\"\n    sort:\n      - property: dt\n        direction: ASC\n  - type: table\n    name: \"sort l ASC\"\n    sort:\n      - property: l\n        direction: ASC\n  - type: table\n    name: \"sort l DESC\"\n    sort:\n      - property: l\n        direction: DESC\n  - type: table\n    name: \"sort mixed ASC\"\n    sort:\n      - property: mixed\n        direction: ASC\n  - type: table\n    name: \"sort mixed DESC\"\n    sort:\n      - property: mixed\n        direction: DESC\n  - type: table\n    name: \"sort file.name DESC\"\n    sort:\n      - property: file.name\n        direction: DESC\n  - type: table\n    name: \"sort tags ASC\"\n    sort:\n      - property: tags\n        direction: ASC\n  - type: table\n    name: \"sort formula.len ASC\"\n    sort:\n      - property: formula.len\n        direction: ASC\n  - type: table\n    name: \"sort formula.err ASC\"\n    sort:\n      - property: formula.err\n        direction: ASC\n  - type: table\n    name: multi\n    sort:\n      - property: b\n        direction: ASC\n      - property: n\n        direction: DESC\n  - type: table\n    name: nosort\n  - type: table\n    name: \"group s ASC\"\n    groupBy:\n      property: s\n      direction: ASC\n  - type: table\n    name: \"group s DESC\"\n    groupBy:\n      property: s\n      direction: DESC\n  - type: table\n    name: \"group n ASC\"\n    groupBy:\n      property: n\n      direction: ASC\n  - type: table\n    name: \"group b ASC\"\n    groupBy:\n      property: b\n      direction: ASC\n  - type: table\n    name: \"group d ASC\"\n    groupBy:\n      property: d\n      direction: ASC\n  - type: table\n    name: \"group l ASC\"\n    groupBy:\n      property: l\n      direction: ASC\n  - type: table\n    name: \"group l DESC\"\n    groupBy:\n      property: l\n      direction: DESC\n  - type: table\n    name: \"group mixed ASC\"\n    groupBy:\n      property: mixed\n      direction: ASC\n  - type: table\n    name: \"group file.folder ASC\"\n    groupBy:\n      property: file.folder\n      direction: ASC\n  - type: table\n    name: \"group tags ASC\"\n    groupBy:\n      property: tags\n      direction: ASC\n  - type: table\n    name: \"group formula.len DESC\"\n    groupBy:\n      property: formula.len\n      direction: DESC\n  - type: table\n    name: grouped sorted limited\n    groupBy:\n      property: b\n      direction: ASC\n    sort:\n      - property: n\n        direction: DESC\n    limit: 4\n  - type: table\n    name: limit 3\n    sort:\n      - property: n\n        direction: ASC\n    limit: 3\n  - type: table\n    name: groupOrder\n    groupBy:\n      property: b\n      direction: ASC\n    groupOrder:\n      - false\n      - null\n  - type: table\n    name: groupOrder2\n    groupBy:\n      property: s\n      direction: ASC\n    groupOrder:\n      - banana\n      - Apple\n",
+		"filters": "filters:\n  and:\n    - file.inFolder(\"zz-b3\")\n    - file.ext == \"md\"\nformulas:\n  half: n / 2\nviews:\n  - type: table\n    name: \"string\"\n    filters: \"n > 2\"\n  - type: table\n    name: \"or\"\n    filters: \n      or:\n        - s == \"apple\"\n        - n > 50\n  - type: table\n    name: \"not many\"\n    filters: \n      not:\n        - n > 50\n        - s == \"apple\"\n  - type: table\n    name: \"nested\"\n    filters: \n      and:\n        - b == true\n        - or:\n            - n > 5\n            - file.inFolder(\"zz-b3/sub\")\n  - type: table\n    name: \"error rows\"\n    filters: \"n.abs() > 1\"\n  - type: table\n    name: \"error all\"\n    filters: \"n.nope()\"\n  - type: table\n    name: \"formula filter\"\n    filters: \"formula.half > 1\"\n  - type: table\n    name: \"null compare\"\n    filters: \"d < date(\\\"2026-02-01\\\")\"\n  - type: table\n    name: \"not error\"\n    filters: \n      not:\n        - n.nope()\n  - type: table\n    name: \"empty and\"\n    filters: \n      and: []\n  - type: table\n    name: \"list contains\"\n    filters: \"l.contains(\\\"x\\\")\"\n  - type: table\n    name: \"tags filter\"\n    filters: \"file.hasTag(\\\"one\\\")\"\n  - type: table\n    name: search\n    order: [file.name, s, n, b, d, l, mixed]\n",
+		"search": "filters:\n  and:\n    - file.inFolder(\"zz-b3\")\n    - file.ext == \"md\"\nformulas:\n  nn: empty.nope()\n  nn2: n.abs()\nviews:\n  - type: table\n    name: search\n    order: [file.name, s, n, b, d, l, mixed, formula.nn, formula.nn2]\n  - type: table\n    name: string\n    filters: \"n > 2\"\n  - type: table\n    name: string2\n    filters: n > 2\n",
+		"summaries": "filters:\n  and:\n    - file.inFolder(\"zz-b3\")\n    - file.ext == \"md\"\nformulas:\n  half: n / 2\nsummaries:\n  Twice: values.length * 2\n  Mean: values.mean()\n  Bad: values.nope()\n  Echo: values\nviews:\n  - type: table\n    name: T\n    order: [file.name, s, n, b, d, l, mixed, formula.half]\n    summaries:\n      n: Sum\n"
+	},
+	"sortGroup": [
+		{
+			"view": "sort s ASC",
+			"rows": [
+				"zz-b3/F.md",
+				"zz-b3/G.md",
+				"zz-b3/D.md",
+				"zz-b3/B.md",
+				"zz-b3/C.md",
+				"zz-b3/A.md",
+				"zz-b3/sub/I.md",
+				"zz-b3/0.md",
+				"zz-b3/E.md",
+				"zz-b3/H.md"
+			],
+			"groups": [
+				{
+					"key": null,
+					"rows": [
+						"zz-b3/F.md",
+						"zz-b3/G.md",
+						"zz-b3/D.md",
+						"zz-b3/B.md",
+						"zz-b3/C.md",
+						"zz-b3/A.md",
+						"zz-b3/sub/I.md",
+						"zz-b3/0.md",
+						"zz-b3/E.md",
+						"zz-b3/H.md"
+					]
+				}
+			]
+		},
+		{
+			"view": "sort s DESC",
+			"rows": [
+				"zz-b3/0.md",
+				"zz-b3/sub/I.md",
+				"zz-b3/A.md",
+				"zz-b3/B.md",
+				"zz-b3/C.md",
+				"zz-b3/D.md",
+				"zz-b3/G.md",
+				"zz-b3/F.md",
+				"zz-b3/E.md",
+				"zz-b3/H.md"
+			],
+			"groups": [
+				{
+					"key": null,
+					"rows": [
+						"zz-b3/0.md",
+						"zz-b3/sub/I.md",
+						"zz-b3/A.md",
+						"zz-b3/B.md",
+						"zz-b3/C.md",
+						"zz-b3/D.md",
+						"zz-b3/G.md",
+						"zz-b3/F.md",
+						"zz-b3/E.md",
+						"zz-b3/H.md"
+					]
+				}
+			]
+		},
+		{
+			"view": "sort n ASC",
+			"rows": [
+				"zz-b3/C.md",
+				"zz-b3/F.md",
+				"zz-b3/B.md",
+				"zz-b3/D.md",
+				"zz-b3/0.md",
+				"zz-b3/sub/I.md",
+				"zz-b3/A.md",
+				"zz-b3/G.md",
+				"zz-b3/E.md",
+				"zz-b3/H.md"
+			],
+			"groups": [
+				{
+					"key": null,
+					"rows": [
+						"zz-b3/C.md",
+						"zz-b3/F.md",
+						"zz-b3/B.md",
+						"zz-b3/D.md",
+						"zz-b3/0.md",
+						"zz-b3/sub/I.md",
+						"zz-b3/A.md",
+						"zz-b3/G.md",
+						"zz-b3/E.md",
+						"zz-b3/H.md"
+					]
+				}
+			]
+		},
+		{
+			"view": "sort n DESC",
+			"rows": [
+				"zz-b3/G.md",
+				"zz-b3/A.md",
+				"zz-b3/sub/I.md",
+				"zz-b3/0.md",
+				"zz-b3/D.md",
+				"zz-b3/B.md",
+				"zz-b3/F.md",
+				"zz-b3/C.md",
+				"zz-b3/E.md",
+				"zz-b3/H.md"
+			],
+			"groups": [
+				{
+					"key": null,
+					"rows": [
+						"zz-b3/G.md",
+						"zz-b3/A.md",
+						"zz-b3/sub/I.md",
+						"zz-b3/0.md",
+						"zz-b3/D.md",
+						"zz-b3/B.md",
+						"zz-b3/F.md",
+						"zz-b3/C.md",
+						"zz-b3/E.md",
+						"zz-b3/H.md"
+					]
+				}
+			]
+		},
+		{
+			"view": "sort b ASC",
+			"rows": [
+				"zz-b3/0.md",
+				"zz-b3/B.md",
+				"zz-b3/D.md",
+				"zz-b3/E.md",
+				"zz-b3/F.md",
+				"zz-b3/G.md",
+				"zz-b3/H.md",
+				"zz-b3/A.md",
+				"zz-b3/C.md",
+				"zz-b3/sub/I.md"
+			],
+			"groups": [
+				{
+					"key": null,
+					"rows": [
+						"zz-b3/0.md",
+						"zz-b3/B.md",
+						"zz-b3/D.md",
+						"zz-b3/E.md",
+						"zz-b3/F.md",
+						"zz-b3/G.md",
+						"zz-b3/H.md",
+						"zz-b3/A.md",
+						"zz-b3/C.md",
+						"zz-b3/sub/I.md"
+					]
+				}
+			]
+		},
+		{
+			"view": "sort b DESC",
+			"rows": [
+				"zz-b3/A.md",
+				"zz-b3/C.md",
+				"zz-b3/sub/I.md",
+				"zz-b3/0.md",
+				"zz-b3/B.md",
+				"zz-b3/D.md",
+				"zz-b3/E.md",
+				"zz-b3/F.md",
+				"zz-b3/G.md",
+				"zz-b3/H.md"
+			],
+			"groups": [
+				{
+					"key": null,
+					"rows": [
+						"zz-b3/A.md",
+						"zz-b3/C.md",
+						"zz-b3/sub/I.md",
+						"zz-b3/0.md",
+						"zz-b3/B.md",
+						"zz-b3/D.md",
+						"zz-b3/E.md",
+						"zz-b3/F.md",
+						"zz-b3/G.md",
+						"zz-b3/H.md"
+					]
+				}
+			]
+		},
+		{
+			"view": "sort d ASC",
+			"rows": [
+				"zz-b3/B.md",
+				"zz-b3/A.md",
+				"zz-b3/D.md",
+				"zz-b3/C.md",
+				"zz-b3/0.md",
+				"zz-b3/E.md",
+				"zz-b3/F.md",
+				"zz-b3/G.md",
+				"zz-b3/H.md",
+				"zz-b3/sub/I.md"
+			],
+			"groups": [
+				{
+					"key": null,
+					"rows": [
+						"zz-b3/B.md",
+						"zz-b3/A.md",
+						"zz-b3/D.md",
+						"zz-b3/C.md",
+						"zz-b3/0.md",
+						"zz-b3/E.md",
+						"zz-b3/F.md",
+						"zz-b3/G.md",
+						"zz-b3/H.md",
+						"zz-b3/sub/I.md"
+					]
+				}
+			]
+		},
+		{
+			"view": "sort d DESC",
+			"rows": [
+				"zz-b3/C.md",
+				"zz-b3/A.md",
+				"zz-b3/D.md",
+				"zz-b3/B.md",
+				"zz-b3/0.md",
+				"zz-b3/E.md",
+				"zz-b3/F.md",
+				"zz-b3/G.md",
+				"zz-b3/H.md",
+				"zz-b3/sub/I.md"
+			],
+			"groups": [
+				{
+					"key": null,
+					"rows": [
+						"zz-b3/C.md",
+						"zz-b3/A.md",
+						"zz-b3/D.md",
+						"zz-b3/B.md",
+						"zz-b3/0.md",
+						"zz-b3/E.md",
+						"zz-b3/F.md",
+						"zz-b3/G.md",
+						"zz-b3/H.md",
+						"zz-b3/sub/I.md"
+					]
+				}
+			]
+		},
+		{
+			"view": "sort dt ASC",
+			"rows": [
+				"zz-b3/A.md",
+				"zz-b3/C.md",
+				"zz-b3/0.md",
+				"zz-b3/B.md",
+				"zz-b3/D.md",
+				"zz-b3/E.md",
+				"zz-b3/F.md",
+				"zz-b3/G.md",
+				"zz-b3/H.md",
+				"zz-b3/sub/I.md"
+			],
+			"groups": [
+				{
+					"key": null,
+					"rows": [
+						"zz-b3/A.md",
+						"zz-b3/C.md",
+						"zz-b3/0.md",
+						"zz-b3/B.md",
+						"zz-b3/D.md",
+						"zz-b3/E.md",
+						"zz-b3/F.md",
+						"zz-b3/G.md",
+						"zz-b3/H.md",
+						"zz-b3/sub/I.md"
+					]
+				}
+			]
+		},
+		{
+			"view": "sort l ASC",
+			"rows": [
+				"zz-b3/D.md",
+				"zz-b3/E.md",
+				"zz-b3/F.md",
+				"zz-b3/A.md",
+				"zz-b3/C.md",
+				"zz-b3/B.md",
+				"zz-b3/0.md",
+				"zz-b3/G.md",
+				"zz-b3/H.md",
+				"zz-b3/sub/I.md"
+			],
+			"groups": [
+				{
+					"key": null,
+					"rows": [
+						"zz-b3/D.md",
+						"zz-b3/E.md",
+						"zz-b3/F.md",
+						"zz-b3/A.md",
+						"zz-b3/C.md",
+						"zz-b3/B.md",
+						"zz-b3/0.md",
+						"zz-b3/G.md",
+						"zz-b3/H.md",
+						"zz-b3/sub/I.md"
+					]
+				}
+			]
+		},
+		{
+			"view": "sort l DESC",
+			"rows": [
+				"zz-b3/B.md",
+				"zz-b3/A.md",
+				"zz-b3/C.md",
+				"zz-b3/E.md",
+				"zz-b3/F.md",
+				"zz-b3/D.md",
+				"zz-b3/0.md",
+				"zz-b3/G.md",
+				"zz-b3/H.md",
+				"zz-b3/sub/I.md"
+			],
+			"groups": [
+				{
+					"key": null,
+					"rows": [
+						"zz-b3/B.md",
+						"zz-b3/A.md",
+						"zz-b3/C.md",
+						"zz-b3/E.md",
+						"zz-b3/F.md",
+						"zz-b3/D.md",
+						"zz-b3/0.md",
+						"zz-b3/G.md",
+						"zz-b3/H.md",
+						"zz-b3/sub/I.md"
+					]
+				}
+			]
+		},
+		{
+			"view": "sort mixed ASC",
+			"rows": [
+				"zz-b3/F.md",
+				"zz-b3/E.md",
+				"zz-b3/A.md",
+				"zz-b3/D.md",
+				"zz-b3/B.md",
+				"zz-b3/0.md",
+				"zz-b3/G.md",
+				"zz-b3/H.md",
+				"zz-b3/sub/I.md",
+				"zz-b3/C.md"
+			],
+			"groups": [
+				{
+					"key": null,
+					"rows": [
+						"zz-b3/F.md",
+						"zz-b3/E.md",
+						"zz-b3/A.md",
+						"zz-b3/D.md",
+						"zz-b3/B.md",
+						"zz-b3/0.md",
+						"zz-b3/G.md",
+						"zz-b3/H.md",
+						"zz-b3/sub/I.md",
+						"zz-b3/C.md"
+					]
+				}
+			]
+		},
+		{
+			"view": "sort mixed DESC",
+			"rows": [
+				"zz-b3/B.md",
+				"zz-b3/A.md",
+				"zz-b3/C.md",
+				"zz-b3/D.md",
+				"zz-b3/E.md",
+				"zz-b3/F.md",
+				"zz-b3/0.md",
+				"zz-b3/G.md",
+				"zz-b3/H.md",
+				"zz-b3/sub/I.md"
+			],
+			"groups": [
+				{
+					"key": null,
+					"rows": [
+						"zz-b3/B.md",
+						"zz-b3/A.md",
+						"zz-b3/C.md",
+						"zz-b3/D.md",
+						"zz-b3/E.md",
+						"zz-b3/F.md",
+						"zz-b3/0.md",
+						"zz-b3/G.md",
+						"zz-b3/H.md",
+						"zz-b3/sub/I.md"
+					]
+				}
+			]
+		},
+		{
+			"view": "sort file.name DESC",
+			"rows": [
+				"zz-b3/sub/I.md",
+				"zz-b3/H.md",
+				"zz-b3/G.md",
+				"zz-b3/F.md",
+				"zz-b3/E.md",
+				"zz-b3/D.md",
+				"zz-b3/C.md",
+				"zz-b3/B.md",
+				"zz-b3/A.md",
+				"zz-b3/0.md"
+			],
+			"groups": [
+				{
+					"key": null,
+					"rows": [
+						"zz-b3/sub/I.md",
+						"zz-b3/H.md",
+						"zz-b3/G.md",
+						"zz-b3/F.md",
+						"zz-b3/E.md",
+						"zz-b3/D.md",
+						"zz-b3/C.md",
+						"zz-b3/B.md",
+						"zz-b3/A.md",
+						"zz-b3/0.md"
+					]
+				}
+			]
+		},
+		{
+			"view": "sort tags ASC",
+			"rows": [
+				"zz-b3/A.md",
+				"zz-b3/D.md",
+				"zz-b3/B.md",
+				"zz-b3/0.md",
+				"zz-b3/C.md",
+				"zz-b3/E.md",
+				"zz-b3/F.md",
+				"zz-b3/G.md",
+				"zz-b3/H.md",
+				"zz-b3/sub/I.md"
+			],
+			"groups": [
+				{
+					"key": null,
+					"rows": [
+						"zz-b3/A.md",
+						"zz-b3/D.md",
+						"zz-b3/B.md",
+						"zz-b3/0.md",
+						"zz-b3/C.md",
+						"zz-b3/E.md",
+						"zz-b3/F.md",
+						"zz-b3/G.md",
+						"zz-b3/H.md",
+						"zz-b3/sub/I.md"
+					]
+				}
+			]
+		},
+		{
+			"view": "sort formula.len ASC",
+			"rows": [
+				"zz-b3/A.md",
+				"zz-b3/D.md",
+				"zz-b3/B.md",
+				"zz-b3/0.md",
+				"zz-b3/C.md",
+				"zz-b3/E.md",
+				"zz-b3/F.md",
+				"zz-b3/G.md",
+				"zz-b3/H.md",
+				"zz-b3/sub/I.md"
+			],
+			"groups": [
+				{
+					"key": null,
+					"rows": [
+						"zz-b3/A.md",
+						"zz-b3/D.md",
+						"zz-b3/B.md",
+						"zz-b3/0.md",
+						"zz-b3/C.md",
+						"zz-b3/E.md",
+						"zz-b3/F.md",
+						"zz-b3/G.md",
+						"zz-b3/H.md",
+						"zz-b3/sub/I.md"
+					]
+				}
+			]
+		},
+		{
+			"view": "sort formula.err ASC",
+			"rows": [
+				"zz-b3/A.md",
+				"zz-b3/D.md",
+				"zz-b3/B.md",
+				"zz-b3/0.md",
+				"zz-b3/C.md",
+				"zz-b3/E.md",
+				"zz-b3/F.md",
+				"zz-b3/G.md",
+				"zz-b3/H.md",
+				"zz-b3/sub/I.md"
+			],
+			"groups": [
+				{
+					"key": null,
+					"rows": [
+						"zz-b3/A.md",
+						"zz-b3/D.md",
+						"zz-b3/B.md",
+						"zz-b3/0.md",
+						"zz-b3/C.md",
+						"zz-b3/E.md",
+						"zz-b3/F.md",
+						"zz-b3/G.md",
+						"zz-b3/H.md",
+						"zz-b3/sub/I.md"
+					]
+				}
+			]
+		},
+		{
+			"view": "multi",
+			"rows": [
+				"zz-b3/G.md",
+				"zz-b3/0.md",
+				"zz-b3/D.md",
+				"zz-b3/B.md",
+				"zz-b3/F.md",
+				"zz-b3/E.md",
+				"zz-b3/H.md",
+				"zz-b3/A.md",
+				"zz-b3/sub/I.md",
+				"zz-b3/C.md"
+			],
+			"groups": [
+				{
+					"key": null,
+					"rows": [
+						"zz-b3/G.md",
+						"zz-b3/0.md",
+						"zz-b3/D.md",
+						"zz-b3/B.md",
+						"zz-b3/F.md",
+						"zz-b3/E.md",
+						"zz-b3/H.md",
+						"zz-b3/A.md",
+						"zz-b3/sub/I.md",
+						"zz-b3/C.md"
+					]
+				}
+			]
+		},
+		{
+			"view": "nosort",
+			"rows": [
+				"zz-b3/0.md",
+				"zz-b3/A.md",
+				"zz-b3/B.md",
+				"zz-b3/C.md",
+				"zz-b3/D.md",
+				"zz-b3/E.md",
+				"zz-b3/F.md",
+				"zz-b3/G.md",
+				"zz-b3/H.md",
+				"zz-b3/sub/I.md"
+			],
+			"groups": [
+				{
+					"key": null,
+					"rows": [
+						"zz-b3/0.md",
+						"zz-b3/A.md",
+						"zz-b3/B.md",
+						"zz-b3/C.md",
+						"zz-b3/D.md",
+						"zz-b3/E.md",
+						"zz-b3/F.md",
+						"zz-b3/G.md",
+						"zz-b3/H.md",
+						"zz-b3/sub/I.md"
+					]
+				}
+			]
+		},
+		{
+			"view": "group s ASC",
+			"rows": [
+				"zz-b3/0.md",
+				"zz-b3/A.md",
+				"zz-b3/B.md",
+				"zz-b3/C.md",
+				"zz-b3/D.md",
+				"zz-b3/E.md",
+				"zz-b3/F.md",
+				"zz-b3/G.md",
+				"zz-b3/H.md",
+				"zz-b3/sub/I.md"
+			],
+			"groups": [
+				{
+					"key": {
+						"type": "String",
+						"string": ""
+					},
+					"rows": [
+						"zz-b3/F.md"
+					]
+				},
+				{
+					"key": {
+						"type": "String",
+						"string": "9"
+					},
+					"rows": [
+						"zz-b3/G.md"
+					]
+				},
+				{
+					"key": {
+						"type": "String",
+						"string": "10"
+					},
+					"rows": [
+						"zz-b3/D.md"
+					]
+				},
+				{
+					"key": {
+						"type": "String",
+						"string": "Apple"
+					},
+					"rows": [
+						"zz-b3/B.md"
+					]
+				},
+				{
+					"key": {
+						"type": "String",
+						"string": "apple"
+					},
+					"rows": [
+						"zz-b3/C.md"
+					]
+				},
+				{
+					"key": {
+						"type": "String",
+						"string": "banana"
+					},
+					"rows": [
+						"zz-b3/A.md"
+					]
+				},
+				{
+					"key": {
+						"type": "String",
+						"string": "Zed"
+					},
+					"rows": [
+						"zz-b3/sub/I.md"
+					]
+				},
+				{
+					"key": {
+						"type": "String",
+						"string": "zero"
+					},
+					"rows": [
+						"zz-b3/0.md"
+					]
+				},
+				{
+					"key": {
+						"type": "Null",
+						"string": "null"
+					},
+					"rows": [
+						"zz-b3/E.md",
+						"zz-b3/H.md"
+					]
+				}
+			]
+		},
+		{
+			"view": "group s DESC",
+			"rows": [
+				"zz-b3/0.md",
+				"zz-b3/A.md",
+				"zz-b3/B.md",
+				"zz-b3/C.md",
+				"zz-b3/D.md",
+				"zz-b3/E.md",
+				"zz-b3/F.md",
+				"zz-b3/G.md",
+				"zz-b3/H.md",
+				"zz-b3/sub/I.md"
+			],
+			"groups": [
+				{
+					"key": {
+						"type": "String",
+						"string": "zero"
+					},
+					"rows": [
+						"zz-b3/0.md"
+					]
+				},
+				{
+					"key": {
+						"type": "String",
+						"string": "Zed"
+					},
+					"rows": [
+						"zz-b3/sub/I.md"
+					]
+				},
+				{
+					"key": {
+						"type": "String",
+						"string": "banana"
+					},
+					"rows": [
+						"zz-b3/A.md"
+					]
+				},
+				{
+					"key": {
+						"type": "String",
+						"string": "Apple"
+					},
+					"rows": [
+						"zz-b3/B.md"
+					]
+				},
+				{
+					"key": {
+						"type": "String",
+						"string": "apple"
+					},
+					"rows": [
+						"zz-b3/C.md"
+					]
+				},
+				{
+					"key": {
+						"type": "String",
+						"string": "10"
+					},
+					"rows": [
+						"zz-b3/D.md"
+					]
+				},
+				{
+					"key": {
+						"type": "String",
+						"string": "9"
+					},
+					"rows": [
+						"zz-b3/G.md"
+					]
+				},
+				{
+					"key": {
+						"type": "String",
+						"string": ""
+					},
+					"rows": [
+						"zz-b3/F.md"
+					]
+				},
+				{
+					"key": {
+						"type": "Null",
+						"string": "null"
+					},
+					"rows": [
+						"zz-b3/E.md",
+						"zz-b3/H.md"
+					]
+				}
+			]
+		},
+		{
+			"view": "group n ASC",
+			"rows": [
+				"zz-b3/0.md",
+				"zz-b3/A.md",
+				"zz-b3/B.md",
+				"zz-b3/C.md",
+				"zz-b3/D.md",
+				"zz-b3/E.md",
+				"zz-b3/F.md",
+				"zz-b3/G.md",
+				"zz-b3/H.md",
+				"zz-b3/sub/I.md"
+			],
+			"groups": [
+				{
+					"key": {
+						"type": "Number",
+						"string": "-1"
+					},
+					"rows": [
+						"zz-b3/C.md"
+					]
+				},
+				{
+					"key": {
+						"type": "Number",
+						"string": "0"
+					},
+					"rows": [
+						"zz-b3/F.md"
+					]
+				},
+				{
+					"key": {
+						"type": "Number",
+						"string": "2"
+					},
+					"rows": [
+						"zz-b3/B.md"
+					]
+				},
+				{
+					"key": {
+						"type": "Number",
+						"string": "2.5"
+					},
+					"rows": [
+						"zz-b3/D.md"
+					]
+				},
+				{
+					"key": {
+						"type": "Number",
+						"string": "3"
+					},
+					"rows": [
+						"zz-b3/0.md"
+					]
+				},
+				{
+					"key": {
+						"type": "Number",
+						"string": "7"
+					},
+					"rows": [
+						"zz-b3/sub/I.md"
+					]
+				},
+				{
+					"key": {
+						"type": "Number",
+						"string": "10"
+					},
+					"rows": [
+						"zz-b3/A.md"
+					]
+				},
+				{
+					"key": {
+						"type": "Number",
+						"string": "100"
+					},
+					"rows": [
+						"zz-b3/G.md"
+					]
+				},
+				{
+					"key": {
+						"type": "Null",
+						"string": "null"
+					},
+					"rows": [
+						"zz-b3/E.md",
+						"zz-b3/H.md"
+					]
+				}
+			]
+		},
+		{
+			"view": "group b ASC",
+			"rows": [
+				"zz-b3/0.md",
+				"zz-b3/A.md",
+				"zz-b3/B.md",
+				"zz-b3/C.md",
+				"zz-b3/D.md",
+				"zz-b3/E.md",
+				"zz-b3/F.md",
+				"zz-b3/G.md",
+				"zz-b3/H.md",
+				"zz-b3/sub/I.md"
+			],
+			"groups": [
+				{
+					"key": {
+						"type": "Boolean",
+						"string": "false"
+					},
+					"rows": [
+						"zz-b3/B.md",
+						"zz-b3/E.md"
+					]
+				},
+				{
+					"key": {
+						"type": "Boolean",
+						"string": "true"
+					},
+					"rows": [
+						"zz-b3/A.md",
+						"zz-b3/C.md",
+						"zz-b3/sub/I.md"
+					]
+				},
+				{
+					"key": {
+						"type": "Null",
+						"string": "null"
+					},
+					"rows": [
+						"zz-b3/0.md",
+						"zz-b3/D.md",
+						"zz-b3/F.md",
+						"zz-b3/G.md",
+						"zz-b3/H.md"
+					]
+				}
+			]
+		},
+		{
+			"view": "group d ASC",
+			"rows": [
+				"zz-b3/0.md",
+				"zz-b3/A.md",
+				"zz-b3/B.md",
+				"zz-b3/C.md",
+				"zz-b3/D.md",
+				"zz-b3/E.md",
+				"zz-b3/F.md",
+				"zz-b3/G.md",
+				"zz-b3/H.md",
+				"zz-b3/sub/I.md"
+			],
+			"groups": [
+				{
+					"key": {
+						"type": "Date",
+						"string": "2025-12-31"
+					},
+					"rows": [
+						"zz-b3/B.md"
+					]
+				},
+				{
+					"key": {
+						"type": "Date",
+						"string": "2026-01-05"
+					},
+					"rows": [
+						"zz-b3/A.md",
+						"zz-b3/D.md"
+					]
+				},
+				{
+					"key": {
+						"type": "Date",
+						"string": "2026-03-01"
+					},
+					"rows": [
+						"zz-b3/C.md"
+					]
+				},
+				{
+					"key": {
+						"type": "Null",
+						"string": "null"
+					},
+					"rows": [
+						"zz-b3/0.md",
+						"zz-b3/E.md",
+						"zz-b3/F.md",
+						"zz-b3/G.md",
+						"zz-b3/H.md",
+						"zz-b3/sub/I.md"
+					]
+				}
+			]
+		},
+		{
+			"view": "group l ASC",
+			"rows": [
+				"zz-b3/0.md",
+				"zz-b3/A.md",
+				"zz-b3/B.md",
+				"zz-b3/C.md",
+				"zz-b3/D.md",
+				"zz-b3/E.md",
+				"zz-b3/F.md",
+				"zz-b3/G.md",
+				"zz-b3/H.md",
+				"zz-b3/sub/I.md"
+			],
+			"groups": [
+				{
+					"key": {
+						"type": "List",
+						"string": ""
+					},
+					"rows": [
+						"zz-b3/D.md"
+					]
+				},
+				{
+					"key": {
+						"type": "List",
+						"string": "x"
+					},
+					"rows": [
+						"zz-b3/E.md",
+						"zz-b3/F.md"
+					]
+				},
+				{
+					"key": {
+						"type": "List",
+						"string": "x, y"
+					},
+					"rows": [
+						"zz-b3/A.md",
+						"zz-b3/C.md"
+					]
+				},
+				{
+					"key": {
+						"type": "List",
+						"string": "y"
+					},
+					"rows": [
+						"zz-b3/B.md"
+					]
+				},
+				{
+					"key": {
+						"type": "Null",
+						"string": "null"
+					},
+					"rows": [
+						"zz-b3/0.md",
+						"zz-b3/G.md",
+						"zz-b3/H.md",
+						"zz-b3/sub/I.md"
+					]
+				}
+			]
+		},
+		{
+			"view": "group l DESC",
+			"rows": [
+				"zz-b3/0.md",
+				"zz-b3/A.md",
+				"zz-b3/B.md",
+				"zz-b3/C.md",
+				"zz-b3/D.md",
+				"zz-b3/E.md",
+				"zz-b3/F.md",
+				"zz-b3/G.md",
+				"zz-b3/H.md",
+				"zz-b3/sub/I.md"
+			],
+			"groups": [
+				{
+					"key": {
+						"type": "List",
+						"string": "y"
+					},
+					"rows": [
+						"zz-b3/B.md"
+					]
+				},
+				{
+					"key": {
+						"type": "List",
+						"string": "x, y"
+					},
+					"rows": [
+						"zz-b3/A.md",
+						"zz-b3/C.md"
+					]
+				},
+				{
+					"key": {
+						"type": "List",
+						"string": "x"
+					},
+					"rows": [
+						"zz-b3/E.md",
+						"zz-b3/F.md"
+					]
+				},
+				{
+					"key": {
+						"type": "List",
+						"string": ""
+					},
+					"rows": [
+						"zz-b3/D.md"
+					]
+				},
+				{
+					"key": {
+						"type": "Null",
+						"string": "null"
+					},
+					"rows": [
+						"zz-b3/0.md",
+						"zz-b3/G.md",
+						"zz-b3/H.md",
+						"zz-b3/sub/I.md"
+					]
+				}
+			]
+		},
+		{
+			"view": "group mixed ASC",
+			"rows": [
+				"zz-b3/0.md",
+				"zz-b3/A.md",
+				"zz-b3/B.md",
+				"zz-b3/C.md",
+				"zz-b3/D.md",
+				"zz-b3/E.md",
+				"zz-b3/F.md",
+				"zz-b3/G.md",
+				"zz-b3/H.md",
+				"zz-b3/sub/I.md"
+			],
+			"groups": [
+				{
+					"key": {
+						"type": "Link",
+						"string": "[[A]]"
+					},
+					"rows": [
+						"zz-b3/F.md"
+					]
+				},
+				{
+					"key": {
+						"type": "List",
+						"string": "1, 2"
+					},
+					"rows": [
+						"zz-b3/E.md"
+					]
+				},
+				{
+					"key": {
+						"type": "Number",
+						"string": "5"
+					},
+					"rows": [
+						"zz-b3/A.md"
+					]
+				},
+				{
+					"key": {
+						"type": "Date",
+						"string": "2026-01-01"
+					},
+					"rows": [
+						"zz-b3/D.md"
+					]
+				},
+				{
+					"key": {
+						"type": "String",
+						"string": "five"
+					},
+					"rows": [
+						"zz-b3/B.md"
+					]
+				},
+				{
+					"key": {
+						"type": "Boolean",
+						"string": "true"
+					},
+					"rows": [
+						"zz-b3/C.md"
+					]
+				},
+				{
+					"key": {
+						"type": "Null",
+						"string": "null"
+					},
+					"rows": [
+						"zz-b3/0.md",
+						"zz-b3/G.md",
+						"zz-b3/H.md",
+						"zz-b3/sub/I.md"
+					]
+				}
+			]
+		},
+		{
+			"view": "group file.folder ASC",
+			"rows": [
+				"zz-b3/0.md",
+				"zz-b3/A.md",
+				"zz-b3/B.md",
+				"zz-b3/C.md",
+				"zz-b3/D.md",
+				"zz-b3/E.md",
+				"zz-b3/F.md",
+				"zz-b3/G.md",
+				"zz-b3/H.md",
+				"zz-b3/sub/I.md"
+			],
+			"groups": [
+				{
+					"key": {
+						"type": "String",
+						"string": "zz-b3"
+					},
+					"rows": [
+						"zz-b3/0.md",
+						"zz-b3/A.md",
+						"zz-b3/B.md",
+						"zz-b3/C.md",
+						"zz-b3/D.md",
+						"zz-b3/E.md",
+						"zz-b3/F.md",
+						"zz-b3/G.md",
+						"zz-b3/H.md"
+					]
+				},
+				{
+					"key": {
+						"type": "String",
+						"string": "zz-b3/sub"
+					},
+					"rows": [
+						"zz-b3/sub/I.md"
+					]
+				}
+			]
+		},
+		{
+			"view": "group tags ASC",
+			"rows": [
+				"zz-b3/0.md",
+				"zz-b3/A.md",
+				"zz-b3/B.md",
+				"zz-b3/C.md",
+				"zz-b3/D.md",
+				"zz-b3/E.md",
+				"zz-b3/F.md",
+				"zz-b3/G.md",
+				"zz-b3/H.md",
+				"zz-b3/sub/I.md"
+			],
+			"groups": [
+				{
+					"key": {
+						"type": "List",
+						"string": "#one"
+					},
+					"rows": [
+						"zz-b3/A.md"
+					]
+				},
+				{
+					"key": {
+						"type": "List",
+						"string": "#one, #two"
+					},
+					"rows": [
+						"zz-b3/D.md"
+					]
+				},
+				{
+					"key": {
+						"type": "List",
+						"string": "#two"
+					},
+					"rows": [
+						"zz-b3/B.md"
+					]
+				},
+				{
+					"key": {
+						"type": "Null",
+						"string": "null"
+					},
+					"rows": [
+						"zz-b3/0.md",
+						"zz-b3/C.md",
+						"zz-b3/E.md",
+						"zz-b3/F.md",
+						"zz-b3/G.md",
+						"zz-b3/H.md",
+						"zz-b3/sub/I.md"
+					]
+				}
+			]
+		},
+		{
+			"view": "group formula.len DESC",
+			"rows": [
+				"zz-b3/0.md",
+				"zz-b3/A.md",
+				"zz-b3/B.md",
+				"zz-b3/C.md",
+				"zz-b3/D.md",
+				"zz-b3/E.md",
+				"zz-b3/F.md",
+				"zz-b3/G.md",
+				"zz-b3/H.md",
+				"zz-b3/sub/I.md"
+			],
+			"groups": [
+				{
+					"key": {
+						"type": "Null",
+						"string": "null"
+					},
+					"rows": [
+						"zz-b3/0.md",
+						"zz-b3/A.md",
+						"zz-b3/B.md",
+						"zz-b3/C.md",
+						"zz-b3/D.md",
+						"zz-b3/E.md",
+						"zz-b3/F.md",
+						"zz-b3/G.md",
+						"zz-b3/H.md",
+						"zz-b3/sub/I.md"
+					]
+				}
+			]
+		},
+		{
+			"view": "grouped sorted limited",
+			"rows": [
+				"zz-b3/G.md",
+				"zz-b3/A.md",
+				"zz-b3/sub/I.md",
+				"zz-b3/0.md"
+			],
+			"groups": [
+				{
+					"key": {
+						"type": "Boolean",
+						"string": "true"
+					},
+					"rows": [
+						"zz-b3/A.md",
+						"zz-b3/sub/I.md"
+					]
+				},
+				{
+					"key": {
+						"type": "Null",
+						"string": "null"
+					},
+					"rows": [
+						"zz-b3/G.md",
+						"zz-b3/0.md"
+					]
+				}
+			]
+		},
+		{
+			"view": "limit 3",
+			"rows": [
+				"zz-b3/C.md",
+				"zz-b3/F.md",
+				"zz-b3/B.md"
+			],
+			"groups": [
+				{
+					"key": null,
+					"rows": [
+						"zz-b3/C.md",
+						"zz-b3/F.md",
+						"zz-b3/B.md"
+					]
+				}
+			]
+		},
+		{
+			"view": "groupOrder",
+			"rows": [
+				"zz-b3/0.md",
+				"zz-b3/B.md",
+				"zz-b3/D.md",
+				"zz-b3/E.md",
+				"zz-b3/F.md",
+				"zz-b3/G.md",
+				"zz-b3/H.md"
+			],
+			"groups": [
+				{
+					"key": {
+						"type": "Boolean",
+						"string": "false"
+					},
+					"rows": [
+						"zz-b3/B.md",
+						"zz-b3/E.md"
+					]
+				},
+				{
+					"key": {
+						"type": "Null",
+						"string": "null"
+					},
+					"rows": [
+						"zz-b3/0.md",
+						"zz-b3/D.md",
+						"zz-b3/F.md",
+						"zz-b3/G.md",
+						"zz-b3/H.md"
+					]
+				}
+			]
+		},
+		{
+			"view": "groupOrder2",
+			"rows": [
+				"zz-b3/A.md",
+				"zz-b3/B.md"
+			],
+			"groups": [
+				{
+					"key": {
+						"type": "String",
+						"string": "banana"
+					},
+					"rows": [
+						"zz-b3/A.md"
+					]
+				},
+				{
+					"key": {
+						"type": "String",
+						"string": "Apple"
+					},
+					"rows": [
+						"zz-b3/B.md"
+					]
+				}
+			]
+		}
+	],
+	"filters": [
+		{
+			"view": "string",
+			"rows": [
+				"zz-b3/0.md",
+				"zz-b3/A.md",
+				"zz-b3/D.md",
+				"zz-b3/G.md",
+				"zz-b3/sub/I.md"
+			],
+			"error": null,
+			"errors": "{}",
+			"errorEl": null
+		},
+		{
+			"view": "or",
+			"rows": [
+				"zz-b3/C.md",
+				"zz-b3/G.md"
+			],
+			"error": null,
+			"errors": "{}",
+			"errorEl": null
+		},
+		{
+			"view": "not many",
+			"rows": [
+				"zz-b3/0.md",
+				"zz-b3/A.md",
+				"zz-b3/B.md",
+				"zz-b3/D.md",
+				"zz-b3/E.md",
+				"zz-b3/F.md",
+				"zz-b3/H.md",
+				"zz-b3/sub/I.md"
+			],
+			"error": null,
+			"errors": "{}",
+			"errorEl": null
+		},
+		{
+			"view": "nested",
+			"rows": [
+				"zz-b3/A.md",
+				"zz-b3/sub/I.md"
+			],
+			"error": null,
+			"errors": "{}",
+			"errorEl": null
+		},
+		{
+			"view": "error rows",
+			"rows": [
+				"zz-b3/0.md",
+				"zz-b3/A.md",
+				"zz-b3/B.md",
+				"zz-b3/D.md",
+				"zz-b3/G.md",
+				"zz-b3/sub/I.md"
+			],
+			"error": null,
+			"errors": "{}",
+			"errorEl": null
+		},
+		{
+			"view": "error all",
+			"rows": [],
+			"error": null,
+			"errors": "{}",
+			"errorEl": null
+		},
+		{
+			"view": "formula filter",
+			"rows": [
+				"zz-b3/0.md",
+				"zz-b3/A.md",
+				"zz-b3/D.md",
+				"zz-b3/G.md",
+				"zz-b3/sub/I.md"
+			],
+			"error": null,
+			"errors": "{}",
+			"errorEl": null
+		},
+		{
+			"view": "null compare",
+			"rows": [
+				"zz-b3/A.md",
+				"zz-b3/B.md",
+				"zz-b3/D.md"
+			],
+			"error": null,
+			"errors": "{}",
+			"errorEl": null
+		},
+		{
+			"view": "not error",
+			"rows": [
+				"zz-b3/E.md",
+				"zz-b3/H.md"
+			],
+			"error": null,
+			"errors": "{}",
+			"errorEl": null
+		},
+		{
+			"view": "empty and",
+			"rows": [
+				"zz-b3/0.md",
+				"zz-b3/A.md",
+				"zz-b3/B.md",
+				"zz-b3/C.md",
+				"zz-b3/D.md",
+				"zz-b3/E.md",
+				"zz-b3/F.md",
+				"zz-b3/G.md",
+				"zz-b3/H.md",
+				"zz-b3/sub/I.md"
+			],
+			"error": null,
+			"errors": "{}",
+			"errorEl": null
+		},
+		{
+			"view": "list contains",
+			"rows": [
+				"zz-b3/A.md",
+				"zz-b3/C.md",
+				"zz-b3/E.md",
+				"zz-b3/F.md"
+			],
+			"error": null,
+			"errors": "{}",
+			"errorEl": null
+		},
+		{
+			"view": "tags filter",
+			"rows": [
+				"zz-b3/A.md",
+				"zz-b3/D.md",
+				"zz-b3/H.md"
+			],
+			"error": null,
+			"errors": "{}",
+			"errorEl": null
+		}
+	],
+	"search": [
+		{
+			"search": "app",
+			"rows": [
+				"zz-b3/B.md",
+				"zz-b3/C.md"
+			]
+		},
+		{
+			"search": "APPLE",
+			"rows": [
+				"zz-b3/B.md",
+				"zz-b3/C.md"
+			]
+		},
+		{
+			"search": "zz-b3",
+			"rows": []
+		},
+		{
+			"search": "A",
+			"rows": [
+				"zz-b3/A.md",
+				"zz-b3/B.md",
+				"zz-b3/C.md",
+				"zz-b3/E.md",
+				"zz-b3/F.md"
+			]
+		},
+		{
+			"search": "100",
+			"rows": [
+				"zz-b3/G.md"
+			]
+		},
+		{
+			"search": "01/05/2026",
+			"rows": []
+		},
+		{
+			"search": "2026-01-05",
+			"rows": [
+				"zz-b3/A.md",
+				"zz-b3/D.md"
+			]
+		},
+		{
+			"search": "#one",
+			"rows": []
+		},
+		{
+			"search": "one",
+			"rows": []
+		},
+		{
+			"search": "true",
+			"rows": [
+				"zz-b3/A.md",
+				"zz-b3/C.md",
+				"zz-b3/sub/I.md"
+			]
+		},
+		{
+			"search": "x, y",
+			"rows": [
+				"zz-b3/A.md",
+				"zz-b3/C.md"
+			]
+		},
+		{
+			"search": "x y",
+			"rows": [
+				"zz-b3/A.md",
+				"zz-b3/C.md"
+			]
+		},
+		{
+			"search": "2.5",
+			"rows": [
+				"zz-b3/D.md"
+			]
+		},
+		{
+			"search": "ban app",
+			"rows": []
+		},
+		{
+			"search": "-1",
+			"rows": [
+				"zz-b3/A.md",
+				"zz-b3/B.md",
+				"zz-b3/C.md",
+				"zz-b3/D.md"
+			]
+		},
+		{
+			"search": "[[A]]",
+			"rows": [
+				"zz-b3/F.md"
+			]
+		},
+		{
+			"search": "banana 10",
+			"rows": [
+				"zz-b3/A.md"
+			]
+		},
+		{
+			"search": "xy",
+			"rows": []
+		},
+		{
+			"search": "bna",
+			"rows": []
+		},
+		{
+			"search": "nan",
+			"rows": [
+				"zz-b3/A.md"
+			]
+		},
+		{
+			"search": "zed 7",
+			"rows": [
+				"zz-b3/sub/I.md"
+			]
+		},
+		{
+			"search": "a 9",
+			"rows": []
+		},
+		{
+			"search": "-1",
+			"rows": [
+				"zz-b3/A.md",
+				"zz-b3/B.md",
+				"zz-b3/C.md",
+				"zz-b3/D.md"
+			]
+		},
+		{
+			"search": "-0",
+			"rows": [
+				"zz-b3/A.md",
+				"zz-b3/B.md",
+				"zz-b3/C.md",
+				"zz-b3/D.md"
+			]
+		},
+		{
+			"search": "-3",
+			"rows": [
+				"zz-b3/B.md",
+				"zz-b3/C.md"
+			]
+		},
+		{
+			"search": "-31",
+			"rows": [
+				"zz-b3/B.md"
+			]
+		},
+		{
+			"search": "01-05",
+			"rows": [
+				"zz-b3/A.md",
+				"zz-b3/D.md"
+			]
+		},
+		{
+			"search": "12-3",
+			"rows": [
+				"zz-b3/B.md"
+			]
+		},
+		{
+			"search": "-",
+			"rows": [
+				"zz-b3/A.md",
+				"zz-b3/B.md",
+				"zz-b3/C.md",
+				"zz-b3/D.md"
+			]
+		},
+		{
+			"search": "jan",
+			"rows": []
+		},
+		{
+			"search": "2026",
+			"rows": [
+				"zz-b3/A.md",
+				"zz-b3/C.md",
+				"zz-b3/D.md"
+			]
+		},
+		{
+			"search": "-banana",
+			"rows": [
+				"zz-b3/A.md"
+			]
+		},
+		{
+			"search": "-x",
+			"rows": [
+				"zz-b3/A.md",
+				"zz-b3/C.md"
+			]
+		},
+		{
+			"search": "fals",
+			"rows": [
+				"zz-b3/B.md",
+				"zz-b3/E.md"
+			]
+		},
+		{
+			"search": "-a",
+			"rows": [
+				"zz-b3/A.md",
+				"zz-b3/B.md",
+				"zz-b3/C.md"
+			]
+		}
+	],
+	"summaries": [
+		{
+			"subset": "all",
+			"prop": "note.s",
+			"summary": "Average",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "all",
+			"prop": "note.s",
+			"summary": "Min",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "all",
+			"prop": "note.s",
+			"summary": "Max",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "all",
+			"prop": "note.s",
+			"summary": "Sum",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "all",
+			"prop": "note.s",
+			"summary": "Range",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "all",
+			"prop": "note.s",
+			"summary": "Median",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "all",
+			"prop": "note.s",
+			"summary": "Stddev",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "all",
+			"prop": "note.s",
+			"summary": "Earliest",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "all",
+			"prop": "note.s",
+			"summary": "Latest",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "all",
+			"prop": "note.s",
+			"summary": "Checked",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "all",
+			"prop": "note.s",
+			"summary": "Unchecked",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "all",
+			"prop": "note.s",
+			"summary": "Empty",
+			"type": "Number",
+			"string": "2"
+		},
+		{
+			"subset": "all",
+			"prop": "note.s",
+			"summary": "Filled",
+			"type": "Number",
+			"string": "8"
+		},
+		{
+			"subset": "all",
+			"prop": "note.s",
+			"summary": "Unique",
+			"type": "Number",
+			"string": "9"
+		},
+		{
+			"subset": "all",
+			"prop": "note.s",
+			"summary": "Twice",
+			"type": "Number",
+			"string": "20"
+		},
+		{
+			"subset": "all",
+			"prop": "note.s",
+			"summary": "Mean",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "all",
+			"prop": "note.s",
+			"summary": "Bad",
+			"type": "Error",
+			"string": "Error: Cannot find function \"nope\" on type List"
+		},
+		{
+			"subset": "all",
+			"prop": "note.s",
+			"summary": "Echo",
+			"type": "List",
+			"string": "zero, banana, Apple, apple, 10, null, , 9, null, Zed"
+		},
+		{
+			"subset": "all",
+			"prop": "note.s",
+			"summary": "Nope",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "all",
+			"prop": "note.n",
+			"summary": "Average",
+			"type": "Number",
+			"string": "12.35"
+		},
+		{
+			"subset": "all",
+			"prop": "note.n",
+			"summary": "Min",
+			"type": "Number",
+			"string": "-1"
+		},
+		{
+			"subset": "all",
+			"prop": "note.n",
+			"summary": "Max",
+			"type": "Number",
+			"string": "100"
+		},
+		{
+			"subset": "all",
+			"prop": "note.n",
+			"summary": "Sum",
+			"type": "Number",
+			"string": "123.5"
+		},
+		{
+			"subset": "all",
+			"prop": "note.n",
+			"summary": "Range",
+			"type": "Number",
+			"string": "101"
+		},
+		{
+			"subset": "all",
+			"prop": "note.n",
+			"summary": "Median",
+			"type": "Number",
+			"string": "2.75"
+		},
+		{
+			"subset": "all",
+			"prop": "note.n",
+			"summary": "Stddev",
+			"type": "Number",
+			"string": "32.14"
+		},
+		{
+			"subset": "all",
+			"prop": "note.n",
+			"summary": "Earliest",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "all",
+			"prop": "note.n",
+			"summary": "Latest",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "all",
+			"prop": "note.n",
+			"summary": "Checked",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "all",
+			"prop": "note.n",
+			"summary": "Unchecked",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "all",
+			"prop": "note.n",
+			"summary": "Empty",
+			"type": "Number",
+			"string": "2"
+		},
+		{
+			"subset": "all",
+			"prop": "note.n",
+			"summary": "Filled",
+			"type": "Number",
+			"string": "8"
+		},
+		{
+			"subset": "all",
+			"prop": "note.n",
+			"summary": "Unique",
+			"type": "Number",
+			"string": "9"
+		},
+		{
+			"subset": "all",
+			"prop": "note.n",
+			"summary": "Twice",
+			"type": "Number",
+			"string": "20"
+		},
+		{
+			"subset": "all",
+			"prop": "note.n",
+			"summary": "Mean",
+			"type": "Number",
+			"string": "12.35"
+		},
+		{
+			"subset": "all",
+			"prop": "note.n",
+			"summary": "Bad",
+			"type": "Error",
+			"string": "Error: Cannot find function \"nope\" on type List"
+		},
+		{
+			"subset": "all",
+			"prop": "note.n",
+			"summary": "Echo",
+			"type": "List",
+			"string": "3, 10, 2, -1, 2.5, null, 0, 100, null, 7"
+		},
+		{
+			"subset": "all",
+			"prop": "note.n",
+			"summary": "Nope",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "all",
+			"prop": "note.b",
+			"summary": "Average",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "all",
+			"prop": "note.b",
+			"summary": "Min",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "all",
+			"prop": "note.b",
+			"summary": "Max",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "all",
+			"prop": "note.b",
+			"summary": "Sum",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "all",
+			"prop": "note.b",
+			"summary": "Range",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "all",
+			"prop": "note.b",
+			"summary": "Median",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "all",
+			"prop": "note.b",
+			"summary": "Stddev",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "all",
+			"prop": "note.b",
+			"summary": "Earliest",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "all",
+			"prop": "note.b",
+			"summary": "Latest",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "all",
+			"prop": "note.b",
+			"summary": "Checked",
+			"type": "Number",
+			"string": "3"
+		},
+		{
+			"subset": "all",
+			"prop": "note.b",
+			"summary": "Unchecked",
+			"type": "Number",
+			"string": "2"
+		},
+		{
+			"subset": "all",
+			"prop": "note.b",
+			"summary": "Empty",
+			"type": "Number",
+			"string": "5"
+		},
+		{
+			"subset": "all",
+			"prop": "note.b",
+			"summary": "Filled",
+			"type": "Number",
+			"string": "5"
+		},
+		{
+			"subset": "all",
+			"prop": "note.b",
+			"summary": "Unique",
+			"type": "Number",
+			"string": "3"
+		},
+		{
+			"subset": "all",
+			"prop": "note.b",
+			"summary": "Twice",
+			"type": "Number",
+			"string": "20"
+		},
+		{
+			"subset": "all",
+			"prop": "note.b",
+			"summary": "Mean",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "all",
+			"prop": "note.b",
+			"summary": "Bad",
+			"type": "Error",
+			"string": "Error: Cannot find function \"nope\" on type List"
+		},
+		{
+			"subset": "all",
+			"prop": "note.b",
+			"summary": "Echo",
+			"type": "List",
+			"string": "null, true, false, true, null, false, null, null, null, true"
+		},
+		{
+			"subset": "all",
+			"prop": "note.b",
+			"summary": "Nope",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "all",
+			"prop": "note.d",
+			"summary": "Average",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "all",
+			"prop": "note.d",
+			"summary": "Min",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "all",
+			"prop": "note.d",
+			"summary": "Max",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "all",
+			"prop": "note.d",
+			"summary": "Sum",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "all",
+			"prop": "note.d",
+			"summary": "Range",
+			"type": "Duration",
+			"string": "2 months"
+		},
+		{
+			"subset": "all",
+			"prop": "note.d",
+			"summary": "Median",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "all",
+			"prop": "note.d",
+			"summary": "Stddev",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "all",
+			"prop": "note.d",
+			"summary": "Earliest",
+			"type": "Date",
+			"string": "2025-12-31T00:00:00"
+		},
+		{
+			"subset": "all",
+			"prop": "note.d",
+			"summary": "Latest",
+			"type": "Date",
+			"string": "2026-03-01T00:00:00"
+		},
+		{
+			"subset": "all",
+			"prop": "note.d",
+			"summary": "Checked",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "all",
+			"prop": "note.d",
+			"summary": "Unchecked",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "all",
+			"prop": "note.d",
+			"summary": "Empty",
+			"type": "Number",
+			"string": "6"
+		},
+		{
+			"subset": "all",
+			"prop": "note.d",
+			"summary": "Filled",
+			"type": "Number",
+			"string": "4"
+		},
+		{
+			"subset": "all",
+			"prop": "note.d",
+			"summary": "Unique",
+			"type": "Number",
+			"string": "4"
+		},
+		{
+			"subset": "all",
+			"prop": "note.d",
+			"summary": "Twice",
+			"type": "Number",
+			"string": "20"
+		},
+		{
+			"subset": "all",
+			"prop": "note.d",
+			"summary": "Mean",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "all",
+			"prop": "note.d",
+			"summary": "Bad",
+			"type": "Error",
+			"string": "Error: Cannot find function \"nope\" on type List"
+		},
+		{
+			"subset": "all",
+			"prop": "note.d",
+			"summary": "Echo",
+			"type": "List",
+			"string": "null, 2026-01-05, 2025-12-31, 2026-03-01, 2026-01-05, null, null, null, null, null"
+		},
+		{
+			"subset": "all",
+			"prop": "note.d",
+			"summary": "Nope",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "all",
+			"prop": "note.dt",
+			"summary": "Average",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "all",
+			"prop": "note.dt",
+			"summary": "Min",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "all",
+			"prop": "note.dt",
+			"summary": "Max",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "all",
+			"prop": "note.dt",
+			"summary": "Sum",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "all",
+			"prop": "note.dt",
+			"summary": "Range",
+			"type": "Duration",
+			"string": "2 months"
+		},
+		{
+			"subset": "all",
+			"prop": "note.dt",
+			"summary": "Median",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "all",
+			"prop": "note.dt",
+			"summary": "Stddev",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "all",
+			"prop": "note.dt",
+			"summary": "Earliest",
+			"type": "Date",
+			"string": "2026-01-05T10:00:00"
+		},
+		{
+			"subset": "all",
+			"prop": "note.dt",
+			"summary": "Latest",
+			"type": "Date",
+			"string": "2026-03-01T08:00:00"
+		},
+		{
+			"subset": "all",
+			"prop": "note.dt",
+			"summary": "Checked",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "all",
+			"prop": "note.dt",
+			"summary": "Unchecked",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "all",
+			"prop": "note.dt",
+			"summary": "Empty",
+			"type": "Number",
+			"string": "8"
+		},
+		{
+			"subset": "all",
+			"prop": "note.dt",
+			"summary": "Filled",
+			"type": "Number",
+			"string": "2"
+		},
+		{
+			"subset": "all",
+			"prop": "note.dt",
+			"summary": "Unique",
+			"type": "Number",
+			"string": "3"
+		},
+		{
+			"subset": "all",
+			"prop": "note.dt",
+			"summary": "Twice",
+			"type": "Number",
+			"string": "20"
+		},
+		{
+			"subset": "all",
+			"prop": "note.dt",
+			"summary": "Mean",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "all",
+			"prop": "note.dt",
+			"summary": "Bad",
+			"type": "Error",
+			"string": "Error: Cannot find function \"nope\" on type List"
+		},
+		{
+			"subset": "all",
+			"prop": "note.dt",
+			"summary": "Echo",
+			"type": "List",
+			"string": "null, 2026-01-05T10:00:00, null, 2026-03-01T08:00:00, null, null, null, null, null, null"
+		},
+		{
+			"subset": "all",
+			"prop": "note.dt",
+			"summary": "Nope",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "all",
+			"prop": "note.l",
+			"summary": "Average",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "all",
+			"prop": "note.l",
+			"summary": "Min",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "all",
+			"prop": "note.l",
+			"summary": "Max",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "all",
+			"prop": "note.l",
+			"summary": "Sum",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "all",
+			"prop": "note.l",
+			"summary": "Range",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "all",
+			"prop": "note.l",
+			"summary": "Median",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "all",
+			"prop": "note.l",
+			"summary": "Stddev",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "all",
+			"prop": "note.l",
+			"summary": "Earliest",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "all",
+			"prop": "note.l",
+			"summary": "Latest",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "all",
+			"prop": "note.l",
+			"summary": "Checked",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "all",
+			"prop": "note.l",
+			"summary": "Unchecked",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "all",
+			"prop": "note.l",
+			"summary": "Empty",
+			"type": "Number",
+			"string": "4"
+		},
+		{
+			"subset": "all",
+			"prop": "note.l",
+			"summary": "Filled",
+			"type": "Number",
+			"string": "6"
+		},
+		{
+			"subset": "all",
+			"prop": "note.l",
+			"summary": "Unique",
+			"type": "Number",
+			"string": "6"
+		},
+		{
+			"subset": "all",
+			"prop": "note.l",
+			"summary": "Twice",
+			"type": "Number",
+			"string": "20"
+		},
+		{
+			"subset": "all",
+			"prop": "note.l",
+			"summary": "Mean",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "all",
+			"prop": "note.l",
+			"summary": "Bad",
+			"type": "Error",
+			"string": "Error: Cannot find function \"nope\" on type List"
+		},
+		{
+			"subset": "all",
+			"prop": "note.l",
+			"summary": "Echo",
+			"type": "List",
+			"string": "null, x, y, y, x, y, , x, x, null, null, null"
+		},
+		{
+			"subset": "all",
+			"prop": "note.l",
+			"summary": "Nope",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "all",
+			"prop": "note.mixed",
+			"summary": "Average",
+			"type": "Number",
+			"string": "0.5"
+		},
+		{
+			"subset": "all",
+			"prop": "note.mixed",
+			"summary": "Min",
+			"type": "Number",
+			"string": "5"
+		},
+		{
+			"subset": "all",
+			"prop": "note.mixed",
+			"summary": "Max",
+			"type": "Number",
+			"string": "5"
+		},
+		{
+			"subset": "all",
+			"prop": "note.mixed",
+			"summary": "Sum",
+			"type": "Number",
+			"string": "5"
+		},
+		{
+			"subset": "all",
+			"prop": "note.mixed",
+			"summary": "Range",
+			"type": "Number",
+			"string": "0"
+		},
+		{
+			"subset": "all",
+			"prop": "note.mixed",
+			"summary": "Median",
+			"type": "Number",
+			"string": "5"
+		},
+		{
+			"subset": "all",
+			"prop": "note.mixed",
+			"summary": "Stddev",
+			"type": "Number",
+			"string": "0"
+		},
+		{
+			"subset": "all",
+			"prop": "note.mixed",
+			"summary": "Earliest",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "all",
+			"prop": "note.mixed",
+			"summary": "Latest",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "all",
+			"prop": "note.mixed",
+			"summary": "Checked",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "all",
+			"prop": "note.mixed",
+			"summary": "Unchecked",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "all",
+			"prop": "note.mixed",
+			"summary": "Empty",
+			"type": "Number",
+			"string": "4"
+		},
+		{
+			"subset": "all",
+			"prop": "note.mixed",
+			"summary": "Filled",
+			"type": "Number",
+			"string": "6"
+		},
+		{
+			"subset": "all",
+			"prop": "note.mixed",
+			"summary": "Unique",
+			"type": "Number",
+			"string": "7"
+		},
+		{
+			"subset": "all",
+			"prop": "note.mixed",
+			"summary": "Twice",
+			"type": "Number",
+			"string": "20"
+		},
+		{
+			"subset": "all",
+			"prop": "note.mixed",
+			"summary": "Mean",
+			"type": "Number",
+			"string": "0.5"
+		},
+		{
+			"subset": "all",
+			"prop": "note.mixed",
+			"summary": "Bad",
+			"type": "Error",
+			"string": "Error: Cannot find function \"nope\" on type List"
+		},
+		{
+			"subset": "all",
+			"prop": "note.mixed",
+			"summary": "Echo",
+			"type": "List",
+			"string": "null, 5, five, true, 2026-01-01, 1, 2, [[A]], null, null, null"
+		},
+		{
+			"subset": "all",
+			"prop": "note.mixed",
+			"summary": "Nope",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "all",
+			"prop": "note.tags",
+			"summary": "Average",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "all",
+			"prop": "note.tags",
+			"summary": "Min",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "all",
+			"prop": "note.tags",
+			"summary": "Max",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "all",
+			"prop": "note.tags",
+			"summary": "Sum",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "all",
+			"prop": "note.tags",
+			"summary": "Range",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "all",
+			"prop": "note.tags",
+			"summary": "Median",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "all",
+			"prop": "note.tags",
+			"summary": "Stddev",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "all",
+			"prop": "note.tags",
+			"summary": "Earliest",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "all",
+			"prop": "note.tags",
+			"summary": "Latest",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "all",
+			"prop": "note.tags",
+			"summary": "Checked",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "all",
+			"prop": "note.tags",
+			"summary": "Unchecked",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "all",
+			"prop": "note.tags",
+			"summary": "Empty",
+			"type": "Number",
+			"string": "7"
+		},
+		{
+			"subset": "all",
+			"prop": "note.tags",
+			"summary": "Filled",
+			"type": "Number",
+			"string": "3"
+		},
+		{
+			"subset": "all",
+			"prop": "note.tags",
+			"summary": "Unique",
+			"type": "Number",
+			"string": "4"
+		},
+		{
+			"subset": "all",
+			"prop": "note.tags",
+			"summary": "Twice",
+			"type": "Number",
+			"string": "20"
+		},
+		{
+			"subset": "all",
+			"prop": "note.tags",
+			"summary": "Mean",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "all",
+			"prop": "note.tags",
+			"summary": "Bad",
+			"type": "Error",
+			"string": "Error: Cannot find function \"nope\" on type List"
+		},
+		{
+			"subset": "all",
+			"prop": "note.tags",
+			"summary": "Echo",
+			"type": "List",
+			"string": "null, #one, #two, null, #one, #two, null, null, null, null, null"
+		},
+		{
+			"subset": "all",
+			"prop": "note.tags",
+			"summary": "Nope",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "all",
+			"prop": "file.name",
+			"summary": "Average",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "all",
+			"prop": "file.name",
+			"summary": "Min",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "all",
+			"prop": "file.name",
+			"summary": "Max",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "all",
+			"prop": "file.name",
+			"summary": "Sum",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "all",
+			"prop": "file.name",
+			"summary": "Range",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "all",
+			"prop": "file.name",
+			"summary": "Median",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "all",
+			"prop": "file.name",
+			"summary": "Stddev",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "all",
+			"prop": "file.name",
+			"summary": "Earliest",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "all",
+			"prop": "file.name",
+			"summary": "Latest",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "all",
+			"prop": "file.name",
+			"summary": "Checked",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "all",
+			"prop": "file.name",
+			"summary": "Unchecked",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "all",
+			"prop": "file.name",
+			"summary": "Empty",
+			"type": "Number",
+			"string": "0"
+		},
+		{
+			"subset": "all",
+			"prop": "file.name",
+			"summary": "Filled",
+			"type": "Number",
+			"string": "10"
+		},
+		{
+			"subset": "all",
+			"prop": "file.name",
+			"summary": "Unique",
+			"type": "Number",
+			"string": "10"
+		},
+		{
+			"subset": "all",
+			"prop": "file.name",
+			"summary": "Twice",
+			"type": "Number",
+			"string": "20"
+		},
+		{
+			"subset": "all",
+			"prop": "file.name",
+			"summary": "Mean",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "all",
+			"prop": "file.name",
+			"summary": "Bad",
+			"type": "Error",
+			"string": "Error: Cannot find function \"nope\" on type List"
+		},
+		{
+			"subset": "all",
+			"prop": "file.name",
+			"summary": "Echo",
+			"type": "List",
+			"string": "0, A, B, C, D, E, F, G, H, I"
+		},
+		{
+			"subset": "all",
+			"prop": "file.name",
+			"summary": "Nope",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "all",
+			"prop": "file.size",
+			"summary": "Average",
+			"type": "Number",
+			"string": "52.5"
+		},
+		{
+			"subset": "all",
+			"prop": "file.size",
+			"summary": "Min",
+			"type": "Number",
+			"string": "21"
+		},
+		{
+			"subset": "all",
+			"prop": "file.size",
+			"summary": "Max",
+			"type": "Number",
+			"string": "108"
+		},
+		{
+			"subset": "all",
+			"prop": "file.size",
+			"summary": "Sum",
+			"type": "Number",
+			"string": "525"
+		},
+		{
+			"subset": "all",
+			"prop": "file.size",
+			"summary": "Range",
+			"type": "Number",
+			"string": "87"
+		},
+		{
+			"subset": "all",
+			"prop": "file.size",
+			"summary": "Median",
+			"type": "Number",
+			"string": "40"
+		},
+		{
+			"subset": "all",
+			"prop": "file.size",
+			"summary": "Stddev",
+			"type": "Number",
+			"string": "30.97"
+		},
+		{
+			"subset": "all",
+			"prop": "file.size",
+			"summary": "Earliest",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "all",
+			"prop": "file.size",
+			"summary": "Latest",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "all",
+			"prop": "file.size",
+			"summary": "Checked",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "all",
+			"prop": "file.size",
+			"summary": "Unchecked",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "all",
+			"prop": "file.size",
+			"summary": "Empty",
+			"type": "Number",
+			"string": "0"
+		},
+		{
+			"subset": "all",
+			"prop": "file.size",
+			"summary": "Filled",
+			"type": "Number",
+			"string": "10"
+		},
+		{
+			"subset": "all",
+			"prop": "file.size",
+			"summary": "Unique",
+			"type": "Number",
+			"string": "9"
+		},
+		{
+			"subset": "all",
+			"prop": "file.size",
+			"summary": "Twice",
+			"type": "Number",
+			"string": "20"
+		},
+		{
+			"subset": "all",
+			"prop": "file.size",
+			"summary": "Mean",
+			"type": "Number",
+			"string": "52.5"
+		},
+		{
+			"subset": "all",
+			"prop": "file.size",
+			"summary": "Bad",
+			"type": "Error",
+			"string": "Error: Cannot find function \"nope\" on type List"
+		},
+		{
+			"subset": "all",
+			"prop": "file.size",
+			"summary": "Echo",
+			"type": "List",
+			"string": "21, 108, 76, 91, 78, 41, 39, 22, 21, 28"
+		},
+		{
+			"subset": "all",
+			"prop": "file.size",
+			"summary": "Nope",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "all",
+			"prop": "formula.half",
+			"summary": "Average",
+			"type": "Number",
+			"string": "6.18"
+		},
+		{
+			"subset": "all",
+			"prop": "formula.half",
+			"summary": "Min",
+			"type": "Number",
+			"string": "-0.5"
+		},
+		{
+			"subset": "all",
+			"prop": "formula.half",
+			"summary": "Max",
+			"type": "Number",
+			"string": "50"
+		},
+		{
+			"subset": "all",
+			"prop": "formula.half",
+			"summary": "Sum",
+			"type": "Number",
+			"string": "61.75"
+		},
+		{
+			"subset": "all",
+			"prop": "formula.half",
+			"summary": "Range",
+			"type": "Number",
+			"string": "50.5"
+		},
+		{
+			"subset": "all",
+			"prop": "formula.half",
+			"summary": "Median",
+			"type": "Number",
+			"string": "1.375"
+		},
+		{
+			"subset": "all",
+			"prop": "formula.half",
+			"summary": "Stddev",
+			"type": "Number",
+			"string": "16.07"
+		},
+		{
+			"subset": "all",
+			"prop": "formula.half",
+			"summary": "Earliest",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "all",
+			"prop": "formula.half",
+			"summary": "Latest",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "all",
+			"prop": "formula.half",
+			"summary": "Checked",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "all",
+			"prop": "formula.half",
+			"summary": "Unchecked",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "all",
+			"prop": "formula.half",
+			"summary": "Empty",
+			"type": "Number",
+			"string": "2"
+		},
+		{
+			"subset": "all",
+			"prop": "formula.half",
+			"summary": "Filled",
+			"type": "Number",
+			"string": "8"
+		},
+		{
+			"subset": "all",
+			"prop": "formula.half",
+			"summary": "Unique",
+			"type": "Number",
+			"string": "9"
+		},
+		{
+			"subset": "all",
+			"prop": "formula.half",
+			"summary": "Twice",
+			"type": "Number",
+			"string": "20"
+		},
+		{
+			"subset": "all",
+			"prop": "formula.half",
+			"summary": "Mean",
+			"type": "Number",
+			"string": "6.175"
+		},
+		{
+			"subset": "all",
+			"prop": "formula.half",
+			"summary": "Bad",
+			"type": "Error",
+			"string": "Error: Cannot find function \"nope\" on type List"
+		},
+		{
+			"subset": "all",
+			"prop": "formula.half",
+			"summary": "Echo",
+			"type": "List",
+			"string": "1.5, 5, 1, -0.5, 1.25, null, 0, 50, null, 3.5"
+		},
+		{
+			"subset": "all",
+			"prop": "formula.half",
+			"summary": "Nope",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.s",
+			"summary": "Average",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.s",
+			"summary": "Min",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.s",
+			"summary": "Max",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.s",
+			"summary": "Sum",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.s",
+			"summary": "Range",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.s",
+			"summary": "Median",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.s",
+			"summary": "Stddev",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.s",
+			"summary": "Earliest",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.s",
+			"summary": "Latest",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.s",
+			"summary": "Checked",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.s",
+			"summary": "Unchecked",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.s",
+			"summary": "Empty",
+			"type": "Number",
+			"string": "0"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.s",
+			"summary": "Filled",
+			"type": "Number",
+			"string": "3"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.s",
+			"summary": "Unique",
+			"type": "Number",
+			"string": "3"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.s",
+			"summary": "Twice",
+			"type": "Number",
+			"string": "6"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.s",
+			"summary": "Mean",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.s",
+			"summary": "Bad",
+			"type": "Error",
+			"string": "Error: Cannot find function \"nope\" on type List"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.s",
+			"summary": "Echo",
+			"type": "List",
+			"string": "banana, Apple, apple"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.s",
+			"summary": "Nope",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.n",
+			"summary": "Average",
+			"type": "Number",
+			"string": "3.67"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.n",
+			"summary": "Min",
+			"type": "Number",
+			"string": "-1"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.n",
+			"summary": "Max",
+			"type": "Number",
+			"string": "10"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.n",
+			"summary": "Sum",
+			"type": "Number",
+			"string": "11"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.n",
+			"summary": "Range",
+			"type": "Number",
+			"string": "11"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.n",
+			"summary": "Median",
+			"type": "Number",
+			"string": "2"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.n",
+			"summary": "Stddev",
+			"type": "Number",
+			"string": "4.64"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.n",
+			"summary": "Earliest",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.n",
+			"summary": "Latest",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.n",
+			"summary": "Checked",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.n",
+			"summary": "Unchecked",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.n",
+			"summary": "Empty",
+			"type": "Number",
+			"string": "0"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.n",
+			"summary": "Filled",
+			"type": "Number",
+			"string": "3"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.n",
+			"summary": "Unique",
+			"type": "Number",
+			"string": "3"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.n",
+			"summary": "Twice",
+			"type": "Number",
+			"string": "6"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.n",
+			"summary": "Mean",
+			"type": "Number",
+			"string": "3.6666666666666665"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.n",
+			"summary": "Bad",
+			"type": "Error",
+			"string": "Error: Cannot find function \"nope\" on type List"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.n",
+			"summary": "Echo",
+			"type": "List",
+			"string": "10, 2, -1"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.n",
+			"summary": "Nope",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.b",
+			"summary": "Average",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.b",
+			"summary": "Min",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.b",
+			"summary": "Max",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.b",
+			"summary": "Sum",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.b",
+			"summary": "Range",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.b",
+			"summary": "Median",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.b",
+			"summary": "Stddev",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.b",
+			"summary": "Earliest",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.b",
+			"summary": "Latest",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.b",
+			"summary": "Checked",
+			"type": "Number",
+			"string": "2"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.b",
+			"summary": "Unchecked",
+			"type": "Number",
+			"string": "1"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.b",
+			"summary": "Empty",
+			"type": "Number",
+			"string": "0"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.b",
+			"summary": "Filled",
+			"type": "Number",
+			"string": "3"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.b",
+			"summary": "Unique",
+			"type": "Number",
+			"string": "2"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.b",
+			"summary": "Twice",
+			"type": "Number",
+			"string": "6"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.b",
+			"summary": "Mean",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.b",
+			"summary": "Bad",
+			"type": "Error",
+			"string": "Error: Cannot find function \"nope\" on type List"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.b",
+			"summary": "Echo",
+			"type": "List",
+			"string": "true, false, true"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.b",
+			"summary": "Nope",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.d",
+			"summary": "Average",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.d",
+			"summary": "Min",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.d",
+			"summary": "Max",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.d",
+			"summary": "Sum",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.d",
+			"summary": "Range",
+			"type": "Duration",
+			"string": "2 months"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.d",
+			"summary": "Median",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.d",
+			"summary": "Stddev",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.d",
+			"summary": "Earliest",
+			"type": "Date",
+			"string": "2025-12-31T00:00:00"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.d",
+			"summary": "Latest",
+			"type": "Date",
+			"string": "2026-03-01T00:00:00"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.d",
+			"summary": "Checked",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.d",
+			"summary": "Unchecked",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.d",
+			"summary": "Empty",
+			"type": "Number",
+			"string": "0"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.d",
+			"summary": "Filled",
+			"type": "Number",
+			"string": "3"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.d",
+			"summary": "Unique",
+			"type": "Number",
+			"string": "3"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.d",
+			"summary": "Twice",
+			"type": "Number",
+			"string": "6"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.d",
+			"summary": "Mean",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.d",
+			"summary": "Bad",
+			"type": "Error",
+			"string": "Error: Cannot find function \"nope\" on type List"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.d",
+			"summary": "Echo",
+			"type": "List",
+			"string": "2026-01-05, 2025-12-31, 2026-03-01"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.d",
+			"summary": "Nope",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.dt",
+			"summary": "Average",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.dt",
+			"summary": "Min",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.dt",
+			"summary": "Max",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.dt",
+			"summary": "Sum",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.dt",
+			"summary": "Range",
+			"type": "Duration",
+			"string": "2 months"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.dt",
+			"summary": "Median",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.dt",
+			"summary": "Stddev",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.dt",
+			"summary": "Earliest",
+			"type": "Date",
+			"string": "2026-01-05T10:00:00"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.dt",
+			"summary": "Latest",
+			"type": "Date",
+			"string": "2026-03-01T08:00:00"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.dt",
+			"summary": "Checked",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.dt",
+			"summary": "Unchecked",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.dt",
+			"summary": "Empty",
+			"type": "Number",
+			"string": "1"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.dt",
+			"summary": "Filled",
+			"type": "Number",
+			"string": "2"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.dt",
+			"summary": "Unique",
+			"type": "Number",
+			"string": "3"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.dt",
+			"summary": "Twice",
+			"type": "Number",
+			"string": "6"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.dt",
+			"summary": "Mean",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.dt",
+			"summary": "Bad",
+			"type": "Error",
+			"string": "Error: Cannot find function \"nope\" on type List"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.dt",
+			"summary": "Echo",
+			"type": "List",
+			"string": "2026-01-05T10:00:00, null, 2026-03-01T08:00:00"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.dt",
+			"summary": "Nope",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.l",
+			"summary": "Average",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.l",
+			"summary": "Min",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.l",
+			"summary": "Max",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.l",
+			"summary": "Sum",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.l",
+			"summary": "Range",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.l",
+			"summary": "Median",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.l",
+			"summary": "Stddev",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.l",
+			"summary": "Earliest",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.l",
+			"summary": "Latest",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.l",
+			"summary": "Checked",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.l",
+			"summary": "Unchecked",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.l",
+			"summary": "Empty",
+			"type": "Number",
+			"string": "0"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.l",
+			"summary": "Filled",
+			"type": "Number",
+			"string": "3"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.l",
+			"summary": "Unique",
+			"type": "Number",
+			"string": "2"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.l",
+			"summary": "Twice",
+			"type": "Number",
+			"string": "6"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.l",
+			"summary": "Mean",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.l",
+			"summary": "Bad",
+			"type": "Error",
+			"string": "Error: Cannot find function \"nope\" on type List"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.l",
+			"summary": "Echo",
+			"type": "List",
+			"string": "x, y, y, x, y"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.l",
+			"summary": "Nope",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.mixed",
+			"summary": "Average",
+			"type": "Number",
+			"string": "1.67"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.mixed",
+			"summary": "Min",
+			"type": "Number",
+			"string": "5"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.mixed",
+			"summary": "Max",
+			"type": "Number",
+			"string": "5"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.mixed",
+			"summary": "Sum",
+			"type": "Number",
+			"string": "5"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.mixed",
+			"summary": "Range",
+			"type": "Number",
+			"string": "0"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.mixed",
+			"summary": "Median",
+			"type": "Number",
+			"string": "5"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.mixed",
+			"summary": "Stddev",
+			"type": "Number",
+			"string": "0"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.mixed",
+			"summary": "Earliest",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.mixed",
+			"summary": "Latest",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.mixed",
+			"summary": "Checked",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.mixed",
+			"summary": "Unchecked",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.mixed",
+			"summary": "Empty",
+			"type": "Number",
+			"string": "0"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.mixed",
+			"summary": "Filled",
+			"type": "Number",
+			"string": "3"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.mixed",
+			"summary": "Unique",
+			"type": "Number",
+			"string": "3"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.mixed",
+			"summary": "Twice",
+			"type": "Number",
+			"string": "6"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.mixed",
+			"summary": "Mean",
+			"type": "Number",
+			"string": "1.6666666666666667"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.mixed",
+			"summary": "Bad",
+			"type": "Error",
+			"string": "Error: Cannot find function \"nope\" on type List"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.mixed",
+			"summary": "Echo",
+			"type": "List",
+			"string": "5, five, true"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.mixed",
+			"summary": "Nope",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.tags",
+			"summary": "Average",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.tags",
+			"summary": "Min",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.tags",
+			"summary": "Max",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.tags",
+			"summary": "Sum",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.tags",
+			"summary": "Range",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.tags",
+			"summary": "Median",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.tags",
+			"summary": "Stddev",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.tags",
+			"summary": "Earliest",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.tags",
+			"summary": "Latest",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.tags",
+			"summary": "Checked",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.tags",
+			"summary": "Unchecked",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.tags",
+			"summary": "Empty",
+			"type": "Number",
+			"string": "1"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.tags",
+			"summary": "Filled",
+			"type": "Number",
+			"string": "2"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.tags",
+			"summary": "Unique",
+			"type": "Number",
+			"string": "3"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.tags",
+			"summary": "Twice",
+			"type": "Number",
+			"string": "6"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.tags",
+			"summary": "Mean",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.tags",
+			"summary": "Bad",
+			"type": "Error",
+			"string": "Error: Cannot find function \"nope\" on type List"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.tags",
+			"summary": "Echo",
+			"type": "List",
+			"string": "#one, #two, null"
+		},
+		{
+			"subset": "ABC",
+			"prop": "note.tags",
+			"summary": "Nope",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "ABC",
+			"prop": "file.name",
+			"summary": "Average",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "ABC",
+			"prop": "file.name",
+			"summary": "Min",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "ABC",
+			"prop": "file.name",
+			"summary": "Max",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "ABC",
+			"prop": "file.name",
+			"summary": "Sum",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "ABC",
+			"prop": "file.name",
+			"summary": "Range",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "ABC",
+			"prop": "file.name",
+			"summary": "Median",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "ABC",
+			"prop": "file.name",
+			"summary": "Stddev",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "ABC",
+			"prop": "file.name",
+			"summary": "Earliest",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "ABC",
+			"prop": "file.name",
+			"summary": "Latest",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "ABC",
+			"prop": "file.name",
+			"summary": "Checked",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "ABC",
+			"prop": "file.name",
+			"summary": "Unchecked",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "ABC",
+			"prop": "file.name",
+			"summary": "Empty",
+			"type": "Number",
+			"string": "0"
+		},
+		{
+			"subset": "ABC",
+			"prop": "file.name",
+			"summary": "Filled",
+			"type": "Number",
+			"string": "3"
+		},
+		{
+			"subset": "ABC",
+			"prop": "file.name",
+			"summary": "Unique",
+			"type": "Number",
+			"string": "3"
+		},
+		{
+			"subset": "ABC",
+			"prop": "file.name",
+			"summary": "Twice",
+			"type": "Number",
+			"string": "6"
+		},
+		{
+			"subset": "ABC",
+			"prop": "file.name",
+			"summary": "Mean",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "ABC",
+			"prop": "file.name",
+			"summary": "Bad",
+			"type": "Error",
+			"string": "Error: Cannot find function \"nope\" on type List"
+		},
+		{
+			"subset": "ABC",
+			"prop": "file.name",
+			"summary": "Echo",
+			"type": "List",
+			"string": "A, B, C"
+		},
+		{
+			"subset": "ABC",
+			"prop": "file.name",
+			"summary": "Nope",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "ABC",
+			"prop": "file.size",
+			"summary": "Average",
+			"type": "Number",
+			"string": "91.67"
+		},
+		{
+			"subset": "ABC",
+			"prop": "file.size",
+			"summary": "Min",
+			"type": "Number",
+			"string": "76"
+		},
+		{
+			"subset": "ABC",
+			"prop": "file.size",
+			"summary": "Max",
+			"type": "Number",
+			"string": "108"
+		},
+		{
+			"subset": "ABC",
+			"prop": "file.size",
+			"summary": "Sum",
+			"type": "Number",
+			"string": "275"
+		},
+		{
+			"subset": "ABC",
+			"prop": "file.size",
+			"summary": "Range",
+			"type": "Number",
+			"string": "32"
+		},
+		{
+			"subset": "ABC",
+			"prop": "file.size",
+			"summary": "Median",
+			"type": "Number",
+			"string": "91"
+		},
+		{
+			"subset": "ABC",
+			"prop": "file.size",
+			"summary": "Stddev",
+			"type": "Number",
+			"string": "13.07"
+		},
+		{
+			"subset": "ABC",
+			"prop": "file.size",
+			"summary": "Earliest",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "ABC",
+			"prop": "file.size",
+			"summary": "Latest",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "ABC",
+			"prop": "file.size",
+			"summary": "Checked",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "ABC",
+			"prop": "file.size",
+			"summary": "Unchecked",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "ABC",
+			"prop": "file.size",
+			"summary": "Empty",
+			"type": "Number",
+			"string": "0"
+		},
+		{
+			"subset": "ABC",
+			"prop": "file.size",
+			"summary": "Filled",
+			"type": "Number",
+			"string": "3"
+		},
+		{
+			"subset": "ABC",
+			"prop": "file.size",
+			"summary": "Unique",
+			"type": "Number",
+			"string": "3"
+		},
+		{
+			"subset": "ABC",
+			"prop": "file.size",
+			"summary": "Twice",
+			"type": "Number",
+			"string": "6"
+		},
+		{
+			"subset": "ABC",
+			"prop": "file.size",
+			"summary": "Mean",
+			"type": "Number",
+			"string": "91.66666666666667"
+		},
+		{
+			"subset": "ABC",
+			"prop": "file.size",
+			"summary": "Bad",
+			"type": "Error",
+			"string": "Error: Cannot find function \"nope\" on type List"
+		},
+		{
+			"subset": "ABC",
+			"prop": "file.size",
+			"summary": "Echo",
+			"type": "List",
+			"string": "108, 76, 91"
+		},
+		{
+			"subset": "ABC",
+			"prop": "file.size",
+			"summary": "Nope",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "ABC",
+			"prop": "formula.half",
+			"summary": "Average",
+			"type": "Number",
+			"string": "1.83"
+		},
+		{
+			"subset": "ABC",
+			"prop": "formula.half",
+			"summary": "Min",
+			"type": "Number",
+			"string": "-0.5"
+		},
+		{
+			"subset": "ABC",
+			"prop": "formula.half",
+			"summary": "Max",
+			"type": "Number",
+			"string": "5"
+		},
+		{
+			"subset": "ABC",
+			"prop": "formula.half",
+			"summary": "Sum",
+			"type": "Number",
+			"string": "5.5"
+		},
+		{
+			"subset": "ABC",
+			"prop": "formula.half",
+			"summary": "Range",
+			"type": "Number",
+			"string": "5.5"
+		},
+		{
+			"subset": "ABC",
+			"prop": "formula.half",
+			"summary": "Median",
+			"type": "Number",
+			"string": "1"
+		},
+		{
+			"subset": "ABC",
+			"prop": "formula.half",
+			"summary": "Stddev",
+			"type": "Number",
+			"string": "2.32"
+		},
+		{
+			"subset": "ABC",
+			"prop": "formula.half",
+			"summary": "Earliest",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "ABC",
+			"prop": "formula.half",
+			"summary": "Latest",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "ABC",
+			"prop": "formula.half",
+			"summary": "Checked",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "ABC",
+			"prop": "formula.half",
+			"summary": "Unchecked",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "ABC",
+			"prop": "formula.half",
+			"summary": "Empty",
+			"type": "Number",
+			"string": "0"
+		},
+		{
+			"subset": "ABC",
+			"prop": "formula.half",
+			"summary": "Filled",
+			"type": "Number",
+			"string": "3"
+		},
+		{
+			"subset": "ABC",
+			"prop": "formula.half",
+			"summary": "Unique",
+			"type": "Number",
+			"string": "3"
+		},
+		{
+			"subset": "ABC",
+			"prop": "formula.half",
+			"summary": "Twice",
+			"type": "Number",
+			"string": "6"
+		},
+		{
+			"subset": "ABC",
+			"prop": "formula.half",
+			"summary": "Mean",
+			"type": "Number",
+			"string": "1.8333333333333333"
+		},
+		{
+			"subset": "ABC",
+			"prop": "formula.half",
+			"summary": "Bad",
+			"type": "Error",
+			"string": "Error: Cannot find function \"nope\" on type List"
+		},
+		{
+			"subset": "ABC",
+			"prop": "formula.half",
+			"summary": "Echo",
+			"type": "List",
+			"string": "5, 1, -0.5"
+		},
+		{
+			"subset": "ABC",
+			"prop": "formula.half",
+			"summary": "Nope",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "note.s",
+			"summary": "Average",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "note.s",
+			"summary": "Min",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "note.s",
+			"summary": "Max",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "note.s",
+			"summary": "Sum",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "note.s",
+			"summary": "Range",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "note.s",
+			"summary": "Median",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "note.s",
+			"summary": "Stddev",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "note.s",
+			"summary": "Earliest",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "note.s",
+			"summary": "Latest",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "note.s",
+			"summary": "Checked",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "note.s",
+			"summary": "Unchecked",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "note.s",
+			"summary": "Empty",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "note.s",
+			"summary": "Filled",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "note.s",
+			"summary": "Unique",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "note.s",
+			"summary": "Twice",
+			"type": "Number",
+			"string": "0"
+		},
+		{
+			"subset": "none",
+			"prop": "note.s",
+			"summary": "Mean",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "note.s",
+			"summary": "Bad",
+			"type": "Error",
+			"string": "Error: Cannot find function \"nope\" on type List"
+		},
+		{
+			"subset": "none",
+			"prop": "note.s",
+			"summary": "Echo",
+			"type": "List",
+			"string": ""
+		},
+		{
+			"subset": "none",
+			"prop": "note.s",
+			"summary": "Nope",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "note.n",
+			"summary": "Average",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "note.n",
+			"summary": "Min",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "note.n",
+			"summary": "Max",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "note.n",
+			"summary": "Sum",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "note.n",
+			"summary": "Range",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "note.n",
+			"summary": "Median",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "note.n",
+			"summary": "Stddev",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "note.n",
+			"summary": "Earliest",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "note.n",
+			"summary": "Latest",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "note.n",
+			"summary": "Checked",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "note.n",
+			"summary": "Unchecked",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "note.n",
+			"summary": "Empty",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "note.n",
+			"summary": "Filled",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "note.n",
+			"summary": "Unique",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "note.n",
+			"summary": "Twice",
+			"type": "Number",
+			"string": "0"
+		},
+		{
+			"subset": "none",
+			"prop": "note.n",
+			"summary": "Mean",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "note.n",
+			"summary": "Bad",
+			"type": "Error",
+			"string": "Error: Cannot find function \"nope\" on type List"
+		},
+		{
+			"subset": "none",
+			"prop": "note.n",
+			"summary": "Echo",
+			"type": "List",
+			"string": ""
+		},
+		{
+			"subset": "none",
+			"prop": "note.n",
+			"summary": "Nope",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "note.b",
+			"summary": "Average",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "note.b",
+			"summary": "Min",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "note.b",
+			"summary": "Max",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "note.b",
+			"summary": "Sum",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "note.b",
+			"summary": "Range",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "note.b",
+			"summary": "Median",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "note.b",
+			"summary": "Stddev",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "note.b",
+			"summary": "Earliest",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "note.b",
+			"summary": "Latest",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "note.b",
+			"summary": "Checked",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "note.b",
+			"summary": "Unchecked",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "note.b",
+			"summary": "Empty",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "note.b",
+			"summary": "Filled",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "note.b",
+			"summary": "Unique",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "note.b",
+			"summary": "Twice",
+			"type": "Number",
+			"string": "0"
+		},
+		{
+			"subset": "none",
+			"prop": "note.b",
+			"summary": "Mean",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "note.b",
+			"summary": "Bad",
+			"type": "Error",
+			"string": "Error: Cannot find function \"nope\" on type List"
+		},
+		{
+			"subset": "none",
+			"prop": "note.b",
+			"summary": "Echo",
+			"type": "List",
+			"string": ""
+		},
+		{
+			"subset": "none",
+			"prop": "note.b",
+			"summary": "Nope",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "note.d",
+			"summary": "Average",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "note.d",
+			"summary": "Min",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "note.d",
+			"summary": "Max",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "note.d",
+			"summary": "Sum",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "note.d",
+			"summary": "Range",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "note.d",
+			"summary": "Median",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "note.d",
+			"summary": "Stddev",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "note.d",
+			"summary": "Earliest",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "note.d",
+			"summary": "Latest",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "note.d",
+			"summary": "Checked",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "note.d",
+			"summary": "Unchecked",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "note.d",
+			"summary": "Empty",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "note.d",
+			"summary": "Filled",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "note.d",
+			"summary": "Unique",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "note.d",
+			"summary": "Twice",
+			"type": "Number",
+			"string": "0"
+		},
+		{
+			"subset": "none",
+			"prop": "note.d",
+			"summary": "Mean",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "note.d",
+			"summary": "Bad",
+			"type": "Error",
+			"string": "Error: Cannot find function \"nope\" on type List"
+		},
+		{
+			"subset": "none",
+			"prop": "note.d",
+			"summary": "Echo",
+			"type": "List",
+			"string": ""
+		},
+		{
+			"subset": "none",
+			"prop": "note.d",
+			"summary": "Nope",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "note.dt",
+			"summary": "Average",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "note.dt",
+			"summary": "Min",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "note.dt",
+			"summary": "Max",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "note.dt",
+			"summary": "Sum",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "note.dt",
+			"summary": "Range",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "note.dt",
+			"summary": "Median",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "note.dt",
+			"summary": "Stddev",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "note.dt",
+			"summary": "Earliest",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "note.dt",
+			"summary": "Latest",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "note.dt",
+			"summary": "Checked",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "note.dt",
+			"summary": "Unchecked",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "note.dt",
+			"summary": "Empty",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "note.dt",
+			"summary": "Filled",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "note.dt",
+			"summary": "Unique",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "note.dt",
+			"summary": "Twice",
+			"type": "Number",
+			"string": "0"
+		},
+		{
+			"subset": "none",
+			"prop": "note.dt",
+			"summary": "Mean",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "note.dt",
+			"summary": "Bad",
+			"type": "Error",
+			"string": "Error: Cannot find function \"nope\" on type List"
+		},
+		{
+			"subset": "none",
+			"prop": "note.dt",
+			"summary": "Echo",
+			"type": "List",
+			"string": ""
+		},
+		{
+			"subset": "none",
+			"prop": "note.dt",
+			"summary": "Nope",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "note.l",
+			"summary": "Average",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "note.l",
+			"summary": "Min",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "note.l",
+			"summary": "Max",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "note.l",
+			"summary": "Sum",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "note.l",
+			"summary": "Range",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "note.l",
+			"summary": "Median",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "note.l",
+			"summary": "Stddev",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "note.l",
+			"summary": "Earliest",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "note.l",
+			"summary": "Latest",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "note.l",
+			"summary": "Checked",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "note.l",
+			"summary": "Unchecked",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "note.l",
+			"summary": "Empty",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "note.l",
+			"summary": "Filled",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "note.l",
+			"summary": "Unique",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "note.l",
+			"summary": "Twice",
+			"type": "Number",
+			"string": "0"
+		},
+		{
+			"subset": "none",
+			"prop": "note.l",
+			"summary": "Mean",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "note.l",
+			"summary": "Bad",
+			"type": "Error",
+			"string": "Error: Cannot find function \"nope\" on type List"
+		},
+		{
+			"subset": "none",
+			"prop": "note.l",
+			"summary": "Echo",
+			"type": "List",
+			"string": ""
+		},
+		{
+			"subset": "none",
+			"prop": "note.l",
+			"summary": "Nope",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "note.mixed",
+			"summary": "Average",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "note.mixed",
+			"summary": "Min",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "note.mixed",
+			"summary": "Max",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "note.mixed",
+			"summary": "Sum",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "note.mixed",
+			"summary": "Range",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "note.mixed",
+			"summary": "Median",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "note.mixed",
+			"summary": "Stddev",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "note.mixed",
+			"summary": "Earliest",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "note.mixed",
+			"summary": "Latest",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "note.mixed",
+			"summary": "Checked",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "note.mixed",
+			"summary": "Unchecked",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "note.mixed",
+			"summary": "Empty",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "note.mixed",
+			"summary": "Filled",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "note.mixed",
+			"summary": "Unique",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "note.mixed",
+			"summary": "Twice",
+			"type": "Number",
+			"string": "0"
+		},
+		{
+			"subset": "none",
+			"prop": "note.mixed",
+			"summary": "Mean",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "note.mixed",
+			"summary": "Bad",
+			"type": "Error",
+			"string": "Error: Cannot find function \"nope\" on type List"
+		},
+		{
+			"subset": "none",
+			"prop": "note.mixed",
+			"summary": "Echo",
+			"type": "List",
+			"string": ""
+		},
+		{
+			"subset": "none",
+			"prop": "note.mixed",
+			"summary": "Nope",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "note.tags",
+			"summary": "Average",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "note.tags",
+			"summary": "Min",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "note.tags",
+			"summary": "Max",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "note.tags",
+			"summary": "Sum",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "note.tags",
+			"summary": "Range",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "note.tags",
+			"summary": "Median",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "note.tags",
+			"summary": "Stddev",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "note.tags",
+			"summary": "Earliest",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "note.tags",
+			"summary": "Latest",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "note.tags",
+			"summary": "Checked",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "note.tags",
+			"summary": "Unchecked",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "note.tags",
+			"summary": "Empty",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "note.tags",
+			"summary": "Filled",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "note.tags",
+			"summary": "Unique",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "note.tags",
+			"summary": "Twice",
+			"type": "Number",
+			"string": "0"
+		},
+		{
+			"subset": "none",
+			"prop": "note.tags",
+			"summary": "Mean",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "note.tags",
+			"summary": "Bad",
+			"type": "Error",
+			"string": "Error: Cannot find function \"nope\" on type List"
+		},
+		{
+			"subset": "none",
+			"prop": "note.tags",
+			"summary": "Echo",
+			"type": "List",
+			"string": ""
+		},
+		{
+			"subset": "none",
+			"prop": "note.tags",
+			"summary": "Nope",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "file.name",
+			"summary": "Average",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "file.name",
+			"summary": "Min",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "file.name",
+			"summary": "Max",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "file.name",
+			"summary": "Sum",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "file.name",
+			"summary": "Range",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "file.name",
+			"summary": "Median",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "file.name",
+			"summary": "Stddev",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "file.name",
+			"summary": "Earliest",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "file.name",
+			"summary": "Latest",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "file.name",
+			"summary": "Checked",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "file.name",
+			"summary": "Unchecked",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "file.name",
+			"summary": "Empty",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "file.name",
+			"summary": "Filled",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "file.name",
+			"summary": "Unique",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "file.name",
+			"summary": "Twice",
+			"type": "Number",
+			"string": "0"
+		},
+		{
+			"subset": "none",
+			"prop": "file.name",
+			"summary": "Mean",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "file.name",
+			"summary": "Bad",
+			"type": "Error",
+			"string": "Error: Cannot find function \"nope\" on type List"
+		},
+		{
+			"subset": "none",
+			"prop": "file.name",
+			"summary": "Echo",
+			"type": "List",
+			"string": ""
+		},
+		{
+			"subset": "none",
+			"prop": "file.name",
+			"summary": "Nope",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "file.size",
+			"summary": "Average",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "file.size",
+			"summary": "Min",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "file.size",
+			"summary": "Max",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "file.size",
+			"summary": "Sum",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "file.size",
+			"summary": "Range",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "file.size",
+			"summary": "Median",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "file.size",
+			"summary": "Stddev",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "file.size",
+			"summary": "Earliest",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "file.size",
+			"summary": "Latest",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "file.size",
+			"summary": "Checked",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "file.size",
+			"summary": "Unchecked",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "file.size",
+			"summary": "Empty",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "file.size",
+			"summary": "Filled",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "file.size",
+			"summary": "Unique",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "file.size",
+			"summary": "Twice",
+			"type": "Number",
+			"string": "0"
+		},
+		{
+			"subset": "none",
+			"prop": "file.size",
+			"summary": "Mean",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "file.size",
+			"summary": "Bad",
+			"type": "Error",
+			"string": "Error: Cannot find function \"nope\" on type List"
+		},
+		{
+			"subset": "none",
+			"prop": "file.size",
+			"summary": "Echo",
+			"type": "List",
+			"string": ""
+		},
+		{
+			"subset": "none",
+			"prop": "file.size",
+			"summary": "Nope",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "formula.half",
+			"summary": "Average",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "formula.half",
+			"summary": "Min",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "formula.half",
+			"summary": "Max",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "formula.half",
+			"summary": "Sum",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "formula.half",
+			"summary": "Range",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "formula.half",
+			"summary": "Median",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "formula.half",
+			"summary": "Stddev",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "formula.half",
+			"summary": "Earliest",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "formula.half",
+			"summary": "Latest",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "formula.half",
+			"summary": "Checked",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "formula.half",
+			"summary": "Unchecked",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "formula.half",
+			"summary": "Empty",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "formula.half",
+			"summary": "Filled",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "formula.half",
+			"summary": "Unique",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "formula.half",
+			"summary": "Twice",
+			"type": "Number",
+			"string": "0"
+		},
+		{
+			"subset": "none",
+			"prop": "formula.half",
+			"summary": "Mean",
+			"type": "Null",
+			"string": "null"
+		},
+		{
+			"subset": "none",
+			"prop": "formula.half",
+			"summary": "Bad",
+			"type": "Error",
+			"string": "Error: Cannot find function \"nope\" on type List"
+		},
+		{
+			"subset": "none",
+			"prop": "formula.half",
+			"summary": "Echo",
+			"type": "List",
+			"string": ""
+		},
+		{
+			"subset": "none",
+			"prop": "formula.half",
+			"summary": "Nope",
+			"type": "Null",
+			"string": "null"
+		}
+	]
+}

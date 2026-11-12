@@ -74,8 +74,11 @@ export class RowScope {
 		}
 	}
 
-	/** An expression's value for this row. A blank or unparseable expression is null, as in Obsidian. */
-	evaluate(expression: string | Expr): Value {
+	/**
+	 * An expression's value for this row, with extra variables (a summary's `values`). A blank or unparseable expression
+	 * is null, as in Obsidian.
+	 */
+	evaluate(expression: string | Expr, vars: Vars = {}): Value {
 		let expr: Expr
 		try {
 			expr = typeof expression === 'string' ? parseExpression(expression) : expression
@@ -83,7 +86,17 @@ export class RowScope {
 			if (e instanceof ExpressionSyntaxError) return NULL
 			throw e
 		}
-		return this.eval(expr, {})
+		return this.eval(expr, vars)
+	}
+
+	/** A property by its id: `note.x` (or a bare `x`), `file.x`, `formula.x`. */
+	property(id: string): Value {
+		const dot = id.indexOf('.')
+		const space = dot < 0 ? '' : id.slice(0, dot)
+		if (space === 'file') return this.member({type: 'File', path: this.path}, id.slice(dot + 1))
+		if (space === 'formula') return this.formula(id.slice(dot + 1))
+		const name = space === 'note' ? id.slice(dot + 1) : id
+		return (this.note() as ValueOf<'Object'>).entries.get(name) ?? NULL
 	}
 
 	/** `formula.name` for this row. */
@@ -276,7 +289,8 @@ export class RowScope {
 		const subject = this.eval(expr.subject, vars)
 		if (subject.type === 'Error') return subject
 		const f = findMethod(subject, expr.name)
-		if (!f) return error(`Cannot find function "${expr.name}" on type ${subject.type}`)
+		// A missing value has no methods to miss: `empty.nope()` is null, so a null property never errors a filter.
+		if (!f) return subject.type === 'Null' ? NULL : error(`Cannot find function "${expr.name}" on type ${subject.type}`)
 		return callFunction(expr.name, f, expr.args, call, subject, evaluate)
 	}
 

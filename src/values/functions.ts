@@ -1,7 +1,7 @@
 import type {Expr} from '../expr/ast'
 import {isUrl} from './convert'
 import {formatDate, parseDate, parseDuration, relative, startOfDay} from './time'
-import {bool, error, isA, isTruthy, list, looseEquals, NULL, num, parseWikiLink, str, stringValue, toText, typeChain, type TypeName, type Value, type ValueOf} from './value'
+import {bool, collate, error, isA, isTruthy, list, looseEquals, NULL, num, parseWikiLink, str, stringValue, toText, typeChain, type TypeName, type Value, type ValueOf} from './value'
 
 /** What a function sees of the evaluation: the clock, links, files, and lazy arguments with lambda variables. */
 export interface Call {
@@ -121,10 +121,9 @@ const aggregate = (items: Value[], f: (values: number[]) => number) => {
 	const values = numbers(items)
 	return values.length ? num(f(values)) : NULL
 }
-const mean = (values: number[]) => values.reduce((a, b) => a + b, 0) / values.length
+const sum = (values: number[]) => values.reduce((a, b) => a + b, 0)
+const mean = (values: number[]) => sum(values) / values.length
 
-// Numeric-aware, case- and accent-blind: `2, 9, 10`; `a, A, b, B` keep their order.
-const collator = new Intl.Collator('en', {numeric: true, sensitivity: 'base'})
 
 function flatten(items: Value[]): Value[] {
 	return items.flatMap(item => (item.type === 'List' ? flatten(item.items) : [item]))
@@ -280,7 +279,7 @@ const LIST: Record<string, Fn> = {
 	join: fn([p('separator', 'String')], (args, _, self) => str(items(self).map(toText).join(s(args, 0)))),
 	reverse: fn([], (_, __, self) => list([...items(self)].reverse())),
 	slice: fn([p('start', 'Number'), opt(p('end', 'Number'))], (args, _, self) => list(items(self).slice(n(args, 0), v(args, 1) ? n(args, 1) : undefined))),
-	sort: fn([], (_, __, self) => list([...items(self)].sort((a, b) => collator.compare(toText(a), toText(b))))),
+	sort: fn([], (_, __, self) => list([...items(self)].sort((a, b) => collate(toText(a), toText(b))))),
 	// Grouped by text, first occurrence first, so values that print alike end up together: `[1, 1, 2, "1"]` is `1, "1", 2`.
 	unique: fn([], (_, call, self) => {
 		const groups = new Map<string, Value[]>()
@@ -292,8 +291,9 @@ const LIST: Record<string, Fn> = {
 		return list([...groups.values()].flat())
 	}),
 	isEmpty: fn([], (_, __, self) => bool(items(self).length === 0)),
-	sum: fn([], (_, __, self) => aggregate(items(self), values => values.reduce((a, b) => a + b, 0))),
-	mean: fn([], (_, __, self) => aggregate(items(self), mean)),
+	sum: fn([], (_, __, self) => aggregate(items(self), sum)),
+	// Over every item, numbers or not: `[5, "five", null].mean()` is 5 / 3, as in Obsidian (and its Average summary).
+	mean: fn([], (_, __, self) => aggregate(items(self), values => sum(values) / items(self).length)),
 	median: fn([], (_, __, self) => aggregate(items(self), values => {
 		const sorted = [...values].sort((a, b) => a - b)
 		const mid = sorted.length >> 1
