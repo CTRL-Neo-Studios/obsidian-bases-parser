@@ -6,3 +6,5 @@ export {isTruthy, looseEquals, toDisplay, toText, typeChain, type TypeName, type
 export {fromFrontmatter} from './values/convert'
 export type {Base, BaseView, FilterNode, PropertyOrder} from './query/base'
 export {runQuery, summarize, type QueryGroup, type QueryOptions, type QueryResult} from './query/query'
+export {parseBase, stringifyBase, type ParsedBase} from './format/file'
+export * from './format/edit'

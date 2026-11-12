@@ -1,0 +1,539 @@
+{
+	"obsidian": "1.15.1",
+	"normalize": [
+		{
+			"name": "scrambled",
+			"input": "# comment\nunknownTop: 1\nviews:\n  - sort:\n      - property: n\n        direction: DESC\n    custom1: x\n    name: V\n    cardSize: 300\n    type: cards\n    limit: 5\n    order: [file.name, n]\n    columnSize:\n      note.n: 100\n    filters: n > 0\n    groupBy:\n      property: status\n      direction: ASC\n    summaries:\n      n: Sum\n    image: cover\nsummaries:\n  S: values.length\nproperties:\n  note.n:\n    displayName: Number\nformulas:\n  f: n * 2\nfilters:\n  and:\n    - file.inFolder(\"zz-b4\")\nanother: [a, b]\n",
+			"output": "unknownTop: 1\nsummaries:\n  S: values.length\nanother:\n  - a\n  - b\nfilters:\n  and:\n    - file.inFolder(\"zz-b4\")\nformulas:\n  f: n * 2\nproperties:\n  note.n:\n    displayName: Number\nviews:\n  - type: cards\n    name: V\n    filters: n > 0\n    groupBy:\n      property: status\n      direction: ASC\n    order:\n      - file.name\n      - n\n    sort:\n      - property: n\n        direction: DESC\n    limit: 5\n    summaries:\n      n: Sum\n    custom1: x\n    cardSize: 300\n    columnSize:\n      note.n: 100\n    image: cover\n"
+		},
+		{
+			"name": "minimal",
+			"input": "views:\n  - type: table\n    name: T\n",
+			"output": "views:\n  - type: table\n    name: T\n"
+		},
+		{
+			"name": "empty views",
+			"input": "views: []\n",
+			"output": "views:\n  - type: table\n    name: View\n"
+		},
+		{
+			"name": "no views",
+			"input": "filters:\n  and:\n    - n > 0\n",
+			"output": "filters:\n  and:\n    - n > 0\nviews:\n  - type: table\n    name: View\n"
+		},
+		{
+			"name": "empty file",
+			"input": "",
+			"output": "views:\n  - type: table\n    name: View\n"
+		},
+		{
+			"name": "summaries new pos",
+			"input": "filters: n > 0\nformulas:\n  f: n\nproperties:\n  note.n:\n    displayName: N\nviews:\n  - type: table\n    name: T\nsummaries:\n  S: values.length\n",
+			"output": "summaries:\n  S: values.length\nfilters: n > 0\nformulas:\n  f: n\nproperties:\n  note.n:\n    displayName: N\nviews:\n  - type: table\n    name: T\n"
+		},
+		{
+			"name": "note prefix",
+			"input": "views:\n  - type: table\n    name: T\n    order: [note.n, n, file.name, formula.f, note.my prop]\n    sort:\n      - property: note.n\n        direction: ASC\n    groupBy:\n      property: note.status\n      direction: DESC\n    summaries:\n      note.n: Sum\n    columnSize:\n      note.n: 50\n      n: 60\nproperties:\n  n:\n    displayName: Bare\n  note.status:\n    displayName: Status\n",
+			"output": "properties:\n  n:\n    displayName: Bare\n  note.status:\n    displayName: Status\nviews:\n  - type: table\n    name: T\n    groupBy:\n      property: status\n      direction: DESC\n    order:\n      - n\n      - n\n      - file.name\n      - formula.f\n      - my prop\n    sort:\n      - property: n\n        direction: ASC\n    summaries:\n      n: Sum\n    columnSize:\n      note.n: 50\n      n: 60\n"
+		},
+		{
+			"name": "groupOrder",
+			"input": "views:\n  - type: table\n    name: T\n    custom: 1\n    groupOrder: [false, null, \"x\", 3]\n    groupBy:\n      property: b\n      direction: ASC\n    order: [file.name]\n",
+			"output": "views:\n  - type: table\n    name: T\n    groupBy:\n      property: b\n      direction: ASC\n    groupOrder:\n      - false\n      - \n      - x\n      - 3\n    order:\n      - file.name\n    custom: 1\n"
+		},
+		{
+			"name": "quoting",
+			"input": "formulas:\n  colon: '\"a: b\"'\n  hash: '\"#x\"'\n  empty: \"\"\n  space: \" lead\"\n  truestr: '\"true\"'\n  num: '\"5\"'\n  quote: \"it's\"\n  dq: 'say \"hi\"'\n  uni: '\"café 名前\"'\n  multi: \"a\\nb\"\n  long: '\"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\"'\n  brackets: '[1, 2].length'\n  star: \"*bold*\"\n  dash: \"- item\"\n  qmark: \"? x\"\n  percent: \"%x\"\n  at: \"@x\"\n  backtick: \"`x`\"\n  pipe: \"| x\"\n  gt: \"> x\"\n  amp: \"&x\"\n  bang: \"!x\"\n  tilde: \"~\"\n  nullstr: \"null\"\n  yes: \"yes\"\n  tab: \"a\\tb\"\nviews:\n  - type: table\n    name: T\n",
+			"output": "formulas:\n  colon: '\"a: b\"'\n  hash: '\"#x\"'\n  empty: \"\"\n  space: \" lead\"\n  truestr: '\"true\"'\n  num: '\"5\"'\n  quote: it's\n  dq: say \"hi\"\n  uni: '\"café 名前\"'\n  multi: |-\n    a\n    b\n  long: '\"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\"'\n  brackets: \"[1, 2].length\"\n  star: \"*bold*\"\n  dash: \"- item\"\n  qmark: \"? x\"\n  percent: \"%x\"\n  at: \"@x\"\n  backtick: \"`x`\"\n  pipe: \"| x\"\n  gt: \"> x\"\n  amp: \"&x\"\n  bang: \"!x\"\n  tilde: \"~\"\n  nullstr: \"null\"\n  yes: yes\n  tab: a\tb\nviews:\n  - type: table\n    name: T\n"
+		},
+		{
+			"name": "keys",
+			"input": "formulas:\n  \"Time of Existence\": today()\n  \"a: b\": \"1\"\n  \"#hash\": \"2\"\n  \"123\": \"3\"\n  \"true\": \"4\"\n  \"\": \"5\"\n  \"名前\": \"6\"\n  \"n\": \"7\"\n  \"- x\": \"8\"\nviews:\n  - type: table\n    name: T\n",
+			"output": "formulas:\n  \"123\": \"3\"\n  Time of Existence: today()\n  \"a: b\": \"1\"\n  \"#hash\": \"2\"\n  \"true\": \"4\"\n  \"\": \"5\"\n  名前: \"6\"\n  n: \"7\"\n  \"- x\": \"8\"\nviews:\n  - type: table\n    name: T\n"
+		},
+		{
+			"name": "numbers",
+			"input": "views:\n  - type: cards\n    name: T\n    cardSize: 210\n    imageAspectRatio: 0.55\n    limit: 0\n    neg: -1\n    big: 1e21\n    float: 1.0\n    zero: 0.0\n    rowHeight: \"\"\n    image: cover\n    imageFit: \"\"\n    flag: true\n    nul: null\n    tiles: []\n    obj: {}\n",
+			"output": "views:\n  - type: cards\n    name: T\n    cardSize: 210\n    imageAspectRatio: 0.55\n    neg: -1\n    big: 1e+21\n    float: 1\n    zero: 0\n    rowHeight: \"\"\n    image: cover\n    imageFit: \"\"\n    flag: true\n    nul:\n    tiles: []\n    obj: {}\n"
+		},
+		{
+			"name": "filters shapes",
+			"input": "filters:\n  or:\n    - n > 1\n    - and:\n        - s == \"a\"\n        - not:\n            - file.hasTag(\"x\")\n            - \"true\"\nviews:\n  - type: table\n    name: T\n    filters: 'n > 2'\n  - type: table\n    name: U\n    filters:\n      and: []\n",
+			"output": "filters:\n  or:\n    - n > 1\n    - and:\n        - s == \"a\"\n        - not:\n            - file.hasTag(\"x\")\n            - \"true\"\nviews:\n  - type: table\n    name: T\n    filters: n > 2\n  - type: table\n    name: U\n    filters:\n      and: []\n"
+		},
+		{
+			"name": "kthalatir",
+			"input": "filters:\n  not:\n    - file.folder == \"Templates\"\nformulas:\n  Untitled: \"\"\n  Time of Existence: today() - file.ctime\n  Last Edited Time: today() - file.mtime\n  Untitled 2: \"\"\nproperties:\n  formula.Last Edited Time:\n    displayName: Last Time of Edit\nviews:\n  - type: table\n    name: All Entries\n    filters:\n      and:\n        - tags.filter(value.containsAny('kthalatir'))\n    order:\n      - file.name\n      - file.mtime\n      - file.ctime\n      - tags\n      - file.path\n      - formula.Untitled\n      - formula.Time of Existence\n      - formula.Last Edited Time\n      - file.folder\n      - file.backlinks\n    sort:\n      - property: file.name\n        direction: ASC\n    columnSize:\n      file.name: 361\n      file.mtime: 127\n      file.ctime: 150\n      note.tags: 762\n  - type: cards\n    name: Kthalatir Races\n    filters:\n      and:\n        - tags.filter(value.containsAny(\"kthalatir/races\"))\n    order:\n      - file.name\n      - file.mtime\n    cardSize: 210\n    imageFit: \"\"\n    imageAspectRatio: 0.55\n    image: cover\n  - type: table\n    name: Adventurers' Guild\n    filters:\n      and:\n        - tags.filter(value.containsAny(\"kthalatir/adventurers-guild\"))\n    order:\n      - file.name\n  - type: cards\n    name: Kthalatir Characters\n    filters:\n      and:\n        - tags.filter(value.containsAny(\"kthalatir/characters\"))\n    order:\n      - file.name\n      - file.mtime\n      - file.ctime\n    cardSize: 250\n    image: cover\n    imageFit: \"\"\n    imageAspectRatio: 1.4\n  - type: kanban\n    name: View\n    groupBy:\n      property: file.tags\n      direction: ASC\n  - type: map\n    name: View 2\n    mapTiles: []\n",
+			"output": "filters:\n  not:\n    - file.folder == \"Templates\"\nformulas:\n  Untitled: \"\"\n  Time of Existence: today() - file.ctime\n  Last Edited Time: today() - file.mtime\n  Untitled 2: \"\"\nproperties:\n  formula.Last Edited Time:\n    displayName: Last Time of Edit\nviews:\n  - type: table\n    name: All Entries\n    filters:\n      and:\n        - tags.filter(value.containsAny('kthalatir'))\n    order:\n      - file.name\n      - file.mtime\n      - file.ctime\n      - tags\n      - file.path\n      - formula.Untitled\n      - formula.Time of Existence\n      - formula.Last Edited Time\n      - file.folder\n      - file.backlinks\n    sort:\n      - property: file.name\n        direction: ASC\n    columnSize:\n      file.name: 361\n      file.mtime: 127\n      file.ctime: 150\n      note.tags: 762\n  - type: cards\n    name: Kthalatir Races\n    filters:\n      and:\n        - tags.filter(value.containsAny(\"kthalatir/races\"))\n    order:\n      - file.name\n      - file.mtime\n    cardSize: 210\n    imageFit: \"\"\n    imageAspectRatio: 0.55\n    image: cover\n  - type: table\n    name: Adventurers' Guild\n    filters:\n      and:\n        - tags.filter(value.containsAny(\"kthalatir/adventurers-guild\"))\n    order:\n      - file.name\n  - type: cards\n    name: Kthalatir Characters\n    filters:\n      and:\n        - tags.filter(value.containsAny(\"kthalatir/characters\"))\n    order:\n      - file.name\n      - file.mtime\n      - file.ctime\n    cardSize: 250\n    image: cover\n    imageFit: \"\"\n    imageAspectRatio: 1.4\n  - type: kanban\n    name: View\n    groupBy:\n      property: file.tags\n      direction: ASC\n  - type: map\n    name: View 2\n    mapTiles: []\n"
+		},
+		{
+			"name": "flow style",
+			"input": "views: [{type: table, name: T, order: [file.name, n]}]\nformulas: {f: \"n * 2\"}\n",
+			"output": "formulas:\n  f: n * 2\nviews:\n  - type: table\n    name: T\n    order:\n      - file.name\n      - n\n"
+		},
+		{
+			"name": "anchors",
+			"input": "formulas:\n  a: &x n * 2\n  b: *x\nviews:\n  - type: table\n    name: T\n",
+			"output": "formulas:\n  a: n * 2\n  b: n * 2\nviews:\n  - type: table\n    name: T\n"
+		},
+		{
+			"name": "crlf",
+			"input": "views:\r\n  - type: table\r\n    name: T\r\n",
+			"output": "views:\n  - type: table\n    name: T\n"
+		},
+		{
+			"name": "doc marker",
+			"input": "---\nviews:\n  - type: table\n    name: T\n",
+			"output": "views:\n  - type: table\n    name: T\n"
+		},
+		{
+			"name": "two views order",
+			"input": "views:\n  - name: B\n    type: list\n  - type: table\n    name: A\n",
+			"output": "views:\n  - type: list\n    name: B\n  - type: table\n    name: A\n"
+		},
+		{
+			"name": "view dup names",
+			"input": "views:\n  - type: table\n    name: A\n  - type: list\n    name: A\n",
+			"output": "views:\n  - type: table\n    name: A\n  - type: list\n    name: A\n"
+		},
+		{
+			"name": "sort dir lower",
+			"input": "views:\n  - type: table\n    name: T\n    sort:\n      - property: n\n        direction: asc\n      - property: s\n",
+			"output": "views:\n  - type: table\n    name: T\n    sort: []\n"
+		},
+		{
+			"name": "properties extra",
+			"input": "properties:\n  note.n:\n    displayName: N\n    width: 3\n  file.name:\n    other: 1\nviews:\n  - type: table\n    name: T\n",
+			"output": "properties:\n  note.n:\n    width: 3\n    displayName: N\n  file.name:\n    other: 1\nviews:\n  - type: table\n    name: T\n"
+		}
+	],
+	"errors": [
+		{
+			"name": "views not array",
+			"input": "views: 5\n",
+			"error": "Views must be an array"
+		},
+		{
+			"name": "view not object",
+			"input": "views:\n  - 5\n",
+			"error": "\"view\" items must be a YAML object, however item 1 is not"
+		},
+		{
+			"name": "view no name",
+			"input": "views:\n  - type: table\n",
+			"error": "Missing or invalid \"name\" in view 1"
+		},
+		{
+			"name": "view name number",
+			"input": "views:\n  - type: table\n    name: 5\n",
+			"error": "Missing or invalid \"name\" in view 1"
+		},
+		{
+			"name": "view no type",
+			"input": "views:\n  - name: T\n",
+			"error": "\"type\" is required in view \"T\""
+		},
+		{
+			"name": "view type number",
+			"input": "views:\n  - name: T\n    type: 5\n",
+			"error": "\"type\" must be a string in view \"T\""
+		},
+		{
+			"name": "view type unknown",
+			"input": "views:\n  - name: T\n    type: foo\n",
+			"output": "views:\n  - type: foo\n    name: T\n"
+		},
+		{
+			"name": "filters number",
+			"input": "filters: 5\nviews:\n  - type: table\n    name: T\n",
+			"error": "\"filters\" must be a string or an object"
+		},
+		{
+			"name": "filters and not array",
+			"input": "filters:\n  and: x\nviews:\n  - type: table\n    name: T\n",
+			"error": "\"and\" filter must be an array"
+		},
+		{
+			"name": "filters two keys",
+			"input": "filters:\n  and: []\n  or: []\nviews:\n  - type: table\n    name: T\n",
+			"error": "\"filters\" may only have one of an \"and\", \"or\", or \"not\" keys."
+		},
+		{
+			"name": "filters unknown key",
+			"input": "filters:\n  foo: []\nviews:\n  - type: table\n    name: T\n",
+			"error": "\"filters\" may only have one of an \"and\", \"or\", or \"not\" keys."
+		},
+		{
+			"name": "filters nested bad",
+			"input": "filters:\n  and:\n    - 5\nviews:\n  - type: table\n    name: T\n",
+			"error": "\"filters\" must be a string or an object"
+		},
+		{
+			"name": "filter unparsable",
+			"input": "filters: \"((\"\nviews:\n  - type: table\n    name: T\n",
+			"output": "filters: ((\nviews:\n  - type: table\n    name: T\n"
+		},
+		{
+			"name": "formulas number",
+			"input": "formulas:\n  a: 1\nviews:\n  - type: table\n    name: T\n",
+			"error": "Formula values must be strings. Value for property a is not."
+		},
+		{
+			"name": "formulas list",
+			"input": "formulas: [a]\nviews:\n  - type: table\n    name: T\n",
+			"output": "formulas:\n  \"0\": a\nviews:\n  - type: table\n    name: T\n"
+		},
+		{
+			"name": "formula unparsable",
+			"input": "formulas:\n  a: \"((\"\nviews:\n  - type: table\n    name: T\n",
+			"output": "formulas:\n  a: ((\nviews:\n  - type: table\n    name: T\n"
+		},
+		{
+			"name": "properties number",
+			"input": "properties: 5\nviews:\n  - type: table\n    name: T\n",
+			"error": "Invalid properties configuration."
+		},
+		{
+			"name": "property not object",
+			"input": "properties:\n  x: 5\nviews:\n  - type: table\n    name: T\n",
+			"error": "Invalid properties configuration."
+		},
+		{
+			"name": "displayName number",
+			"input": "properties:\n  x:\n    displayName: 5\nviews:\n  - type: table\n    name: T\n",
+			"output": "views:\n  - type: table\n    name: T\n"
+		},
+		{
+			"name": "order not array",
+			"input": "views:\n  - type: table\n    name: T\n    order: x\n",
+			"error": "\"order\" must be a array in view \"T\""
+		},
+		{
+			"name": "order number item",
+			"input": "views:\n  - type: table\n    name: T\n    order: [1]\n",
+			"error": "o.startsWith is not a function"
+		},
+		{
+			"name": "sort not array",
+			"input": "views:\n  - type: table\n    name: T\n    sort: x\n",
+			"output": "views:\n  - type: table\n    name: T\n"
+		},
+		{
+			"name": "sort bad property",
+			"input": "views:\n  - type: table\n    name: T\n    sort:\n      - property: 1\n        direction: ASC\n",
+			"output": "views:\n  - type: table\n    name: T\n    sort: []\n"
+		},
+		{
+			"name": "limit string",
+			"input": "views:\n  - type: table\n    name: T\n    limit: x\n",
+			"output": "views:\n  - type: table\n    name: T\n"
+		},
+		{
+			"name": "limit negative",
+			"input": "views:\n  - type: table\n    name: T\n    limit: -3\n",
+			"output": "views:\n  - type: table\n    name: T\n"
+		},
+		{
+			"name": "groupBy string",
+			"input": "views:\n  - type: table\n    name: T\n    groupBy: x\n",
+			"error": "\"groupBy\" must be a object in view \"T\""
+		},
+		{
+			"name": "groupBy bad direction",
+			"input": "views:\n  - type: table\n    name: T\n    groupBy:\n      property: s\n      direction: up\n",
+			"output": "views:\n  - type: table\n    name: T\n"
+		},
+		{
+			"name": "view summaries number",
+			"input": "views:\n  - type: table\n    name: T\n    summaries:\n      n: 5\n",
+			"error": "\"summaries\" values must all be of type string in view \"T\""
+		},
+		{
+			"name": "top summaries number",
+			"input": "summaries:\n  S: 5\nviews:\n  - type: table\n    name: T\n",
+			"error": "Formula values must be strings. Value for property S is not."
+		},
+		{
+			"name": "top summaries list",
+			"input": "summaries: [a]\nviews:\n  - type: table\n    name: T\n",
+			"output": "summaries:\n  \"0\": a\nviews:\n  - type: table\n    name: T\n"
+		},
+		{
+			"name": "yaml syntax",
+			"input": "views: [\n",
+			"error": "Flow sequence in block collection must be sufficiently indented and end with a ] at line 2, column 1: views: [ ^"
+		},
+		{
+			"name": "top list",
+			"input": "- a\n",
+			"output": "\"0\": a\nviews:\n  - type: table\n    name: View\n"
+		},
+		{
+			"name": "top scalar",
+			"input": "hello\n",
+			"error": "Query is an invalid format. It should be a YAML object."
+		},
+		{
+			"name": "dup keys",
+			"input": "views: []\nviews: []\n",
+			"error": "Map keys must be unique at line 2, column 1: views: [] views: [] ^"
+		},
+		{
+			"name": "view filters number",
+			"input": "views:\n  - type: table\n    name: T\n    filters: 5\n",
+			"error": "Unable to parse filters in view \"T\": \"filters\" must be a string or an object"
+		},
+		{
+			"name": "groupOrder string",
+			"input": "views:\n  - type: table\n    name: T\n    groupOrder: x\n",
+			"output": "views:\n  - type: table\n    name: T\n"
+		},
+		{
+			"name": "view dup names",
+			"input": "views:\n  - type: table\n    name: A\n  - type: list\n    name: A\n",
+			"output": "views:\n  - type: table\n    name: A\n  - type: list\n    name: A\n"
+		},
+		{
+			"name": "groupBy no direction",
+			"input": "views:\n  - type: table\n    name: T\n    groupBy:\n      property: s\n",
+			"error": "\"groupBy\" must be a object in view \"T\""
+		}
+	],
+	"edits": [
+		{
+			"name": "toggle sort n",
+			"before": "filters:\n  and:\n    - file.inFolder(\"zz-b4\")\nformulas:\n  f: n * 2\n  g: formula.f + 1\nproperties:\n  note.n:\n    displayName: Number\nviews:\n  - type: table\n    name: T\n    order:\n      - file.name\n      - n\n      - formula.f\n    sort:\n      - property: file.name\n        direction: ASC\n    summaries:\n      n: Sum\n    columnSize:\n      note.n: 100\n  - type: cards\n    name: C\n    order:\n      - file.name\n    cardSize: 200\n",
+			"after": "filters:\n  and:\n    - file.inFolder(\"zz-b4\")\nformulas:\n  f: n * 2\n  g: formula.f + 1\nproperties:\n  note.n:\n    displayName: Number\nviews:\n  - type: table\n    name: T\n    order:\n      - file.name\n      - n\n      - formula.f\n    sort:\n      - property: n\n        direction: ASC\n      - property: file.name\n        direction: ASC\n    summaries:\n      n: Sum\n    columnSize:\n      note.n: 100\n  - type: cards\n    name: C\n    order:\n      - file.name\n    cardSize: 200\n"
+		},
+		{
+			"name": "toggle sort n twice",
+			"before": "filters:\n  and:\n    - file.inFolder(\"zz-b4\")\nformulas:\n  f: n * 2\n  g: formula.f + 1\nproperties:\n  note.n:\n    displayName: Number\nviews:\n  - type: table\n    name: T\n    order:\n      - file.name\n      - n\n      - formula.f\n    sort:\n      - property: file.name\n        direction: ASC\n    summaries:\n      n: Sum\n    columnSize:\n      note.n: 100\n  - type: cards\n    name: C\n    order:\n      - file.name\n    cardSize: 200\n",
+			"after": "filters:\n  and:\n    - file.inFolder(\"zz-b4\")\nformulas:\n  f: n * 2\n  g: formula.f + 1\nproperties:\n  note.n:\n    displayName: Number\nviews:\n  - type: table\n    name: T\n    order:\n      - file.name\n      - n\n      - formula.f\n    sort:\n      - property: n\n        direction: DESC\n      - property: file.name\n        direction: ASC\n    summaries:\n      n: Sum\n    columnSize:\n      note.n: 100\n  - type: cards\n    name: C\n    order:\n      - file.name\n    cardSize: 200\n"
+		},
+		{
+			"name": "toggle sort n thrice",
+			"before": "filters:\n  and:\n    - file.inFolder(\"zz-b4\")\nformulas:\n  f: n * 2\n  g: formula.f + 1\nproperties:\n  note.n:\n    displayName: Number\nviews:\n  - type: table\n    name: T\n    order:\n      - file.name\n      - n\n      - formula.f\n    sort:\n      - property: file.name\n        direction: ASC\n    summaries:\n      n: Sum\n    columnSize:\n      note.n: 100\n  - type: cards\n    name: C\n    order:\n      - file.name\n    cardSize: 200\n",
+			"after": "filters:\n  and:\n    - file.inFolder(\"zz-b4\")\nformulas:\n  f: n * 2\n  g: formula.f + 1\nproperties:\n  note.n:\n    displayName: Number\nviews:\n  - type: table\n    name: T\n    order:\n      - file.name\n      - n\n      - formula.f\n    sort:\n      - property: file.name\n        direction: ASC\n    summaries:\n      n: Sum\n    columnSize:\n      note.n: 100\n  - type: cards\n    name: C\n    order:\n      - file.name\n    cardSize: 200\n"
+		},
+		{
+			"name": "toggle sort file.name",
+			"before": "filters:\n  and:\n    - file.inFolder(\"zz-b4\")\nformulas:\n  f: n * 2\n  g: formula.f + 1\nproperties:\n  note.n:\n    displayName: Number\nviews:\n  - type: table\n    name: T\n    order:\n      - file.name\n      - n\n      - formula.f\n    sort:\n      - property: file.name\n        direction: ASC\n    summaries:\n      n: Sum\n    columnSize:\n      note.n: 100\n  - type: cards\n    name: C\n    order:\n      - file.name\n    cardSize: 200\n",
+			"after": "filters:\n  and:\n    - file.inFolder(\"zz-b4\")\nformulas:\n  f: n * 2\n  g: formula.f + 1\nproperties:\n  note.n:\n    displayName: Number\nviews:\n  - type: table\n    name: T\n    order:\n      - file.name\n      - n\n      - formula.f\n    sort:\n      - property: file.name\n        direction: DESC\n    summaries:\n      n: Sum\n    columnSize:\n      note.n: 100\n  - type: cards\n    name: C\n    order:\n      - file.name\n    cardSize: 200\n"
+		},
+		{
+			"name": "sort ASC formula on C",
+			"before": "filters:\n  and:\n    - file.inFolder(\"zz-b4\")\nformulas:\n  f: n * 2\n  g: formula.f + 1\nproperties:\n  note.n:\n    displayName: Number\nviews:\n  - type: table\n    name: T\n    order:\n      - file.name\n      - n\n      - formula.f\n    sort:\n      - property: file.name\n        direction: ASC\n    summaries:\n      n: Sum\n    columnSize:\n      note.n: 100\n  - type: cards\n    name: C\n    order:\n      - file.name\n    cardSize: 200\n",
+			"after": "filters:\n  and:\n    - file.inFolder(\"zz-b4\")\nformulas:\n  f: n * 2\n  g: formula.f + 1\nproperties:\n  note.n:\n    displayName: Number\nviews:\n  - type: table\n    name: T\n    order:\n      - file.name\n      - n\n      - formula.f\n    sort:\n      - property: file.name\n        direction: ASC\n    summaries:\n      n: Sum\n    columnSize:\n      note.n: 100\n  - type: cards\n    name: C\n    order:\n      - file.name\n    sort:\n      - property: formula.f\n        direction: ASC\n    cardSize: 200\n"
+		},
+		{
+			"name": "sort DESC existing",
+			"before": "filters:\n  and:\n    - file.inFolder(\"zz-b4\")\nformulas:\n  f: n * 2\n  g: formula.f + 1\nproperties:\n  note.n:\n    displayName: Number\nviews:\n  - type: table\n    name: T\n    order:\n      - file.name\n      - n\n      - formula.f\n    sort:\n      - property: file.name\n        direction: ASC\n    summaries:\n      n: Sum\n    columnSize:\n      note.n: 100\n  - type: cards\n    name: C\n    order:\n      - file.name\n    cardSize: 200\n",
+			"after": "filters:\n  and:\n    - file.inFolder(\"zz-b4\")\nformulas:\n  f: n * 2\n  g: formula.f + 1\nproperties:\n  note.n:\n    displayName: Number\nviews:\n  - type: table\n    name: T\n    order:\n      - file.name\n      - n\n      - formula.f\n    sort:\n      - property: file.name\n        direction: DESC\n    summaries:\n      n: Sum\n    columnSize:\n      note.n: 100\n  - type: cards\n    name: C\n    order:\n      - file.name\n    cardSize: 200\n"
+		},
+		{
+			"name": "sort NONE existing",
+			"before": "filters:\n  and:\n    - file.inFolder(\"zz-b4\")\nformulas:\n  f: n * 2\n  g: formula.f + 1\nproperties:\n  note.n:\n    displayName: Number\nviews:\n  - type: table\n    name: T\n    order:\n      - file.name\n      - n\n      - formula.f\n    sort:\n      - property: file.name\n        direction: ASC\n    summaries:\n      n: Sum\n    columnSize:\n      note.n: 100\n  - type: cards\n    name: C\n    order:\n      - file.name\n    cardSize: 200\n",
+			"after": "filters:\n  and:\n    - file.inFolder(\"zz-b4\")\nformulas:\n  f: n * 2\n  g: formula.f + 1\nproperties:\n  note.n:\n    displayName: Number\nviews:\n  - type: table\n    name: T\n    order:\n      - file.name\n      - n\n      - formula.f\n    sort: []\n    summaries:\n      n: Sum\n    columnSize:\n      note.n: 100\n  - type: cards\n    name: C\n    order:\n      - file.name\n    cardSize: 200\n"
+		},
+		{
+			"name": "group by status",
+			"before": "filters:\n  and:\n    - file.inFolder(\"zz-b4\")\nformulas:\n  f: n * 2\n  g: formula.f + 1\nproperties:\n  note.n:\n    displayName: Number\nviews:\n  - type: table\n    name: T\n    order:\n      - file.name\n      - n\n      - formula.f\n    sort:\n      - property: file.name\n        direction: ASC\n    summaries:\n      n: Sum\n    columnSize:\n      note.n: 100\n  - type: cards\n    name: C\n    order:\n      - file.name\n    cardSize: 200\n",
+			"after": "filters:\n  and:\n    - file.inFolder(\"zz-b4\")\nformulas:\n  f: n * 2\n  g: formula.f + 1\nproperties:\n  note.n:\n    displayName: Number\nviews:\n  - type: table\n    name: T\n    groupBy:\n      property: status\n      direction: ASC\n    order:\n      - file.name\n      - n\n      - formula.f\n    sort:\n      - property: file.name\n        direction: ASC\n    summaries:\n      n: Sum\n    columnSize:\n      note.n: 100\n  - type: cards\n    name: C\n    order:\n      - file.name\n    cardSize: 200\n"
+		},
+		{
+			"name": "group by then change",
+			"before": "filters:\n  and:\n    - file.inFolder(\"zz-b4\")\nformulas:\n  f: n * 2\n  g: formula.f + 1\nproperties:\n  note.n:\n    displayName: Number\nviews:\n  - type: table\n    name: T\n    order:\n      - file.name\n      - n\n      - formula.f\n    sort:\n      - property: file.name\n        direction: ASC\n    summaries:\n      n: Sum\n    columnSize:\n      note.n: 100\n  - type: cards\n    name: C\n    order:\n      - file.name\n    cardSize: 200\n",
+			"after": "filters:\n  and:\n    - file.inFolder(\"zz-b4\")\nformulas:\n  f: n * 2\n  g: formula.f + 1\nproperties:\n  note.n:\n    displayName: Number\nviews:\n  - type: table\n    name: T\n    groupBy:\n      property: n\n      direction: DESC\n    groupOrder: []\n    order:\n      - file.name\n      - n\n      - formula.f\n    sort:\n      - property: file.name\n        direction: ASC\n    summaries:\n      n: Sum\n    columnSize:\n      note.n: 100\n  - type: cards\n    name: C\n    order:\n      - file.name\n    cardSize: 200\n"
+		},
+		{
+			"name": "group by then direction",
+			"before": "filters:\n  and:\n    - file.inFolder(\"zz-b4\")\nformulas:\n  f: n * 2\n  g: formula.f + 1\nproperties:\n  note.n:\n    displayName: Number\nviews:\n  - type: table\n    name: T\n    order:\n      - file.name\n      - n\n      - formula.f\n    sort:\n      - property: file.name\n        direction: ASC\n    summaries:\n      n: Sum\n    columnSize:\n      note.n: 100\n  - type: cards\n    name: C\n    order:\n      - file.name\n    cardSize: 200\n",
+			"after": "filters:\n  and:\n    - file.inFolder(\"zz-b4\")\nformulas:\n  f: n * 2\n  g: formula.f + 1\nproperties:\n  note.n:\n    displayName: Number\nviews:\n  - type: table\n    name: T\n    groupBy:\n      property: status\n      direction: DESC\n    groupOrder:\n      - todo\n      - \n    order:\n      - file.name\n      - n\n      - formula.f\n    sort:\n      - property: file.name\n        direction: ASC\n    summaries:\n      n: Sum\n    columnSize:\n      note.n: 100\n  - type: cards\n    name: C\n    order:\n      - file.name\n    cardSize: 200\n"
+		},
+		{
+			"name": "group by then clear",
+			"before": "filters:\n  and:\n    - file.inFolder(\"zz-b4\")\nformulas:\n  f: n * 2\n  g: formula.f + 1\nproperties:\n  note.n:\n    displayName: Number\nviews:\n  - type: table\n    name: T\n    order:\n      - file.name\n      - n\n      - formula.f\n    sort:\n      - property: file.name\n        direction: ASC\n    summaries:\n      n: Sum\n    columnSize:\n      note.n: 100\n  - type: cards\n    name: C\n    order:\n      - file.name\n    cardSize: 200\n",
+			"after": "filters:\n  and:\n    - file.inFolder(\"zz-b4\")\nformulas:\n  f: n * 2\n  g: formula.f + 1\nproperties:\n  note.n:\n    displayName: Number\nviews:\n  - type: table\n    name: T\n    order:\n      - file.name\n      - n\n      - formula.f\n    sort:\n      - property: file.name\n        direction: ASC\n    summaries:\n      n: Sum\n    columnSize:\n      note.n: 100\n  - type: cards\n    name: C\n    order:\n      - file.name\n    cardSize: 200\n"
+		},
+		{
+			"name": "group order",
+			"before": "filters:\n  and:\n    - file.inFolder(\"zz-b4\")\nformulas:\n  f: n * 2\n  g: formula.f + 1\nproperties:\n  note.n:\n    displayName: Number\nviews:\n  - type: table\n    name: T\n    order:\n      - file.name\n      - n\n      - formula.f\n    sort:\n      - property: file.name\n        direction: ASC\n    summaries:\n      n: Sum\n    columnSize:\n      note.n: 100\n  - type: cards\n    name: C\n    order:\n      - file.name\n    cardSize: 200\n",
+			"after": "filters:\n  and:\n    - file.inFolder(\"zz-b4\")\nformulas:\n  f: n * 2\n  g: formula.f + 1\nproperties:\n  note.n:\n    displayName: Number\nviews:\n  - type: table\n    name: T\n    groupBy:\n      property: status\n      direction: ASC\n    groupOrder:\n      - todo\n      - \n      - false\n      - 3\n    order:\n      - file.name\n      - n\n      - formula.f\n    sort:\n      - property: file.name\n        direction: ASC\n    summaries:\n      n: Sum\n    columnSize:\n      note.n: 100\n  - type: cards\n    name: C\n    order:\n      - file.name\n    cardSize: 200\n"
+		},
+		{
+			"name": "group order clear",
+			"before": "filters:\n  and:\n    - file.inFolder(\"zz-b4\")\nformulas:\n  f: n * 2\n  g: formula.f + 1\nproperties:\n  note.n:\n    displayName: Number\nviews:\n  - type: table\n    name: T\n    order:\n      - file.name\n      - n\n      - formula.f\n    sort:\n      - property: file.name\n        direction: ASC\n    summaries:\n      n: Sum\n    columnSize:\n      note.n: 100\n  - type: cards\n    name: C\n    order:\n      - file.name\n    cardSize: 200\n",
+			"after": "filters:\n  and:\n    - file.inFolder(\"zz-b4\")\nformulas:\n  f: n * 2\n  g: formula.f + 1\nproperties:\n  note.n:\n    displayName: Number\nviews:\n  - type: table\n    name: T\n    groupBy:\n      property: status\n      direction: ASC\n    order:\n      - file.name\n      - n\n      - formula.f\n    sort:\n      - property: file.name\n        direction: ASC\n    summaries:\n      n: Sum\n    columnSize:\n      note.n: 100\n  - type: cards\n    name: C\n    order:\n      - file.name\n    cardSize: 200\n"
+		},
+		{
+			"name": "group order empty",
+			"before": "filters:\n  and:\n    - file.inFolder(\"zz-b4\")\nformulas:\n  f: n * 2\n  g: formula.f + 1\nproperties:\n  note.n:\n    displayName: Number\nviews:\n  - type: table\n    name: T\n    order:\n      - file.name\n      - n\n      - formula.f\n    sort:\n      - property: file.name\n        direction: ASC\n    summaries:\n      n: Sum\n    columnSize:\n      note.n: 100\n  - type: cards\n    name: C\n    order:\n      - file.name\n    cardSize: 200\n",
+			"after": "filters:\n  and:\n    - file.inFolder(\"zz-b4\")\nformulas:\n  f: n * 2\n  g: formula.f + 1\nproperties:\n  note.n:\n    displayName: Number\nviews:\n  - type: table\n    name: T\n    groupBy:\n      property: status\n      direction: ASC\n    groupOrder: []\n    order:\n      - file.name\n      - n\n      - formula.f\n    sort:\n      - property: file.name\n        direction: ASC\n    summaries:\n      n: Sum\n    columnSize:\n      note.n: 100\n  - type: cards\n    name: C\n    order:\n      - file.name\n    cardSize: 200\n"
+		},
+		{
+			"name": "limit",
+			"before": "filters:\n  and:\n    - file.inFolder(\"zz-b4\")\nformulas:\n  f: n * 2\n  g: formula.f + 1\nproperties:\n  note.n:\n    displayName: Number\nviews:\n  - type: table\n    name: T\n    order:\n      - file.name\n      - n\n      - formula.f\n    sort:\n      - property: file.name\n        direction: ASC\n    summaries:\n      n: Sum\n    columnSize:\n      note.n: 100\n  - type: cards\n    name: C\n    order:\n      - file.name\n    cardSize: 200\n",
+			"after": "filters:\n  and:\n    - file.inFolder(\"zz-b4\")\nformulas:\n  f: n * 2\n  g: formula.f + 1\nproperties:\n  note.n:\n    displayName: Number\nviews:\n  - type: table\n    name: T\n    order:\n      - file.name\n      - n\n      - formula.f\n    sort:\n      - property: file.name\n        direction: ASC\n    limit: 10\n    summaries:\n      n: Sum\n    columnSize:\n      note.n: 100\n  - type: cards\n    name: C\n    order:\n      - file.name\n    cardSize: 200\n"
+		},
+		{
+			"name": "limit then clear null",
+			"before": "filters:\n  and:\n    - file.inFolder(\"zz-b4\")\nformulas:\n  f: n * 2\n  g: formula.f + 1\nproperties:\n  note.n:\n    displayName: Number\nviews:\n  - type: table\n    name: T\n    order:\n      - file.name\n      - n\n      - formula.f\n    sort:\n      - property: file.name\n        direction: ASC\n    summaries:\n      n: Sum\n    columnSize:\n      note.n: 100\n  - type: cards\n    name: C\n    order:\n      - file.name\n    cardSize: 200\n",
+			"after": "filters:\n  and:\n    - file.inFolder(\"zz-b4\")\nformulas:\n  f: n * 2\n  g: formula.f + 1\nproperties:\n  note.n:\n    displayName: Number\nviews:\n  - type: table\n    name: T\n    order:\n      - file.name\n      - n\n      - formula.f\n    sort:\n      - property: file.name\n        direction: ASC\n    summaries:\n      n: Sum\n    columnSize:\n      note.n: 100\n  - type: cards\n    name: C\n    order:\n      - file.name\n    cardSize: 200\n"
+		},
+		{
+			"name": "limit then 0",
+			"before": "filters:\n  and:\n    - file.inFolder(\"zz-b4\")\nformulas:\n  f: n * 2\n  g: formula.f + 1\nproperties:\n  note.n:\n    displayName: Number\nviews:\n  - type: table\n    name: T\n    order:\n      - file.name\n      - n\n      - formula.f\n    sort:\n      - property: file.name\n        direction: ASC\n    summaries:\n      n: Sum\n    columnSize:\n      note.n: 100\n  - type: cards\n    name: C\n    order:\n      - file.name\n    cardSize: 200\n",
+			"after": "filters:\n  and:\n    - file.inFolder(\"zz-b4\")\nformulas:\n  f: n * 2\n  g: formula.f + 1\nproperties:\n  note.n:\n    displayName: Number\nviews:\n  - type: table\n    name: T\n    order:\n      - file.name\n      - n\n      - formula.f\n    sort:\n      - property: file.name\n        direction: ASC\n    summaries:\n      n: Sum\n    columnSize:\n      note.n: 100\n  - type: cards\n    name: C\n    order:\n      - file.name\n    cardSize: 200\n"
+		},
+		{
+			"name": "order",
+			"before": "filters:\n  and:\n    - file.inFolder(\"zz-b4\")\nformulas:\n  f: n * 2\n  g: formula.f + 1\nproperties:\n  note.n:\n    displayName: Number\nviews:\n  - type: table\n    name: T\n    order:\n      - file.name\n      - n\n      - formula.f\n    sort:\n      - property: file.name\n        direction: ASC\n    summaries:\n      n: Sum\n    columnSize:\n      note.n: 100\n  - type: cards\n    name: C\n    order:\n      - file.name\n    cardSize: 200\n",
+			"after": "filters:\n  and:\n    - file.inFolder(\"zz-b4\")\nformulas:\n  f: n * 2\n  g: formula.f + 1\nproperties:\n  note.n:\n    displayName: Number\nviews:\n  - type: table\n    name: T\n    order:\n      - formula.f\n      - status\n      - file.name\n      - n\n    sort:\n      - property: file.name\n        direction: ASC\n    summaries:\n      n: Sum\n    columnSize:\n      note.n: 100\n  - type: cards\n    name: C\n    order:\n      - file.name\n    cardSize: 200\n"
+		},
+		{
+			"name": "order empty",
+			"before": "filters:\n  and:\n    - file.inFolder(\"zz-b4\")\nformulas:\n  f: n * 2\n  g: formula.f + 1\nproperties:\n  note.n:\n    displayName: Number\nviews:\n  - type: table\n    name: T\n    order:\n      - file.name\n      - n\n      - formula.f\n    sort:\n      - property: file.name\n        direction: ASC\n    summaries:\n      n: Sum\n    columnSize:\n      note.n: 100\n  - type: cards\n    name: C\n    order:\n      - file.name\n    cardSize: 200\n",
+			"after": "filters:\n  and:\n    - file.inFolder(\"zz-b4\")\nformulas:\n  f: n * 2\n  g: formula.f + 1\nproperties:\n  note.n:\n    displayName: Number\nviews:\n  - type: table\n    name: T\n    order: []\n    sort:\n      - property: file.name\n        direction: ASC\n    summaries:\n      n: Sum\n    columnSize:\n      note.n: 100\n  - type: cards\n    name: C\n    order:\n      - file.name\n    cardSize: 200\n"
+		},
+		{
+			"name": "columnSize add",
+			"before": "filters:\n  and:\n    - file.inFolder(\"zz-b4\")\nformulas:\n  f: n * 2\n  g: formula.f + 1\nproperties:\n  note.n:\n    displayName: Number\nviews:\n  - type: table\n    name: T\n    order:\n      - file.name\n      - n\n      - formula.f\n    sort:\n      - property: file.name\n        direction: ASC\n    summaries:\n      n: Sum\n    columnSize:\n      note.n: 100\n  - type: cards\n    name: C\n    order:\n      - file.name\n    cardSize: 200\n",
+			"after": "filters:\n  and:\n    - file.inFolder(\"zz-b4\")\nformulas:\n  f: n * 2\n  g: formula.f + 1\nproperties:\n  note.n:\n    displayName: Number\nviews:\n  - type: table\n    name: T\n    order:\n      - file.name\n      - n\n      - formula.f\n    sort:\n      - property: file.name\n        direction: ASC\n    summaries:\n      n: Sum\n    columnSize:\n      note.n: 100\n      file.name: 300\n  - type: cards\n    name: C\n    order:\n      - file.name\n    cardSize: 200\n"
+		},
+		{
+			"name": "columnSize remove",
+			"before": "filters:\n  and:\n    - file.inFolder(\"zz-b4\")\nformulas:\n  f: n * 2\n  g: formula.f + 1\nproperties:\n  note.n:\n    displayName: Number\nviews:\n  - type: table\n    name: T\n    order:\n      - file.name\n      - n\n      - formula.f\n    sort:\n      - property: file.name\n        direction: ASC\n    summaries:\n      n: Sum\n    columnSize:\n      note.n: 100\n  - type: cards\n    name: C\n    order:\n      - file.name\n    cardSize: 200\n",
+			"after": "filters:\n  and:\n    - file.inFolder(\"zz-b4\")\nformulas:\n  f: n * 2\n  g: formula.f + 1\nproperties:\n  note.n:\n    displayName: Number\nviews:\n  - type: table\n    name: T\n    order:\n      - file.name\n      - n\n      - formula.f\n    sort:\n      - property: file.name\n        direction: ASC\n    summaries:\n      n: Sum\n  - type: cards\n    name: C\n    order:\n      - file.name\n    cardSize: 200\n"
+		},
+		{
+			"name": "summary set",
+			"before": "filters:\n  and:\n    - file.inFolder(\"zz-b4\")\nformulas:\n  f: n * 2\n  g: formula.f + 1\nproperties:\n  note.n:\n    displayName: Number\nviews:\n  - type: table\n    name: T\n    order:\n      - file.name\n      - n\n      - formula.f\n    sort:\n      - property: file.name\n        direction: ASC\n    summaries:\n      n: Sum\n    columnSize:\n      note.n: 100\n  - type: cards\n    name: C\n    order:\n      - file.name\n    cardSize: 200\n",
+			"after": "filters:\n  and:\n    - file.inFolder(\"zz-b4\")\nformulas:\n  f: n * 2\n  g: formula.f + 1\nproperties:\n  note.n:\n    displayName: Number\nviews:\n  - type: table\n    name: T\n    order:\n      - file.name\n      - n\n      - formula.f\n    sort:\n      - property: file.name\n        direction: ASC\n    summaries:\n      n: Sum\n      formula.f: Average\n    columnSize:\n      note.n: 100\n  - type: cards\n    name: C\n    order:\n      - file.name\n    cardSize: 200\n"
+		},
+		{
+			"name": "summary replace",
+			"before": "filters:\n  and:\n    - file.inFolder(\"zz-b4\")\nformulas:\n  f: n * 2\n  g: formula.f + 1\nproperties:\n  note.n:\n    displayName: Number\nviews:\n  - type: table\n    name: T\n    order:\n      - file.name\n      - n\n      - formula.f\n    sort:\n      - property: file.name\n        direction: ASC\n    summaries:\n      n: Sum\n    columnSize:\n      note.n: 100\n  - type: cards\n    name: C\n    order:\n      - file.name\n    cardSize: 200\n",
+			"after": "filters:\n  and:\n    - file.inFolder(\"zz-b4\")\nformulas:\n  f: n * 2\n  g: formula.f + 1\nproperties:\n  note.n:\n    displayName: Number\nviews:\n  - type: table\n    name: T\n    order:\n      - file.name\n      - n\n      - formula.f\n    sort:\n      - property: file.name\n        direction: ASC\n    summaries:\n      n: Max\n    columnSize:\n      note.n: 100\n  - type: cards\n    name: C\n    order:\n      - file.name\n    cardSize: 200\n"
+		},
+		{
+			"name": "summary remove last",
+			"before": "filters:\n  and:\n    - file.inFolder(\"zz-b4\")\nformulas:\n  f: n * 2\n  g: formula.f + 1\nproperties:\n  note.n:\n    displayName: Number\nviews:\n  - type: table\n    name: T\n    order:\n      - file.name\n      - n\n      - formula.f\n    sort:\n      - property: file.name\n        direction: ASC\n    summaries:\n      n: Sum\n    columnSize:\n      note.n: 100\n  - type: cards\n    name: C\n    order:\n      - file.name\n    cardSize: 200\n",
+			"after": "filters:\n  and:\n    - file.inFolder(\"zz-b4\")\nformulas:\n  f: n * 2\n  g: formula.f + 1\nproperties:\n  note.n:\n    displayName: Number\nviews:\n  - type: table\n    name: T\n    order:\n      - file.name\n      - n\n      - formula.f\n    sort:\n      - property: file.name\n        direction: ASC\n    summaries: {}\n    columnSize:\n      note.n: 100\n  - type: cards\n    name: C\n    order:\n      - file.name\n    cardSize: 200\n"
+		},
+		{
+			"name": "summary on C",
+			"before": "filters:\n  and:\n    - file.inFolder(\"zz-b4\")\nformulas:\n  f: n * 2\n  g: formula.f + 1\nproperties:\n  note.n:\n    displayName: Number\nviews:\n  - type: table\n    name: T\n    order:\n      - file.name\n      - n\n      - formula.f\n    sort:\n      - property: file.name\n        direction: ASC\n    summaries:\n      n: Sum\n    columnSize:\n      note.n: 100\n  - type: cards\n    name: C\n    order:\n      - file.name\n    cardSize: 200\n",
+			"after": "filters:\n  and:\n    - file.inFolder(\"zz-b4\")\nformulas:\n  f: n * 2\n  g: formula.f + 1\nproperties:\n  note.n:\n    displayName: Number\nviews:\n  - type: table\n    name: T\n    order:\n      - file.name\n      - n\n      - formula.f\n    sort:\n      - property: file.name\n        direction: ASC\n    summaries:\n      n: Sum\n    columnSize:\n      note.n: 100\n  - type: cards\n    name: C\n    order:\n      - file.name\n    summaries:\n      n: Sum\n    cardSize: 200\n"
+		},
+		{
+			"name": "rowHeight",
+			"before": "filters:\n  and:\n    - file.inFolder(\"zz-b4\")\nformulas:\n  f: n * 2\n  g: formula.f + 1\nproperties:\n  note.n:\n    displayName: Number\nviews:\n  - type: table\n    name: T\n    order:\n      - file.name\n      - n\n      - formula.f\n    sort:\n      - property: file.name\n        direction: ASC\n    summaries:\n      n: Sum\n    columnSize:\n      note.n: 100\n  - type: cards\n    name: C\n    order:\n      - file.name\n    cardSize: 200\n",
+			"after": "filters:\n  and:\n    - file.inFolder(\"zz-b4\")\nformulas:\n  f: n * 2\n  g: formula.f + 1\nproperties:\n  note.n:\n    displayName: Number\nviews:\n  - type: table\n    name: T\n    order:\n      - file.name\n      - n\n      - formula.f\n    sort:\n      - property: file.name\n        direction: ASC\n    summaries:\n      n: Sum\n    columnSize:\n      note.n: 100\n    rowHeight: tall\n  - type: cards\n    name: C\n    order:\n      - file.name\n    cardSize: 200\n"
+		},
+		{
+			"name": "cardSize change",
+			"before": "filters:\n  and:\n    - file.inFolder(\"zz-b4\")\nformulas:\n  f: n * 2\n  g: formula.f + 1\nproperties:\n  note.n:\n    displayName: Number\nviews:\n  - type: table\n    name: T\n    order:\n      - file.name\n      - n\n      - formula.f\n    sort:\n      - property: file.name\n        direction: ASC\n    summaries:\n      n: Sum\n    columnSize:\n      note.n: 100\n  - type: cards\n    name: C\n    order:\n      - file.name\n    cardSize: 200\n",
+			"after": "filters:\n  and:\n    - file.inFolder(\"zz-b4\")\nformulas:\n  f: n * 2\n  g: formula.f + 1\nproperties:\n  note.n:\n    displayName: Number\nviews:\n  - type: table\n    name: T\n    order:\n      - file.name\n      - n\n      - formula.f\n    sort:\n      - property: file.name\n        direction: ASC\n    summaries:\n      n: Sum\n    columnSize:\n      note.n: 100\n  - type: cards\n    name: C\n    order:\n      - file.name\n    cardSize: 300\n"
+		},
+		{
+			"name": "cardSize remove",
+			"before": "filters:\n  and:\n    - file.inFolder(\"zz-b4\")\nformulas:\n  f: n * 2\n  g: formula.f + 1\nproperties:\n  note.n:\n    displayName: Number\nviews:\n  - type: table\n    name: T\n    order:\n      - file.name\n      - n\n      - formula.f\n    sort:\n      - property: file.name\n        direction: ASC\n    summaries:\n      n: Sum\n    columnSize:\n      note.n: 100\n  - type: cards\n    name: C\n    order:\n      - file.name\n    cardSize: 200\n",
+			"after": "filters:\n  and:\n    - file.inFolder(\"zz-b4\")\nformulas:\n  f: n * 2\n  g: formula.f + 1\nproperties:\n  note.n:\n    displayName: Number\nviews:\n  - type: table\n    name: T\n    order:\n      - file.name\n      - n\n      - formula.f\n    sort:\n      - property: file.name\n        direction: ASC\n    summaries:\n      n: Sum\n    columnSize:\n      note.n: 100\n  - type: cards\n    name: C\n    order:\n      - file.name\n"
+		},
+		{
+			"name": "image option",
+			"before": "filters:\n  and:\n    - file.inFolder(\"zz-b4\")\nformulas:\n  f: n * 2\n  g: formula.f + 1\nproperties:\n  note.n:\n    displayName: Number\nviews:\n  - type: table\n    name: T\n    order:\n      - file.name\n      - n\n      - formula.f\n    sort:\n      - property: file.name\n        direction: ASC\n    summaries:\n      n: Sum\n    columnSize:\n      note.n: 100\n  - type: cards\n    name: C\n    order:\n      - file.name\n    cardSize: 200\n",
+			"after": "filters:\n  and:\n    - file.inFolder(\"zz-b4\")\nformulas:\n  f: n * 2\n  g: formula.f + 1\nproperties:\n  note.n:\n    displayName: Number\nviews:\n  - type: table\n    name: T\n    order:\n      - file.name\n      - n\n      - formula.f\n    sort:\n      - property: file.name\n        direction: ASC\n    summaries:\n      n: Sum\n    columnSize:\n      note.n: 100\n  - type: cards\n    name: C\n    order:\n      - file.name\n    cardSize: 200\n    imageAspectRatio: 0.75\n    image: note.cover\n"
+		},
+		{
+			"name": "formula add",
+			"before": "filters:\n  and:\n    - file.inFolder(\"zz-b4\")\nformulas:\n  f: n * 2\n  g: formula.f + 1\nproperties:\n  note.n:\n    displayName: Number\nviews:\n  - type: table\n    name: T\n    order:\n      - file.name\n      - n\n      - formula.f\n    sort:\n      - property: file.name\n        direction: ASC\n    summaries:\n      n: Sum\n    columnSize:\n      note.n: 100\n  - type: cards\n    name: C\n    order:\n      - file.name\n    cardSize: 200\n",
+			"after": "filters:\n  and:\n    - file.inFolder(\"zz-b4\")\nformulas:\n  f: n * 2\n  g: formula.f + 1\n  h: \"[object Object]\"\nproperties:\n  note.n:\n    displayName: Number\nviews:\n  - type: table\n    name: T\n    order:\n      - file.name\n      - n\n      - formula.f\n    sort:\n      - property: file.name\n        direction: ASC\n    summaries:\n      n: Sum\n    columnSize:\n      note.n: 100\n  - type: cards\n    name: C\n    order:\n      - file.name\n    cardSize: 200\n"
+		},
+		{
+			"name": "formula change",
+			"before": "filters:\n  and:\n    - file.inFolder(\"zz-b4\")\nformulas:\n  f: n * 2\n  g: formula.f + 1\nproperties:\n  note.n:\n    displayName: Number\nviews:\n  - type: table\n    name: T\n    order:\n      - file.name\n      - n\n      - formula.f\n    sort:\n      - property: file.name\n        direction: ASC\n    summaries:\n      n: Sum\n    columnSize:\n      note.n: 100\n  - type: cards\n    name: C\n    order:\n      - file.name\n    cardSize: 200\n",
+			"after": "filters:\n  and:\n    - file.inFolder(\"zz-b4\")\nformulas:\n  f: \"[object Object]\"\n  g: formula.f + 1\nproperties:\n  note.n:\n    displayName: Number\nviews:\n  - type: table\n    name: T\n    order:\n      - file.name\n      - n\n      - formula.f\n    sort:\n      - property: file.name\n        direction: ASC\n    summaries:\n      n: Sum\n    columnSize:\n      note.n: 100\n  - type: cards\n    name: C\n    order:\n      - file.name\n    cardSize: 200\n"
+		},
+		{
+			"name": "formula remove",
+			"before": "filters:\n  and:\n    - file.inFolder(\"zz-b4\")\nformulas:\n  f: n * 2\n  g: formula.f + 1\nproperties:\n  note.n:\n    displayName: Number\nviews:\n  - type: table\n    name: T\n    order:\n      - file.name\n      - n\n      - formula.f\n    sort:\n      - property: file.name\n        direction: ASC\n    summaries:\n      n: Sum\n    columnSize:\n      note.n: 100\n  - type: cards\n    name: C\n    order:\n      - file.name\n    cardSize: 200\n",
+			"after": "filters:\n  and:\n    - file.inFolder(\"zz-b4\")\nformulas:\n  g: formula.f + 1\nproperties:\n  note.n:\n    displayName: Number\nviews:\n  - type: table\n    name: T\n    order:\n      - file.name\n      - n\n    sort:\n      - property: file.name\n        direction: ASC\n    summaries:\n      n: Sum\n    columnSize:\n      note.n: 100\n  - type: cards\n    name: C\n    order:\n      - file.name\n    cardSize: 200\n"
+		},
+		{
+			"name": "summary formula add",
+			"before": "filters:\n  and:\n    - file.inFolder(\"zz-b4\")\nformulas:\n  f: n * 2\n  g: formula.f + 1\nproperties:\n  note.n:\n    displayName: Number\nviews:\n  - type: table\n    name: T\n    order:\n      - file.name\n      - n\n      - formula.f\n    sort:\n      - property: file.name\n        direction: ASC\n    summaries:\n      n: Sum\n    columnSize:\n      note.n: 100\n  - type: cards\n    name: C\n    order:\n      - file.name\n    cardSize: 200\n",
+			"after": "filters:\n  and:\n    - file.inFolder(\"zz-b4\")\nformulas:\n  f: n * 2\n  g: formula.f + 1\nsummaries:\n  Twice: values.length * 2\nproperties:\n  note.n:\n    displayName: Number\nviews:\n  - type: table\n    name: T\n    order:\n      - file.name\n      - n\n      - formula.f\n    sort:\n      - property: file.name\n        direction: ASC\n    summaries:\n      n: Sum\n    columnSize:\n      note.n: 100\n  - type: cards\n    name: C\n    order:\n      - file.name\n    cardSize: 200\n"
+		},
+		{
+			"name": "summary formula add existing",
+			"before": "filters:\n  and:\n    - file.inFolder(\"zz-b4\")\nformulas:\n  f: n * 2\n  g: formula.f + 1\nsummaries:\n  S: values.length\nproperties:\n  note.n:\n    displayName: Number\nviews:\n  - type: table\n    name: T\n    order:\n      - file.name\n      - n\n      - formula.f\n    sort:\n      - property: file.name\n        direction: ASC\n    summaries:\n      n: S\n    columnSize:\n      note.n: 100\n  - type: cards\n    name: C\n    order:\n      - file.name\n    cardSize: 200\n",
+			"after": "summaries:\n  S: values.length\n  Twice: values.length * 2\nfilters:\n  and:\n    - file.inFolder(\"zz-b4\")\nformulas:\n  f: n * 2\n  g: formula.f + 1\nproperties:\n  note.n:\n    displayName: Number\nviews:\n  - type: table\n    name: T\n    order:\n      - file.name\n      - n\n      - formula.f\n    sort:\n      - property: file.name\n        direction: ASC\n    summaries:\n      n: S\n    columnSize:\n      note.n: 100\n  - type: cards\n    name: C\n    order:\n      - file.name\n    cardSize: 200\n"
+		},
+		{
+			"name": "summary formula rename",
+			"before": "filters:\n  and:\n    - file.inFolder(\"zz-b4\")\nformulas:\n  f: n * 2\n  g: formula.f + 1\nsummaries:\n  S: values.length\nproperties:\n  note.n:\n    displayName: Number\nviews:\n  - type: table\n    name: T\n    order:\n      - file.name\n      - n\n      - formula.f\n    sort:\n      - property: file.name\n        direction: ASC\n    summaries:\n      n: S\n    columnSize:\n      note.n: 100\n  - type: cards\n    name: C\n    order:\n      - file.name\n    cardSize: 200\n",
+			"after": "summaries:\n  Count: values.length\nfilters:\n  and:\n    - file.inFolder(\"zz-b4\")\nformulas:\n  f: n * 2\n  g: formula.f + 1\nproperties:\n  note.n:\n    displayName: Number\nviews:\n  - type: table\n    name: T\n    order:\n      - file.name\n      - n\n      - formula.f\n    sort:\n      - property: file.name\n        direction: ASC\n    summaries:\n      n: Count\n    columnSize:\n      note.n: 100\n  - type: cards\n    name: C\n    order:\n      - file.name\n    cardSize: 200\n"
+		},
+		{
+			"name": "summary formula delete",
+			"before": "filters:\n  and:\n    - file.inFolder(\"zz-b4\")\nformulas:\n  f: n * 2\n  g: formula.f + 1\nsummaries:\n  S: values.length\nproperties:\n  note.n:\n    displayName: Number\nviews:\n  - type: table\n    name: T\n    order:\n      - file.name\n      - n\n      - formula.f\n    sort:\n      - property: file.name\n        direction: ASC\n    summaries:\n      n: S\n    columnSize:\n      note.n: 100\n  - type: cards\n    name: C\n    order:\n      - file.name\n    cardSize: 200\n",
+			"after": "summaries: {}\nfilters:\n  and:\n    - file.inFolder(\"zz-b4\")\nformulas:\n  f: n * 2\n  g: formula.f + 1\nproperties:\n  note.n:\n    displayName: Number\nviews:\n  - type: table\n    name: T\n    order:\n      - file.name\n      - n\n      - formula.f\n    sort:\n      - property: file.name\n        direction: ASC\n    summaries: {}\n    columnSize:\n      note.n: 100\n  - type: cards\n    name: C\n    order:\n      - file.name\n    cardSize: 200\n"
+		},
+		{
+			"name": "no-op save",
+			"before": "filters:\n  and:\n    - file.inFolder(\"zz-b4\")\nformulas:\n  f: n * 2\n  g: formula.f + 1\nproperties:\n  note.n:\n    displayName: Number\nviews:\n  - type: table\n    name: T\n    order:\n      - file.name\n      - n\n      - formula.f\n    sort:\n      - property: file.name\n        direction: ASC\n    summaries:\n      n: Sum\n    columnSize:\n      note.n: 100\n  - type: cards\n    name: C\n    order:\n      - file.name\n    cardSize: 200\n",
+			"after": "filters:\n  and:\n    - file.inFolder(\"zz-b4\")\nformulas:\n  f: n * 2\n  g: formula.f + 1\nproperties:\n  note.n:\n    displayName: Number\nviews:\n  - type: table\n    name: T\n    order:\n      - file.name\n      - n\n      - formula.f\n    sort:\n      - property: file.name\n        direction: ASC\n    summaries:\n      n: Sum\n    columnSize:\n      note.n: 100\n  - type: cards\n    name: C\n    order:\n      - file.name\n    cardSize: 200\n"
+		},
+		{
+			"name": "formula add text",
+			"before": "filters:\n  and:\n    - file.inFolder(\"zz-b4\")\nformulas:\n  f: n * 2\n  g: formula.f + 1\nproperties:\n  note.n:\n    displayName: Number\nviews:\n  - type: table\n    name: T\n    order:\n      - file.name\n      - n\n      - formula.f\n    sort:\n      - property: file.name\n        direction: ASC\n    summaries:\n      n: Sum\n    columnSize:\n      note.n: 100\n  - type: cards\n    name: C\n    order:\n      - file.name\n    cardSize: 200\n",
+			"after": "filters:\n  and:\n    - file.inFolder(\"zz-b4\")\nformulas:\n  f: n * 2\n  g: formula.f + 1\n  h: n + 1\nproperties:\n  note.n:\n    displayName: Number\nviews:\n  - type: table\n    name: T\n    order:\n      - file.name\n      - n\n      - formula.f\n    sort:\n      - property: file.name\n        direction: ASC\n    summaries:\n      n: Sum\n    columnSize:\n      note.n: 100\n  - type: cards\n    name: C\n    order:\n      - file.name\n    cardSize: 200\n"
+		},
+		{
+			"name": "formula change text",
+			"before": "filters:\n  and:\n    - file.inFolder(\"zz-b4\")\nformulas:\n  f: n * 2\n  g: formula.f + 1\nproperties:\n  note.n:\n    displayName: Number\nviews:\n  - type: table\n    name: T\n    order:\n      - file.name\n      - n\n      - formula.f\n    sort:\n      - property: file.name\n        direction: ASC\n    summaries:\n      n: Sum\n    columnSize:\n      note.n: 100\n  - type: cards\n    name: C\n    order:\n      - file.name\n    cardSize: 200\n",
+			"after": "filters:\n  and:\n    - file.inFolder(\"zz-b4\")\nformulas:\n  f: n * 3\n  g: formula.f + 1\nproperties:\n  note.n:\n    displayName: Number\nviews:\n  - type: table\n    name: T\n    order:\n      - file.name\n      - n\n      - formula.f\n    sort:\n      - property: file.name\n        direction: ASC\n    summaries:\n      n: Sum\n    columnSize:\n      note.n: 100\n  - type: cards\n    name: C\n    order:\n      - file.name\n    cardSize: 200\n"
+		},
+		{
+			"name": "formula remove used",
+			"before": "filters:\n  and:\n    - file.inFolder(\"zz-b4\")\nformulas:\n  f: n * 2\n  g: formula.f + 1\nproperties:\n  note.n:\n    displayName: Number\n  formula.f:\n    displayName: Double\nviews:\n  - type: table\n    name: T\n    order:\n      - file.name\n      - n\n      - formula.f\n    groupBy:\n      property: formula.f\n      direction: ASC\n    sort:\n      - property: formula.f\n        direction: DESC\n      - property: file.name\n        direction: ASC\n    summaries:\n      n: Sum\n      formula.f: Average\n    columnSize:\n      note.n: 100\n      formula.f: 80\n  - type: cards\n    name: C\n    order:\n      - file.name\n    cardSize: 200\n",
+			"after": "filters:\n  and:\n    - file.inFolder(\"zz-b4\")\nformulas:\n  g: formula.f + 1\nproperties:\n  note.n:\n    displayName: Number\nviews:\n  - type: table\n    name: T\n    order:\n      - file.name\n      - n\n    sort:\n      - property: file.name\n        direction: ASC\n    summaries:\n      n: Sum\n    columnSize:\n      note.n: 100\n      formula.f: 80\n  - type: cards\n    name: C\n    order:\n      - file.name\n    cardSize: 200\n"
+		},
+		{
+			"name": "summary rename first of two",
+			"before": "filters:\n  and:\n    - file.inFolder(\"zz-b4\")\nformulas:\n  f: n * 2\n  g: formula.f + 1\nsummaries:\n  S: values.length\n  M: values.mean()\nproperties:\n  note.n:\n    displayName: Number\nviews:\n  - type: table\n    name: T\n    order:\n      - file.name\n      - n\n      - formula.f\n    sort:\n      - property: file.name\n        direction: ASC\n    summaries:\n      n: S\n      formula.f: M\n    columnSize:\n      note.n: 100\n  - type: cards\n    name: C\n    order:\n      - file.name\n    cardSize: 200\n",
+			"after": "summaries:\n  M: values.mean()\n  Count: values.length\nfilters:\n  and:\n    - file.inFolder(\"zz-b4\")\nformulas:\n  f: n * 2\n  g: formula.f + 1\nproperties:\n  note.n:\n    displayName: Number\nviews:\n  - type: table\n    name: T\n    order:\n      - file.name\n      - n\n      - formula.f\n    sort:\n      - property: file.name\n        direction: ASC\n    summaries:\n      n: Count\n      formula.f: M\n    columnSize:\n      note.n: 100\n  - type: cards\n    name: C\n    order:\n      - file.name\n    cardSize: 200\n"
+		},
+		{
+			"name": "summary delete first of two",
+			"before": "filters:\n  and:\n    - file.inFolder(\"zz-b4\")\nformulas:\n  f: n * 2\n  g: formula.f + 1\nsummaries:\n  S: values.length\n  M: values.mean()\nproperties:\n  note.n:\n    displayName: Number\nviews:\n  - type: table\n    name: T\n    order:\n      - file.name\n      - n\n      - formula.f\n    sort:\n      - property: file.name\n        direction: ASC\n    summaries:\n      n: S\n      formula.f: M\n    columnSize:\n      note.n: 100\n  - type: cards\n    name: C\n    order:\n      - file.name\n    cardSize: 200\n",
+			"after": "summaries:\n  M: values.mean()\nfilters:\n  and:\n    - file.inFolder(\"zz-b4\")\nformulas:\n  f: n * 2\n  g: formula.f + 1\nproperties:\n  note.n:\n    displayName: Number\nviews:\n  - type: table\n    name: T\n    order:\n      - file.name\n      - n\n      - formula.f\n    sort:\n      - property: file.name\n        direction: ASC\n    summaries:\n      formula.f: M\n    columnSize:\n      note.n: 100\n  - type: cards\n    name: C\n    order:\n      - file.name\n    cardSize: 200\n"
+		},
+		{
+			"name": "summary change existing",
+			"before": "filters:\n  and:\n    - file.inFolder(\"zz-b4\")\nformulas:\n  f: n * 2\n  g: formula.f + 1\nsummaries:\n  S: values.length\n  M: values.mean()\nproperties:\n  note.n:\n    displayName: Number\nviews:\n  - type: table\n    name: T\n    order:\n      - file.name\n      - n\n      - formula.f\n    sort:\n      - property: file.name\n        direction: ASC\n    summaries:\n      n: S\n      formula.f: M\n    columnSize:\n      note.n: 100\n  - type: cards\n    name: C\n    order:\n      - file.name\n    cardSize: 200\n",
+			"after": "summaries:\n  S: values.length + 1\n  M: values.mean()\nfilters:\n  and:\n    - file.inFolder(\"zz-b4\")\nformulas:\n  f: n * 2\n  g: formula.f + 1\nproperties:\n  note.n:\n    displayName: Number\nviews:\n  - type: table\n    name: T\n    order:\n      - file.name\n      - n\n      - formula.f\n    sort:\n      - property: file.name\n        direction: ASC\n    summaries:\n      n: S\n      formula.f: M\n    columnSize:\n      note.n: 100\n  - type: cards\n    name: C\n    order:\n      - file.name\n    cardSize: 200\n"
+		},
+		{
+			"name": "no-op save two sums",
+			"before": "filters:\n  and:\n    - file.inFolder(\"zz-b4\")\nformulas:\n  f: n * 2\n  g: formula.f + 1\nsummaries:\n  S: values.length\n  M: values.mean()\nproperties:\n  note.n:\n    displayName: Number\nviews:\n  - type: table\n    name: T\n    order:\n      - file.name\n      - n\n      - formula.f\n    sort:\n      - property: file.name\n        direction: ASC\n    summaries:\n      n: S\n      formula.f: M\n    columnSize:\n      note.n: 100\n  - type: cards\n    name: C\n    order:\n      - file.name\n    cardSize: 200\n",
+			"after": "summaries:\n  S: values.length\n  M: values.mean()\nfilters:\n  and:\n    - file.inFolder(\"zz-b4\")\nformulas:\n  f: n * 2\n  g: formula.f + 1\nproperties:\n  note.n:\n    displayName: Number\nviews:\n  - type: table\n    name: T\n    order:\n      - file.name\n      - n\n      - formula.f\n    sort:\n      - property: file.name\n        direction: ASC\n    summaries:\n      n: S\n      formula.f: M\n    columnSize:\n      note.n: 100\n  - type: cards\n    name: C\n    order:\n      - file.name\n    cardSize: 200\n"
+		},
+		{
+			"name": "no-op save used",
+			"before": "filters:\n  and:\n    - file.inFolder(\"zz-b4\")\nformulas:\n  f: n * 2\n  g: formula.f + 1\nproperties:\n  note.n:\n    displayName: Number\n  formula.f:\n    displayName: Double\nviews:\n  - type: table\n    name: T\n    order:\n      - file.name\n      - n\n      - formula.f\n    groupBy:\n      property: formula.f\n      direction: ASC\n    sort:\n      - property: formula.f\n        direction: DESC\n      - property: file.name\n        direction: ASC\n    summaries:\n      n: Sum\n      formula.f: Average\n    columnSize:\n      note.n: 100\n      formula.f: 80\n  - type: cards\n    name: C\n    order:\n      - file.name\n    cardSize: 200\n",
+			"after": "filters:\n  and:\n    - file.inFolder(\"zz-b4\")\nformulas:\n  f: n * 2\n  g: formula.f + 1\nproperties:\n  note.n:\n    displayName: Number\n  formula.f:\n    displayName: Double\nviews:\n  - type: table\n    name: T\n    groupBy:\n      property: formula.f\n      direction: ASC\n    order:\n      - file.name\n      - n\n      - formula.f\n    sort:\n      - property: formula.f\n        direction: DESC\n      - property: file.name\n        direction: ASC\n    summaries:\n      n: Sum\n      formula.f: Average\n    columnSize:\n      note.n: 100\n      formula.f: 80\n  - type: cards\n    name: C\n    order:\n      - file.name\n    cardSize: 200\n"
+		},
+		{
+			"name": "delete view",
+			"before": "filters:\n  and:\n    - file.inFolder(\"zz-b4\")\nformulas:\n  f: n * 2\n  g: formula.f + 1\nproperties:\n  note.n:\n    displayName: Number\nviews:\n  - type: table\n    name: T\n    order:\n      - file.name\n      - n\n      - formula.f\n    sort:\n      - property: file.name\n        direction: ASC\n    summaries:\n      n: Sum\n    columnSize:\n      note.n: 100\n  - type: cards\n    name: C\n    order:\n      - file.name\n    cardSize: 200\n",
+			"after": "filters:\n  and:\n    - file.inFolder(\"zz-b4\")\nformulas:\n  f: n * 2\n  g: formula.f + 1\nproperties:\n  note.n:\n    displayName: Number\nviews:\n  - type: cards\n    name: C\n    order:\n      - file.name\n    cardSize: 200\n"
+		},
+		{
+			"name": "default view",
+			"before": "filters:\n  and:\n    - file.inFolder(\"zz-b4\")\nformulas:\n  f: n * 2\n  g: formula.f + 1\nproperties:\n  note.n:\n    displayName: Number\nviews:\n  - type: table\n    name: T\n    order:\n      - file.name\n      - n\n      - formula.f\n    sort:\n      - property: file.name\n        direction: ASC\n    summaries:\n      n: Sum\n    columnSize:\n      note.n: 100\n  - type: cards\n    name: C\n    order:\n      - file.name\n    cardSize: 200\n",
+			"after": "filters:\n  and:\n    - file.inFolder(\"zz-b4\")\nformulas:\n  f: n * 2\n  g: formula.f + 1\nproperties:\n  note.n:\n    displayName: Number\nviews:\n  - type: cards\n    name: C\n    order:\n      - file.name\n    cardSize: 200\n  - type: table\n    name: T\n    order:\n      - file.name\n      - n\n      - formula.f\n    sort:\n      - property: file.name\n        direction: ASC\n    summaries:\n      n: Sum\n    columnSize:\n      note.n: 100\n"
+		}
+	]
+}
