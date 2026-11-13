@@ -413,3 +413,9 @@ export function findMethod(value: Value, name: string): Fn | undefined {
 
 /** A global function (`if`, `date`, …); not `Object.prototype`'s names. */
 export const findGlobal = (name: string): Fn | undefined => (Object.hasOwn(GLOBALS, name) ? GLOBALS[name] : undefined)
+
+/** Every function's name, for autocomplete: the globals (`if`, `date`), and the methods of any type (`contains`). */
+export const FUNCTION_NAMES: {globals: readonly string[], methods: readonly string[]} = {
+	globals: Object.keys(GLOBALS).sort(),
+	methods: [...new Set([...Object.values(METHODS).flatMap(m => Object.keys(m)), ...Object.keys(ANY)])].sort(),
+}

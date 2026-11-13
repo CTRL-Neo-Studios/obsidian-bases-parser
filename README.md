@@ -29,6 +29,7 @@ const written = stringifyBase(base) // what Obsidian would write, byte for byte
   - invalid sorts and limits are removed;
   - a base without views gets a table named "View".
 - **`stringifyBase`** writes Obsidian's key order, quoting and layout. Files Obsidian saved round-trip unchanged.
+- **`readYaml` / `writeYaml`** are the YAML reader and writer underneath (YAML 1.2's core schema, Obsidian's quoting), for other YAML Obsidian writes, such as a note's frontmatter.
 - **Edits** are pure functions (base in, base out):
   - `toggleSort`, `setSort`, `setGroupBy`, `setGroupOrder`, `setLimit`, `setOrder`, `setColumnSize`, `setSummary`, `setViewOption`, `setFilters`;
   - `setFormula`, `deleteFormula`, `renameFormula`;
@@ -90,6 +91,7 @@ toText(row.formula('age')) // "a year"
 - **Errors are values** (`Cannot find function "upper" on type String`), not exceptions.
 - **Durations** keep calendar months, as Obsidian's do: `duration("2M").days` counts from now, and `"18M"` reads "2 years".
 - **Functions:** every one Obsidian 1.15.1 has, with its argument checks and messages. That includes the list aggregates (`sum`, `mean`, `median`, `min`, `max`, `stddev`, `earliest`, `latest`), and excludes the documented `upper()` and `markdown()`, which 1.15.1 doesn't have.
+- **`FUNCTION_NAMES`** lists the global functions and the methods by name, for an editor's autocomplete.
 
 ## The filter builder
 

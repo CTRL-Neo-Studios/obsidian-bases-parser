@@ -5,6 +5,7 @@
 ## Files and edits
 - `parseBase(text) → {base, error}`: Obsidian's validation messages (UI prefixes "Unable to parse your base file:") and clean-ups (`note.` dropped from order/sort/groupBy/view summaries; invalid sort/limit removed; no views → one table "View").
 - `stringifyBase(base) → string`: Obsidian's key order, quoting and layout.
+- `readYaml(text)` / `writeYaml(value)`: the YAML reader/writer underneath (YAML 1.2 core schema: dates and `yes`/`n` stay text; Obsidian's quoting; null written empty), e.g. for frontmatter.
 - Pure edits (base in, base out): toggleSort, setSort, setGroupBy, setGroupOrder, setLimit, setOrder, setColumnSize, setSummary, setViewOption, setFilters, setFormula, deleteFormula, renameFormula, setSummaryFormula, renameSummaryFormula, deleteSummaryFormula, setDisplayName, addView, duplicateView, deleteView, renameView, setDefaultView, moveView, uniqueViewName, viewNameError.
 
 ## Queries
@@ -15,6 +16,7 @@
 
 ## Expressions and values
 - `parseExpression(text) → Expr` (cached; throws `ExpressionSyntaxError` with `position`). AST node types: empty, primitive, ident, object_access, array_access, function, arithmetic, comparison, not, negate, paren_expr, array, regexp.
+- `FUNCTION_NAMES` → `{globals, methods}`: every function name, sorted, for autocomplete.
 - `new RowScope({host, now, thisPath, formulas}, path)`: `.evaluate(expr, vars?)`, `.formula(name)`, `.property(id)`.
 - `Value` is tagged with Obsidian's type names (Null, Boolean, Number, String, URL, HTML, Image, Link, Date, Duration, List, Object, File, ThisFile, Formulas, RegExp, Error). Errors are values. `toText` = Obsidian's toString; `toDisplay` = cell text (dates `MM/DD/YYYY h:mm A`); `isTruthy`, `looseEquals`, `typeChain`; `fromFrontmatter(raw, path, key?)` converts frontmatter by value.
 
