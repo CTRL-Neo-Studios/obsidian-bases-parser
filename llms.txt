@@ -1,0 +1,23 @@
+# @type32/obsidian-bases-parser
+
+> Obsidian Bases (.base files) in plain TypeScript, matching Obsidian 1.15.1's observed behaviour: expressions, functions, queries, the filter builder model, and reading/writing .base files byte-for-byte as Obsidian does. No filesystem or UI framework; the host passes files and its link graph.
+
+## Files and edits
+- `parseBase(text) → {base, error}`: Obsidian's validation messages (UI prefixes "Unable to parse your base file:") and clean-ups (`note.` dropped from order/sort/groupBy/view summaries; invalid sort/limit removed; no views → one table "View").
+- `stringifyBase(base) → string`: Obsidian's key order, quoting and layout.
+- Pure edits (base in, base out): toggleSort, setSort, setGroupBy, setGroupOrder, setLimit, setOrder, setColumnSize, setSummary, setViewOption, setFilters, setFormula, deleteFormula, renameFormula, setSummaryFormula, renameSummaryFormula, deleteSummaryFormula, setDisplayName, addView, duplicateView, deleteView, renameView, setDefaultView, moveView, uniqueViewName, viewNameError.
+
+## Queries
+- `runQuery(base, viewName, {host, paths, now, thisPath, search?}) → {rows, groups, summaries, total, errors}`; rows are `RowScope`s with `property('note.x' | 'x' | 'file.x' | 'formula.x')`.
+- `BaseHost`: `file(path) → {path, ctime, mtime, size, frontmatter (JSON), tags (body, with #), links, embeds ({link, display})} | null`, `resolve(link, from) → path | null`, `backlinks(path) → path[]`.
+- `summarize(base, context, rows, property, summaryName) → Value`: Average, Min, Max, Sum, Range, Median, Stddev, Earliest, Latest, Checked, Unchecked, Empty, Filled, Unique, or a custom summary formula over `values`.
+- Semantics: filters (base then view; erroring rows left out), search (each word/punctuation in a shown value), stable sort on file-name order with empty values last, limit before grouping, groups by value text with the empty group last, `groupOrder` = shown groups.
+
+## Expressions and values
+- `parseExpression(text) → Expr` (cached; throws `ExpressionSyntaxError` with `position`). AST node types: empty, primitive, ident, object_access, array_access, function, arithmetic, comparison, not, negate, paren_expr, array, regexp.
+- `new RowScope({host, now, thisPath, formulas}, path)`: `.evaluate(expr, vars?)`, `.formula(name)`, `.property(id)`.
+- `Value` is tagged with Obsidian's type names (Null, Boolean, Number, String, URL, HTML, Image, Link, Date, Duration, List, Object, File, ThisFile, Formulas, RegExp, Error). Errors are values. `toText` = Obsidian's toString; `toDisplay` = cell text (dates `MM/DD/YYYY h:mm A`); `isTruthy`, `looseEquals`, `typeChain`; `fromFrontmatter(raw, path, key?)` converts frontmatter by value.
+
+## Filter builder
+- `toFilterGroup(filters, kindOf) → FilterGroup` and `fromFilterGroup(group) → FilterNode`; items are rules `{property, operator, values, text?}`, `{expression}` rows, or nested groups. `ruleExpression(rule)` writes a rule.
+- `OPERATORS[kind]` (kinds: text, number, checkbox, date, list, file) in Obsidian's menu order; `NO_VALUE`, `MANY_VALUES` give arity. Operator ids are semantic (`equals` is "is", "=", "on" or "is exactly" by kind).

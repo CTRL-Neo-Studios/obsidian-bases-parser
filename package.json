@@ -23,6 +23,7 @@
         "dist",
         "src",
         "README.md",
+        "llms.txt",
         "LICENSE"
     ],
     "scripts": {
@@ -31,8 +32,9 @@
         "lint": "eslint .",
         "test": "vitest run",
         "test:types": "tsc --noEmit",
-        "release:minor": "bun run build && bun pm version minor && bun publish",
-        "release:patch": "bun run build && bun pm version patch && bun publish"
+        "release:minor": "bun pm version minor && bun publish",
+        "release:patch": "bun pm version patch && bun publish",
+        "prepack": "bun run build"
     },
     "keywords": [
         "obsidian",
@@ -62,5 +64,13 @@
     "dependencies": {
         "dayjs": "^1.11.23",
         "js-yaml": "^5.5.0"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Type-32/obsidian-bases-parser.git"
+    },
+    "homepage": "https://github.com/Type-32/obsidian-bases-parser#readme",
+    "bugs": {
+        "url": "https://github.com/Type-32/obsidian-bases-parser/issues"
     }
 }
