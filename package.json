@@ -1,6 +1,6 @@
 {
     "name": "@type32/obsidian-bases-parser",
-    "version": "0.5.0",
+    "version": "0.5.1",
     "description": "Obsidian Bases (.base files) in plain TypeScript: the expression language, functions, queries, summaries and Obsidian-compatible reading and writing of .base files.",
     "main": "./dist/index.js",
     "module": "./dist/index.mjs",
